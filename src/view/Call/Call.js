@@ -3,11 +3,12 @@ import callii from '../../assets/Images/callii.png';
 import "bootstrap/dist/css/bootstrap.css";
 import Footer from "../../component/Footer/Footer";
 import NavBar from "../../component/NavBar/NavBar";
+import ScrollUpButton from "react-scroll-up-button";
 
 const Asos = () => (
   <Fragment>
-    <NavBar/>
-    <div class="container">
+    <NavBar />
+    <div class="container" style={{ marginTop: 100 }}>
       <div class="row">
         <div class="col-lg-12 text-center">
           <h1 class="section-heading">CALL II</h1>
@@ -49,7 +50,8 @@ const Asos = () => (
         <p>Serdecznie zapraszamy!!!</p>
       </div>
     </div>
-    <Footer/>
+    <Footer />
+    <ScrollUpButton />
   </Fragment>
 );
 

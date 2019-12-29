@@ -5,6 +5,7 @@ import Portfolio from "../../component/Portfolio/Portfolio";
 import NavBar from "../../component/NavBar/NavBar";
 import Latest from "../../component/Latest/Latest";
 import Logotyp from "../../component/Logotyp/Logotyp";
+import ScrollUpButton from "react-scroll-up-button";
 
 const Home = () => (
   <Fragment>
@@ -14,6 +15,7 @@ const Home = () => (
     <Portfolio />
     <Logotyp />
     <Footer />
+    <ScrollUpButton />
   </Fragment>
 );
 

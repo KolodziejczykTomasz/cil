@@ -3,13 +3,14 @@ import React, { Fragment } from "react";
 import Footer from "../../component/Footer/Footer";
 import "bootstrap/dist/css/bootstrap.css";
 import NavBar from "../../component/NavBar/NavBar";
+import ScrollUpButton from "react-scroll-up-button";
 
 
 const Cookies = () => (
   <Fragment>
-    <NavBar/>
-    
-    <div class="container">
+    <NavBar />
+
+    <div class="container" style={{ marginTop: 100 }}>
       <div class="row">
         <div class="col-lg-12 text-center">
           <h1 class="section-heading">Polityka prywatności</h1>
@@ -140,6 +141,7 @@ const Cookies = () => (
       </div>
     </div>
     <Footer />
+    <ScrollUpButton />
   </Fragment>
 );
 

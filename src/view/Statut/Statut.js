@@ -1,12 +1,13 @@
 import React, { Fragment } from "react";
 import NavBar from "../../component/NavBar/NavBar";
 import Footer from "../../component/Footer/Footer";
+import ScrollUpButton from "react-scroll-up-button";
 
 const Status = () => (
   <Fragment>
-    <NavBar/>
-    
-    <div class="container">
+    <NavBar />
+
+    <div class="container" style={{ marginTop: 100 }}>
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading">Statut</h2>
@@ -93,7 +94,8 @@ const Status = () => (
         <strong>§8</strong>
       </p>
       <p>
-        Stowarzyszenie CIL "PRZESTRZEŃ " będzie dążyło do realizacji swojego celu poprzez:
+        Stowarzyszenie CIL "PRZESTRZEŃ " będzie dążyło do realizacji swojego
+        celu poprzez:
       </p>
       <ol>
         <li>
@@ -168,12 +170,14 @@ const Status = () => (
         </li>
         <li>Działania na rzecz edukacji ekologicznej;</li>
         <li>
-          Działania na rzecz zrównoważonego rozwoju oraz w zakresie ochrony środowiska;
+          Działania na rzecz zrównoważonego rozwoju oraz w zakresie ochrony
+          środowiska;
         </li>
         <li>Działania na rzecz kultury i oświaty;</li>
         <li>Działalność na rzecz ochrony zdrowia;</li>
         <li>
-          Upowszechnianie i ochronę praw kobiet oraz działalność na rzecz równych praw kobiet i mężczyzn;
+          Upowszechnianie i ochronę praw kobiet oraz działalność na rzecz
+          równych praw kobiet i mężczyzn;
         </li>
       </ol>
 
@@ -261,7 +265,8 @@ const Status = () => (
           biernego i czynnego uczestnictwa w wyborach do władzy CIL "PRZESTRZEŃ"
         </li>
         <li>
-          udziału w zebraniach, wykładach oraz imprezach organizowanych przez CIL "PRZESTRZEŃ ",
+          udziału w zebraniach, wykładach oraz imprezach organizowanych przez
+          CIL "PRZESTRZEŃ ",
         </li>
         <li>zgłaszania wniosków dotyczących działalności CIL "PRZESTRZEŃ "</li>
       </ol>
@@ -741,7 +746,8 @@ const Status = () => (
         </div>
       </div>
     </div>
-    <Footer/>
+    <Footer />
+    <ScrollUpButton />
   </Fragment>
 );
 

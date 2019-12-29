@@ -1,25 +1,26 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 import Logo from "../../assets/Images/about/1.jpg";
 
 import "bootstrap/dist/css/bootstrap.css";
-import { Link } from "react-router-dom";
+import "./Portfolio.css";
+
 
 const Portfolio = () => (
   <Fragment>
-    <div style={{ textAlign: "center" }} class="container">
+    <div style={{ textAlign: "center" }} class="container container_portfolio">
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading">Zrealizowane projekty</h2>
           <hr />
         </div>
       </div>
-
       <div class="row justify-content-around">
-        <div class="col-4">
+        <div class="col-lg-4 col-sm-12">
           <div class="timeline-image">
             <img
-              class="img-circle img-responsive img-centered"
+              class="img-circle img-responsive img-centered img_portfolio"
               src={Logo}
               alt="Logo projektu"
             />
@@ -35,10 +36,10 @@ const Portfolio = () => (
             </Link>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-lg-4 col-sm-12">
           <div class="timeline-image">
             <img
-              class="img-circle img-responsive img-centered"
+              class="img-circle img-responsive img-centered img_portfolio"
               src={Logo}
               alt="Logo projektu"
             />
@@ -54,7 +55,8 @@ const Portfolio = () => (
             </Link>
           </div>
         </div>
-      </div>
+      </div>{" "}
+      <hr />
     </div>
   </Fragment>
 );

@@ -8,7 +8,7 @@ const NavBar = () => (
   <Fragment>
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
       <Link to="/" class="navbar-brand">
-        <span style={{ color: "#366EB4" }}> cilprzestrzen.eu</span>
+        <span style={{ color: "#366EB4", fontWeight: 600 }}> cilprzestrzen.eu</span>
       </Link>
       <button
         class="navbar-toggler"
@@ -29,35 +29,35 @@ const NavBar = () => (
         >
           <li class="nav-item active">
             <NavLink class="nav-link " to="/">
-              <button type="button" class="btn btn-outline-dark">
+              <button type="button" class="btn btn-success">
                 Home <span class="sr-only">(current)</span>
               </button>
             </NavLink>
           </li>
           <li>
             <NavLink class="nav-link" to="/news">
-              <button type="button" class="btn btn-outline-dark">
+              <button type="button" class="btn btn-warning">
                 Aktualności
               </button>
             </NavLink>
           </li>
           <li class="nav-item">
             <NavLink class="nav-link" to="/about">
-              <button type="button" class="btn btn-outline-dark">
+              <button type="button" class="btn btn-primary">
                 O nas
               </button>
             </NavLink>
           </li>
           <li class="nav-item">
             <NavLink class="nav-link" to="/statut">
-              <button type="button" class="btn btn-outline-dark">
+              <button type="button" class="btn btn-success">
                 Statut
               </button>
             </NavLink>
           </li>
           <li class="nav-item">
             <NavLink class="nav-link" to="/contact">
-              <button type="button" class="btn btn-outline-dark">
+              <button type="button" class="btn btn-warning">
                 Kontakt
               </button>
             </NavLink>

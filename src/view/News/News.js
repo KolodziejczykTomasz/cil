@@ -3,14 +3,15 @@ import React, { Fragment } from "react";
 import LogoHeaderPost from "../../assets/Images/logo.jpg";
 import Footer from "../../component/Footer/Footer";
 import NavBar from "../../component/NavBar/NavBar";
+import ScrollUpButton from "react-scroll-up-button";
 
 import "bootstrap/dist/css/bootstrap.css";
 
 
 const News = () => (
   <Fragment>
-      <NavBar/>
-    <div class="container">
+    <NavBar />
+    <div class="container" style={{marginTop: 100}}>
       <div class="row">
         <div class="col-lg-12 text-center">
           <h1 class="section-heading">Aktualności</h1>
@@ -210,6 +211,7 @@ const News = () => (
       </div>
     </div>
     <Footer />
+    <ScrollUpButton />
   </Fragment>
 );
 

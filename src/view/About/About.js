@@ -3,12 +3,13 @@ import React, { Fragment } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Footer from "../../component/Footer/Footer";
 import NavBar from "../../component/NavBar/NavBar";
+import ScrollUpButton from "react-scroll-up-button";
 
 
 const About = () => (
   <Fragment>
-    <NavBar/>
-    <div class="container">
+    <NavBar />
+    <div class="container" style={{ marginTop: 100 }}>
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading">O nas</h2>
@@ -130,7 +131,8 @@ const About = () => (
         <li>działania na rzecz kultury oświaty i sportu.</li>
       </ul>
     </div>
-    <Footer/>
+    <Footer />
+    <ScrollUpButton />
   </Fragment>
 );
 

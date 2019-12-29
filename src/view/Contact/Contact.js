@@ -1,11 +1,10 @@
 import React, { Fragment } from "react";
 import NavBar from "../../component/NavBar/NavBar";
 
-
 const Contact = () => (
   <Fragment>
-    <NavBar/>   
-    <div class="container">
+    <NavBar />
+    <div class="container" style={{ marginTop: 100 }}>
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading">Napisz do nas</h2>
@@ -13,7 +12,7 @@ const Contact = () => (
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12" style={{ marginTop: 100 }}>
           <form name="sentMessage" id="contactForm" novalidate>
             <div class="row">
               <div class="col-md-6">
@@ -73,8 +72,8 @@ const Contact = () => (
                 <div id="success"></div>
                 <button
                   type="submit"
-                  class="btn btn-xl"
-                  style={{ background: "#6e5500" }}
+                  class="btn btn-lg btn-primary"
+                  style={{ marginTop: 50 }}
                 >
                   Wyślij
                 </button>
