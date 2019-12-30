@@ -15,7 +15,7 @@ const Asos = () => (
           <hr />
         </div>
       </div>
-      <div class="row text-left">
+      <div class="row">
         <img class="img-responsive img-centered" src={callii} alt="call ii" />
         <p>
           <b>CENTRUM INICJATYW LOKALNYCH „PRZESTRZEŃ”</b> z radością informuję,
