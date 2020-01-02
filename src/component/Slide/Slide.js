@@ -8,10 +8,11 @@ const Slide = () => (
       id="carouselExampleSlidesOnly"
       class="carousel slide"
       data-ride="carousel"
+      role="row"      
     >
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src={LogoCil} class="d-block w-100" alt="Logo Stowarzyszenia" />
+        <div class="carousel-item active" role="columnheader">
+          <img src={LogoCil} class="d-block w-100" alt="Logo Stowarzyszenia" role="presentation"/>
         </div>
       </div>
     </div>   

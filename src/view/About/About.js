@@ -12,12 +12,13 @@ const About = () => (
     <div class="container" style={{ marginTop: 100 }}>
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading">O nas</h2>
+          <h1 class="section-heading">O nas</h1>
           <hr />
         </div>
       </div>
-      <h3> Władze stowarzyszenia: </h3>
+      <h2> Władze stowarzyszenia: </h2>
       <table
+        role="table"
         class="table table-bordered"
         style={{ width: 700, margin: "50 auto 10 auto" }}
       >
@@ -54,7 +55,7 @@ const About = () => (
       <br />
       <br />
 
-      <h4>Główne działania statutowe:</h4>
+      <h3>Główne działania statutowe:</h3>
       <ul>
         <li>
           rozwijanie i propagowanie wszelkich form samoorganizacji społecznej na

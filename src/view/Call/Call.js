@@ -9,13 +9,13 @@ const Asos = () => (
   <Fragment>
     <NavBar />
     <div class="container" style={{ marginTop: 100 }}>
-      <div class="row">
-        <div class="col-lg-12 text-center">
+      <div class="row" role="row">
+        <div class="col-lg-12 text-center" role="columnheader">
           <h1 class="section-heading">CALL II</h1>
           <hr />
         </div>
       </div>
-      <div class="row">
+      <div class="row" role="row">
         <img class="img-responsive img-centered" src={callii} alt="call ii" />
         <p>
           <b>CENTRUM INICJATYW LOKALNYCH „PRZESTRZEŃ”</b> z radością informuję,

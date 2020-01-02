@@ -9,20 +9,21 @@ import "./Latest.css"
 
 const Latest = () => (
   <Fragment>
-    <div class="container container_Latest">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h1 class="section-heading">Zapraszamy do udziału</h1>
+    <div class="container container_Latest" role="row" aria-label="Ostatnie projekty">
+      <div class="row" role="row">
+        <div class="col-lg-12 text-center" role="columnheader">
+          <h1 class="section-heading" >Zapraszamy do udziału</h1>
           <hr />
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-4 col-sm-12">
+    <div class="row" role="columnheader">
+      <div class="col-md-4 col-sm-12" >
         <img
           src={Festiwal}
           class="rounded mx-auto d-block img_Latest"
           alt="Festiwal Kultury i Tradycji Warmińskiej"
+          role="presentation"
         />
       </div>
       <div class="col-md-4 col-sm-12">
@@ -30,6 +31,7 @@ const Latest = () => (
           src={Senioriada}
           class="rounded mx-auto d-block img_Latest"
           alt="Senioriada"
+          role="presentation"
         />
       </div>
       <div class="col-md-4 col-sm-12">
@@ -37,6 +39,7 @@ const Latest = () => (
           src={Apteka}
           class="rounded mx-auto d-block img_Latest"
           alt="Polna apteka"
+          role="presentation"
         />
       </div>
     </div>

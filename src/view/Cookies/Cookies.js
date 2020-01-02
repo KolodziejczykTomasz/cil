@@ -11,8 +11,8 @@ const Cookies = () => (
     <NavBar />
 
     <div class="container" style={{ marginTop: 100 }}>
-      <div class="row">
-        <div class="col-lg-12 text-center">
+      <div class="row" role="row">
+        <div class="col-lg-12 text-center" role="columnheader">
           <h1 class="section-heading">Polityka prywatności</h1>
           <hr />
         </div>

@@ -1,8 +1,8 @@
 .container_portfolio {
-  margin: 70px auto 20px auto;
+  margin:180px auto 50px auto;
 }
 
 .img_portfolio {
   box-shadow: 15px 15px 15px rgba(83, 83, 83, 0.63);
-  margin: 15px auto;
+  margin: 50px auto;
 }

@@ -5,13 +5,13 @@ const Contact = () => (
   <Fragment>
     <NavBar />
     <div class="container" style={{ marginTop: 100 }}>
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading">Napisz do nas</h2>
+      <div class="row" role="row">
+        <div class="col-lg-12 text-center" role="columnheader">
+          <h1 class="section-heading">Napisz do nas</h1>
           <hr />
         </div>
       </div>
-      <div class="row">
+      <div class="row" role="row">
         <div class="col-lg-12" style={{ marginTop: 100 }}>
           <form name="sentMessage" id="contactForm" novalidate>
             <div class="row">
@@ -71,9 +71,10 @@ const Contact = () => (
               <div class="col-lg-12 text-center">
                 <div id="success"></div>
                 <button
+                  aria-label="Wyślij"                 
                   type="submit"
-                  class="btn btn-lg btn-primary"
-                  style={{ marginTop: 50 }}
+                  class="btn btn-lg btn-outline-primary"
+                  style={{ marginTop: 50, color: "black" }}
                 >
                   Wyślij
                 </button>

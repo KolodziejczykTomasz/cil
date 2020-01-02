@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import Home from '../Home/Home';
@@ -10,12 +10,11 @@ import About from '../About/About';
 import News from '../News/News';
 import Kontakt from '../Contact/Contact';
 
-import './Root.css';
 
 class Root extends Component {
   render() {
     return (
-      <>
+      <Fragment>      
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Home} />
@@ -28,7 +27,7 @@ class Root extends Component {
             <Route path="/contact" component={Kontakt} />
           </Switch>
         </BrowserRouter>
-      </>
+      </Fragment>
     );
   }
 }

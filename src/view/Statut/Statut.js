@@ -8,15 +8,15 @@ const Status = () => (
     <NavBar />
 
     <div class="container" style={{ marginTop: 100 }}>
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading">Statut</h2>
-          <h3
+      <div class="row" role="row">
+        <div class="col-lg-12 text-center" role="columnheader">
+          <h1 class="section-heading">Statut</h1>
+          <h2
             class="section-subheading text-muted"
             style={{ color: "#4f4f4f" }}
           >
             STOWARZYSZENIE CENTRUM INICJATYW LOKALNYCH "PRZESTRZEŃ"
-          </h3>
+          </h2>
         </div>
       </div>
       <p style={{ textAlign: "center" }}>
