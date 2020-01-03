@@ -23,7 +23,7 @@ const Portfolio = () => (
       <div class="row justify-content-around" role="row">
         <div class="col-lg-4 col-sm-12">
           <div class="timeline-image">
-            <img
+            <img            
               class="img-circle img-responsive img-centered img_portfolio"
               src={Logo}
               alt="Logo projektu"
@@ -43,7 +43,7 @@ const Portfolio = () => (
         </div>
         <div class="col-lg-4 col-sm-12">
           <div class="timeline-image">
-            <img
+            <img              
               class="img-circle img-responsive img-centered img_portfolio"
               src={Logo}
               alt="Logo projektu"

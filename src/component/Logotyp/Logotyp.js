@@ -15,22 +15,25 @@ const Logotyp = () => (
         <div class="col-md-3 col-sm-6" role="columnheader">
           <img
             src={LogoCal}
+            title="Centrum Aktywności Lokalnej"
             class="img-responsive img-centered img_Logotyp"
-            alt="Logo cal"
+            alt="Logo Centrum Aktywności Lokalnej"
             role="presentation"
           />
         </div>
         <div class="col-md-3 col-sm-6" >
           <img
             src={LogoFio}
+            title="Fundusz Inicjatyw Obywatelskich"
             class="img-responsive img-centered img_Logotyp"
-            alt="Logo fio"
+            alt="Logo Funduszu Inicjatyw Obywatelskich"
             role="presentation"
           />
         </div>
         <div class="col-md-3 col-sm-6" >
           <img
             src={LogoKapital}
+            title="Kapital Ludzki"
             class="img-responsive img-centered img_Logotyp"
             alt="Logo kapital Ludzki"
             role="presentation"
@@ -39,6 +42,7 @@ const Logotyp = () => (
         <div class="col-md-3 col-sm-6" >
           <img
             src={LogoUe}
+            title="Unia europejska"
             class="img-responsive img-centered img_Logotyp"
             alt="Logo unii europejskiej"
             role="presentation"

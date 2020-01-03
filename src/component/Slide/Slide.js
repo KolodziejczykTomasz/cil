@@ -12,7 +12,7 @@ const Slide = () => (
     >
       <div class="carousel-inner">
         <div class="carousel-item active" role="columnheader">
-          <img src={LogoCil} class="d-block w-100" alt="Logo Stowarzyszenia" role="presentation"/>
+          <img src={LogoCil} class="d-block w-100" alt="Logo Stowarzyszenia" role="presentation" title="Logo Stowarzyszenia CIL"/>
         </div>
       </div>
     </div>   

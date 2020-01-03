@@ -16,7 +16,7 @@ const Asos = () => (
         </div>
       </div>
       <div class="row" role="row">
-        <img class="img-responsive img-centered" src={callii} alt="call ii" />
+        <img class="img-responsive img-centered" src={callii} alt="call ii" title="Logotypy"/>
         <p>
           <b>CENTRUM INICJATYW LOKALNYCH „PRZESTRZEŃ”</b> z radością informuję,
           że rusza kolejna edycja Centrum Aktywności Lokalnej II.

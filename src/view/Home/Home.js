@@ -10,7 +10,7 @@ import ScrollUpButton from "react-scroll-up-button";
 import "./Home.css";
 
 class Home extends Component {
-  render() {    
+  render() {
     return (
       <Fragment>
         <NavBar />

@@ -12,7 +12,7 @@ const Latest = () => (
     <div class="container container_Latest" role="row" aria-label="Ostatnie projekty">
       <div class="row" role="row">
         <div class="col-lg-12 text-center" role="columnheader">
-          <h1 class="section-heading" >Zapraszamy do udziału</h1>
+          <h1 class="section-heading">Zapraszamy do udziału</h1>
           <hr />
         </div>
       </div>
@@ -21,6 +21,7 @@ const Latest = () => (
       <div class="col-md-4 col-sm-12" >
         <img
           src={Festiwal}
+          title="Plakat projektu Festiwal Kultury i Tradycji Warmińskiej"
           class="rounded mx-auto d-block img_Latest"
           alt="Festiwal Kultury i Tradycji Warmińskiej"
           role="presentation"
@@ -29,6 +30,7 @@ const Latest = () => (
       <div class="col-md-4 col-sm-12">
         <img
           src={Senioriada}
+          title="Plakat projektu Senioriada"
           class="rounded mx-auto d-block img_Latest"
           alt="Senioriada"
           role="presentation"
@@ -37,6 +39,7 @@ const Latest = () => (
       <div class="col-md-4 col-sm-12">
         <img
           src={Apteka}
+          title="Plakat projektu Polna apteka"
           class="rounded mx-auto d-block img_Latest"
           alt="Polna apteka"
           role="presentation"

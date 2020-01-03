@@ -17,7 +17,7 @@ const Asos = () => (
         </div>
       </div>
       <div class="row text-left">
-        <img class="img-responsive img-centered" src={logoasos} alt="asos" />
+        <img class="img-responsive img-centered" src={logoasos} alt="asos" title="Logotypy"/>
         <p>
           <b>CENTRUM INICJATYW LOKALNYCH „PRZESTRZEŃ”</b> z radością informuje,
           iż rozpoczęło realizację projektu pn. „Bądź aktywny w każdym wieku”
