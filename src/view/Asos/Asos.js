@@ -4,6 +4,7 @@ import Footer from "../../component/Footer/Footer";
 import NavBar from "../../component/NavBar/NavBar";
 import ScrollUpButton from "react-scroll-up-button";
 
+import "./Asos.css";
 
 const Asos = () => (
   <Fragment>
@@ -17,7 +18,7 @@ const Asos = () => (
         </div>
       </div>
       <div class="row text-left">
-        <img class="img-responsive img-centered" src={logoasos} alt="asos" title="Logotypy"/>
+        <img class="img-responsive img-centered img_asos" src={logoasos} alt="asos" title="Logotypy"/>
         <p>
           <b>CENTRUM INICJATYW LOKALNYCH „PRZESTRZEŃ”</b> z radością informuje,
           iż rozpoczęło realizację projektu pn. „Bądź aktywny w każdym wieku”

@@ -28,8 +28,7 @@ const News = () => (
           alt="Domowe leki z polnej apteki"
         />
         <div class="card-body">
-          <p class="card-text">
-            {" "}
+          <p class="card-text">       
             Stowarzyszenie Centrum Inicjatyw Lokalnych „Przestrzeń” informuje,
             że w dniu 14 czerwca 2019 r. podpisało umowę nr 11/2018/5/PROW o
             powierzenie grantu z Lokalna Grupą Działania „Warmiński Zakątek”

@@ -7,16 +7,14 @@ import Latest from "../../component/Latest/Latest";
 import Logotyp from "../../component/Logotyp/Logotyp";
 import ScrollUpButton from "react-scroll-up-button";
 
-
 import "./Home.css";
-
 
 class Home extends Component {
   render() {
     return (
-      <Fragment>        
+      <Fragment>
         <NavBar />
-        <Slide /> 
+        <Slide />
         <Latest />
         <Portfolio />
         <Logotyp />

@@ -45,7 +45,7 @@ class Contact extends Component {
     return (
       <Fragment>
         <NavBar />
-        <div class="container" style={{ marginTop: 100 }}>
+        <div class="container container_form" style={{ marginTop: 100 }}>
           <div class="row" role="row">
             <div class="col-lg-12 text-center" role="columnheader">
               <h1 class="section-heading">Napisz do nas</h1>
