@@ -2,6 +2,7 @@ import React, { Fragment, Component } from "react";
 import * as emailjs from "emailjs-com";
 import NavBar from "../../component/NavBar/NavBar";
 import {Form, FormGroup, Input } from "reactstrap";
+import Footer from "../../component/Footer/Footer";
 
 import "./Contact.css";
 
@@ -124,6 +125,7 @@ class Contact extends Component {
             </div>
           </div>
         </div>
+        <Footer />
       </Fragment>
     );
   }
