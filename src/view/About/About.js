@@ -5,7 +5,6 @@ import Footer from "../../component/Footer/Footer";
 import NavBar from "../../component/NavBar/NavBar";
 import ScrollUpButton from "react-scroll-up-button";
 
-
 const About = () => (
   <Fragment>
     <NavBar />

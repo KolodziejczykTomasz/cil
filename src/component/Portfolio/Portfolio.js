@@ -61,7 +61,7 @@ const Portfolio = () => (
             </Link>
           </div>
         </div>
-      </div>{" "}
+      </div>
       <hr />
     </div>
   </Fragment>

@@ -10,26 +10,29 @@ import About from "../About/About";
 import News from "../News/News";
 import Kontakt from "../Contact/Contact";
 import AppContext from "../../context";
+import AccessibleNav from "../../component/AccessibleNav/AccessibleMinus";
 
 class Root extends Component {
   state = {
-    isSmallSizeFont: false,
-    isBigSizeFont: false,
-    isChangeContrast: false,
-    isResetContrast: false
+    fontSize: 12,
+    backgroundColor: false,
+    color: "black"
   };
+
+  hendleClickSmallFont = () => {
+    this.setState({
+      fontSize: this.state.fontSize + 1
+    });
+  };
+
   render() {
-    const {
-      isSmallSizeFont,
-      isBigSizeFont,
-      isChangeContrast,
-      isResetContrast
-    } = this.state;
-    const contextElements = {...this.state}
+    // const { fontSize, backgroundColor, color } = this.state;
+    const contextElements = { ...this.state };
     return (
       <Fragment>
+        <AccessibleNav smallSize={this.hendleClickSmallFont}/>
         <BrowserRouter>
-          <AppContext.Provider value={contextElements} >
+          <AppContext.Provider value={contextElements}>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/call" component={Call} />
