@@ -7,7 +7,7 @@ import Apteka from "../../assets/Images/plakat_tn.jpg";
 import "bootstrap/dist/css/bootstrap.css";
 import "./Latest.css"
 
-const Latest = () => (
+const Latest = ({ clickColorFn}) => (
   <Fragment>
     <div class="container container_Latest" role="row" aria-label="Ostatnie projekty">
       <div class="row" role="row">

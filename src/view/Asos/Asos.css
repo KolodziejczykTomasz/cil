@@ -2,3 +2,12 @@
   box-shadow: 15px 15px 15px rgba(83, 83, 83, 0.63);
   margin: 50px auto;
 }
+
+
+.buttonTrue {
+  background-color: yellow;
+}
+
+.buttonFalse {
+  background-color: white;
+}

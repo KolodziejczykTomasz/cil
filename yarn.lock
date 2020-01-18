@@ -8746,6 +8746,13 @@ react-bootstrap@^1.0.0-beta.16:
     uncontrollable "^7.0.0"
     warning "^4.0.3"
 
+react-button-a11y@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/react-button-a11y/-/react-button-a11y-4.1.2.tgz#59cad2de94200f3fd05b4ce100368f45d872a10e"
+  integrity sha512-m+P3nSll3VUPRAVrcYh/ICi+BcBmfT7OzgF2NCvqBl31LtpBx3woHG2SNG1bu28eo6zz/LQGxaMgy428hd/WRg==
+  dependencies:
+    react-with-forwarded-ref "^0.3.0"
+
 react-dev-utils@^10.0.0:
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-10.0.0.tgz#bd2d16426c7e4cbfed1b46fb9e2ac98ec06fcdfa"
@@ -8798,6 +8805,13 @@ react-font-size-changer@^0.2.0:
   dependencies:
     react "^16.5.2"
     react-dom "^16.5.2"
+
+react-icons@^3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.8.0.tgz#229de5904809696c9f46932bd9b6126b2522866e"
+  integrity sha512-rA/8GRKjPulft8BSBSMsHkE1AGPqJ7LjNsyk0BE7XjG70Iz62zOled2SJk7LDo8x9z86a3xOstDlKlMZ4pAy7A==
+  dependencies:
+    camelcase "^5.0.0"
 
 react-is@^16.3.2, react-is@^16.6.0, react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   version "16.12.0"
@@ -8952,6 +8966,11 @@ react-transition-group@^4.0.0:
     dom-helpers "^5.0.1"
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
+
+react-with-forwarded-ref@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/react-with-forwarded-ref/-/react-with-forwarded-ref-0.3.0.tgz#a0500015d350f51983d3e97cfb4839ffb944992c"
+  integrity sha512-VubukTf62H1xIZMpbH1Tdv3z/la6IUSNuAkQqVp2jPdDPHOuTxXAFsX/CZGcHMW8YJ1qBkBYsl6ps1fi0zdnyA==
 
 react@^16.12.0, react@^16.5.2:
   version "16.12.0"

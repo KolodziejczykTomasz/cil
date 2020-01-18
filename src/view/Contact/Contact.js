@@ -11,8 +11,16 @@ class Contact extends Component {
     name: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
+    button: true
   };
+
+  handleClick = () => {
+    this.setState({
+      button: !this.state.button
+    });
+  };
+
   handleSubmit(e) {
     e.preventDefault();
     const { name, email, message } = this.state;
@@ -45,7 +53,8 @@ class Contact extends Component {
   render() {
     return (
       <Fragment>
-        <NavBar />
+        <div className={this.state.button ? "buttonTrue" : "buttonFalse"}>
+          <NavBar clickColorFn={this.handleClick} />
         <div class="container container_form" style={{ marginTop: 100 }}>
           <div class="row" role="row">
             <div class="col-lg-12 text-center" role="columnheader">
@@ -125,7 +134,7 @@ class Contact extends Component {
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer /></div>
       </Fragment>
     );
   }

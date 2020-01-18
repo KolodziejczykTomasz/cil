@@ -10,7 +10,7 @@ import About from "../About/About";
 import News from "../News/News";
 import Kontakt from "../Contact/Contact";
 import AppContext from "../../context";
-import AccessibleNav from "../../component/AccessibleNav/AccessibleMinus";
+
 
 class Root extends Component {
   state = {
@@ -29,8 +29,7 @@ class Root extends Component {
     // const { fontSize, backgroundColor, color } = this.state;
     const contextElements = { ...this.state };
     return (
-      <Fragment>
-        <AccessibleNav smallSize={this.hendleClickSmallFont}/>
+      <Fragment>       
         <BrowserRouter>
           <AppContext.Provider value={contextElements}>
             <Switch>

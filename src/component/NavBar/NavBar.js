@@ -2,25 +2,35 @@ import React, { Fragment } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
+import { FaSearchMinus } from "react-icons/fa";
+import { FaSearchPlus } from "react-icons/fa";
+import { FaAdjust } from "react-icons/fa";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const NavBar = () => (
+const NavBar = ({ clickColorFn }) => (
   <Fragment>
-    <Navbar bg="light" expand="lg" fixed="top" role="menu" aria-label="Menu nawigacja">
+    <Navbar
+      bg="light"
+      expand="lg"
+      fixed="top"
+      role="menu"
+      aria-label="Menu nawigacja"
+    >
       <Navbar.Brand>
         <span style={{ color: "#366EB4", fontWeight: 600 }}>
           cilprzestrzen.eu
         </span>
       </Navbar.Brand>
-      <Navbar.Toggle/>
+      <Navbar.Toggle />
       <Navbar.Collapse id="basic-navbar-nav" role="group">
         <Nav
           className="mr-auto justify-content-center"
-          style={{ width: "75vw", backgroundColor: "white" }}
+          style={{ width: "75vw" }}
         >
           <NavLink to="/" aria-current="page">
             <button
-              aria-label="Home" 
+              aria-label="Home"
               role="menuitem"
               type="button"
               class="btn btn-outline-success"
@@ -31,7 +41,7 @@ const NavBar = () => (
           </NavLink>
           <NavLink to="/news">
             <button
-              aria-label="Aktualności" 
+              aria-label="Aktualności"
               role="menuitem"
               type="button"
               class="btn btn-outline-warning"
@@ -42,7 +52,7 @@ const NavBar = () => (
           </NavLink>
           <NavLink to="/about">
             <button
-              aria-label="O nas" 
+              aria-label="O nas"
               role="menuitem"
               type="button"
               class="btn btn-outline-primary"
@@ -75,6 +85,21 @@ const NavBar = () => (
           </NavLink>
         </Nav>
       </Navbar.Collapse>
+      <div>
+        <FaSearchMinus
+          aria-label="Zmiana kontrastu strony po kliknięciu"
+          onClick={clickColorFn}
+        />
+        <FaSearchPlus
+          aria-label="Zmiana kontrastu strony po kliknięciu"
+          style={{ marginLeft: 15, marginRight: 15 }}
+          onClick={clickColorFn}
+        />
+        <FaAdjust
+          aria-label="Zmiana kontrastu strony po kliknięciu"
+          onClick={clickColorFn}
+        />
+      </div>
     </Navbar>
   </Fragment>
 );
