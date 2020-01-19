@@ -8,8 +8,16 @@ import "./Asos.css";
 
 class Asos extends Component {
   state = {
-    button: true
+    button: false,
+    fontSizeChange: 14
   };
+
+  handleResetFontSize = () => {
+    this.setState({
+      fontSizeChange: 14
+    });
+  };
+
 
   handleClick = () => {
     this.setState({
@@ -17,11 +25,26 @@ class Asos extends Component {
     });
   };
 
+  handleGrowFontSize = () => {
+    const number = 1;
+    this.setState({
+      fontSizeChange: this.state.fontSizeChange + number
+    });
+  };
+
+  handleShrinkFontSize = () => {
+    const number = 1;
+    this.setState({
+      fontSizeChange: this.state.fontSizeChange - number
+    });
+  };
+
   render() {
+    const { fontSizeChange } = this.state;
     return (
       <Fragment>
         <div className={this.state.button ? "buttonTrue" : "buttonFalse"}>
-          <NavBar clickColorFn={this.handleClick} />
+          <NavBar clickColorFn={this.handleClick} growFontFn={this.handleGrowFontSize} shrinkFontFn={this.handleShrinkFontSize} resetFontFn={this.handleResetFontSize}/>
 
           <div
             className={
@@ -29,7 +52,7 @@ class Asos extends Component {
                 ? "buttonTrue container"
                 : "container buttonFalse"
             }
-            style={{ marginTop: 100 }}
+            style={{ marginTop: 100, fontSize: fontSizeChange }}
           >
             <div class="row" role="row">
               <div class="col-lg-12 text-center" role="columnheader">

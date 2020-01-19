@@ -12,12 +12,34 @@ class Contact extends Component {
     email: "",
     phone: "",
     message: "",
-    button: true
+    button: false,
+    fontSizeChange: 14
   };
+
+  handleResetFontSize = () => {
+    this.setState({
+      fontSizeChange: 14
+    });
+  };
+
 
   handleClick = () => {
     this.setState({
       button: !this.state.button
+    });
+  };
+
+  handleGrowFontSize = () => {
+    const number = 1;
+    this.setState({
+      fontSizeChange: this.state.fontSizeChange + number
+    });
+  };
+
+  handleShrinkFontSize = () => {
+    const number = 1;
+    this.setState({
+      fontSizeChange: this.state.fontSizeChange - number
     });
   };
 
@@ -51,11 +73,12 @@ class Contact extends Component {
   };
 
   render() {
+    const { fontSizeChange } = this.state;
     return (
       <Fragment>
         <div className={this.state.button ? "buttonTrue" : "buttonFalse"}>
-          <NavBar clickColorFn={this.handleClick} />
-        <div class="container container_form" style={{ marginTop: 100 }}>
+          <NavBar clickColorFn={this.handleClick} growFontFn={this.handleGrowFontSize} shrinkFontFn={this.handleShrinkFontSize} resetFontFn={this.handleResetFontSize}/>
+          <div class="container container_form" style={{ marginTop: 100, fontSize: fontSizeChange  }}>
           <div class="row" role="row">
             <div class="col-lg-12 text-center" role="columnheader">
               <h1 class="section-heading">Napisz do nas</h1>

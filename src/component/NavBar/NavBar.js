@@ -2,13 +2,15 @@ import React, { Fragment } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
+import { FaSearch } from "react-icons/fa";
 import { FaSearchMinus } from "react-icons/fa";
 import { FaSearchPlus } from "react-icons/fa";
 import { FaAdjust } from "react-icons/fa";
+import { FaAccessibleIcon } from "react-icons/fa";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const NavBar = ({ clickColorFn }) => (
+const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
   <Fragment>
     <Navbar
       bg="light"
@@ -85,15 +87,24 @@ const NavBar = ({ clickColorFn }) => (
           </NavLink>
         </Nav>
       </Navbar.Collapse>
-      <div>
+      <div aria-label="Menu accesible">
+        <FaAccessibleIcon
+          aria-label="Zmiana wielkości czcionki oraz kontrastu strony"
+          style={{ marginRight: 15 }}
+        />
+        <FaSearch
+          aria-label="Przywrócenie początkowej wielkości czcionki na stronie po kliknięciu"
+          style={{ marginRight: 15 }}
+          onClick={resetFontFn}
+        />
         <FaSearchMinus
-          aria-label="Zmiana kontrastu strony po kliknięciu"
-          onClick={clickColorFn}
+          aria-label="Zmniejszenie czcionki na stronie po kliknięciu"
+          onClick={shrinkFontFn}
         />
         <FaSearchPlus
-          aria-label="Zmiana kontrastu strony po kliknięciu"
+          aria-label="Powiększenie czcionki na stronie po kliknięciu"
           style={{ marginLeft: 15, marginRight: 15 }}
-          onClick={clickColorFn}
+          onClick={growFontFn}
         />
         <FaAdjust
           aria-label="Zmiana kontrastu strony po kliknięciu"

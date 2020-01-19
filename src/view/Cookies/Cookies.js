@@ -8,8 +8,15 @@ import ScrollUpButton from "react-scroll-up-button";
 
 class Cookies extends Component {
   state = {
-    button: true
+    button: false,
+    fontSizeChange: 14
   };
+  handleResetFontSize = () => {
+    this.setState({
+      fontSizeChange: 14
+    });
+  };
+
 
   handleClick = () => {
     this.setState({
@@ -17,13 +24,27 @@ class Cookies extends Component {
     });
   };
 
+  handleGrowFontSize = () => {
+    const number = 1;
+    this.setState({
+      fontSizeChange: this.state.fontSizeChange + number
+    });
+  };
+
+  handleShrinkFontSize = () => {
+    const number = 1;
+    this.setState({
+      fontSizeChange: this.state.fontSizeChange - number
+    });
+  };
   render() {
+    const { fontSizeChange } = this.state;
     return (
       <Fragment>
         <div className={this.state.button ? "buttonTrue" : "buttonFalse"}>
-          <NavBar clickColorFn={this.handleClick} />
+          <NavBar clickColorFn={this.handleClick} growFontFn={this.handleGrowFontSize} shrinkFontFn={this.handleShrinkFontSize} resetFontFn={this.handleResetFontSize}/>
 
-        <div class="container" style={{ marginTop: 100 }}>
+          <div class="container" style={{ marginTop: 100, fontSize: fontSizeChange  }}>
           <div class="row" role="row">
             <div class="col-lg-12 text-center" role="columnheader">
               <h1 class="section-heading">Polityka prywatności</h1>

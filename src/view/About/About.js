@@ -7,20 +7,43 @@ import ScrollUpButton from "react-scroll-up-button";
 
 class About extends Component {
   state = {
-    button: true
+    button: false,
+    fontSizeChange: 14
   };
+
+  handleResetFontSize = () => {
+    this.setState({
+      fontSizeChange: 14
+    });
+  };
+
 
   handleClick = () => {
     this.setState({
       button: !this.state.button
     });
   };
+
+  handleGrowFontSize = () => {
+    const number = 1;
+    this.setState({
+      fontSizeChange: this.state.fontSizeChange + number
+    });
+  };
+
+  handleShrinkFontSize = () => {
+    const number = 1;
+    this.setState({
+      fontSizeChange: this.state.fontSizeChange - number
+    });
+  };
   render() {
+    const { fontSizeChange } = this.state;
     return (
       <Fragment>
         <div className={this.state.button ? "buttonTrue" : "buttonFalse"}>
-          <NavBar clickColorFn={this.handleClick} />
-          <div class="container" style={{ marginTop: 100 }}>
+          <NavBar clickColorFn={this.handleClick} growFontFn={this.handleGrowFontSize} shrinkFontFn={this.handleShrinkFontSize} resetFontFn={this.handleResetFontSize}/>
+          <div class="container" style={{ marginTop: 100, fontSize: fontSizeChange  }}>
             <div class="row">
               <div class="col-lg-12 text-center">
                 <h1 class="section-heading">O nas</h1>
