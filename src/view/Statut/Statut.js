@@ -1,67 +1,68 @@
-import React, { Fragment, Component } from "react";
-import NavBar from "../../component/NavBar/NavBar";
-import Footer from "../../component/Footer/Footer";
-import ScrollUpButton from "react-scroll-up-button";
+import React, { Component } from 'react';
+import ScrollUpButton from 'react-scroll-up-button';
+import NavBar from '../../component/NavBar/NavBar';
+import Footer from '../../component/Footer/Footer';
 
 class Status extends Component {
   state = {
     button: false,
-    fontSizeChange: 14
+    fontSizeChange: 14,
   };
 
-  handleResetFontSize = () => {    
+  handleResetFontSize = () => {
     this.setState({
-      fontSizeChange: 14
+      fontSizeChange: 14,
     });
   };
 
   handleClick = () => {
     this.setState({
-      button: !this.state.button
+      button: !this.state.button,
     });
   };
-  
+
   handleGrowFontSize = () => {
     const number = 1;
     this.setState({
-      fontSizeChange: this.state.fontSizeChange + number
+      fontSizeChange: this.state.fontSizeChange + number,
     });
   };
 
   handleShrinkFontSize = () => {
     const number = 1;
     this.setState({
-      fontSizeChange: this.state.fontSizeChange - number
+      fontSizeChange: this.state.fontSizeChange - number,
     });
   };
+
   render() {
     const { fontSizeChange } = this.state;
     return (
-      <Fragment>
-        <div className={this.state.button ? "buttonTrue" : "buttonFalse"}>
-          <NavBar clickColorFn={this.handleClick} growFontFn={this.handleGrowFontSize} shrinkFontFn={this.handleShrinkFontSize} resetFontFn={this.handleResetFontSize}/>
+      <>
+        <div className={this.state.button ? 'buttonTrue' : 'buttonFalse'}>
+          <NavBar clickColorFn={this.handleClick} growFontFn={this.handleGrowFontSize} shrinkFontFn={this.handleShrinkFontSize} resetFontFn={this.handleResetFontSize} />
           <div
-            class="container"
+            className="container"
             style={{ marginTop: 100, fontSize: fontSizeChange }}
           >
-            <div class="row" role="row">
-              <div class="col-lg-12 text-center" role="columnheader">
-                <h1 class="section-heading">Statut</h1>
+            <div className="row" role="row">
+              <div className="col-lg-12 text-center" role="columnheader">
+                <h1 className="section-heading">Statut</h1>
                 <h2
-                  class="section-subheading text-muted"
-                  style={{ color: "#4f4f4f", fontSize: fontSizeChange }}
+                  className="section-subheading text-muted"
+                  style={{ color: '#4f4f4f', fontSize: fontSizeChange }}
                 >
                   STOWARZYSZENIE CENTRUM INICJATYW LOKALNYCH "PRZESTRZEŃ"
                 </h2>
               </div>
             </div>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>Rozdział I</strong>
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>Postanowienia ogólne</strong>
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§1</strong>
             </p>
             <p>
@@ -69,11 +70,11 @@ class Status extends Component {
               dalszych postanowieniach zwane CIL "PRZESTRZEŃ" działa na
               podstawie przepisów ustawy z dnia 7 kwietnia 1989r.- Prawo o
               stowarzyszeniach (tj. Dz.U. z 2001r. Nr79 , poz. 855 ze zm.),
-              ustawy z dnia& 24 kwietnia 2003r. o działalności pożytku
+              ustawy z dnia 24 kwietnia 2003r. o działalności pożytku
               publicznego i o wolontariacie (Dz.U. Nr 96, poz.873 ze zm.) oraz
               niniejszego statutu.
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§2</strong>
             </p>
             <ol>
@@ -89,7 +90,7 @@ class Status extends Component {
                 prawa.
               </li>
             </ol>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§3</strong>
             </p>
             <p>
@@ -98,14 +99,14 @@ class Status extends Component {
               prawo używania pieczęci i oznak zgodnie z obowiązującymi
               przepisami.
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§4</strong>
             </p>
             <p>
               CIL "PRZESTRZEŃ " może należeć do innych krajów i międzynarodowych
               organizacji o podobnych celach.
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§5</strong>
             </p>
             <p>
@@ -114,17 +115,17 @@ class Status extends Component {
               pracowników do prowadzenia działalności statutowej i
               organizacyjnej.
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§6</strong>
             </p>
             <p>CIL "PRZESTRZEŃ " powołuje się na czas nieokreślony.</p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>Rozdział II</strong>
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>Cele i środki działania</strong>
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§7</strong>
             </p>
             <p>
@@ -132,7 +133,7 @@ class Status extends Component {
               społeczno-gospodarczego rozwoju gminy wiejskiej Lidzbark
               Warmiński.
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§8</strong>
             </p>
             <p>
@@ -232,13 +233,13 @@ class Status extends Component {
               </li>
             </ol>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>Rozdział III</strong>
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>Członkowie- prawa i obowiązki</strong>
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§9</strong>
             </p>
             <p>
@@ -246,7 +247,7 @@ class Status extends Component {
               prawna może być jedynie członkiem wspierającym stowarzyszenia.
             </p>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§10</strong>
             </p>
             <p>Stowarzyszenie CIL "PRZESTRZEŃ " posiada członków:</p>
@@ -254,15 +255,17 @@ class Status extends Component {
               <li>Zwyczajnych</li>
               <li>Wspierających</li>
               <li>
-                Honorowych <strong></strong>
+                Honorowych
+                {' '}
+                <strong />
               </li>
             </ol>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§11</strong>
             </p>
             <ol>
               <li>Członkiem zwyczajnym stowarzyszenia może być:</li>
-              <ol style={{ listStyleType: "lower-alpha" }}>
+              <ol style={{ listStyleType: 'lower-alpha' }}>
                 <li>
                   osoba fizyczna będąca obywatelem polskim, posiadająca pełną
                   zdolność do czynności prawnych, mająca miejsce zamieszkania na
@@ -281,7 +284,7 @@ class Status extends Component {
               <li>opłacenie składki członkowskiej</li>
             </ul>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§12</strong>
             </p>
             <p>
@@ -291,7 +294,7 @@ class Status extends Component {
               pisemną deklaracje, a następnie uzyska pozytywną decyzje Zarządu.
             </p>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§13</strong>
             </p>
             <ol>
@@ -306,13 +309,13 @@ class Status extends Component {
               </li>
               <li>Członkowie honorowi nie opłacają składek członkowskich.</li>
             </ol>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§14</strong>
             </p>
             <p>
               <u>Członkowie zwyczajni mają prawo:</u>
             </p>
-            <ol style={{ listStyleType: "lower-alpha" }}>
+            <ol style={{ listStyleType: 'lower-alpha' }}>
               <li>
                 biernego i czynnego uczestnictwa w wyborach do władzy CIL
                 "PRZESTRZEŃ"
@@ -326,13 +329,13 @@ class Status extends Component {
               </li>
             </ol>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§15</strong>
             </p>
             <p>
               <u>Członkowie zwyczajni mają obowiązek:</u>
             </p>
-            <ol style={{ listStyleType: "lower-alpha" }}>
+            <ol style={{ listStyleType: 'lower-alpha' }}>
               <li>
                 brania udziału w działalności Stowarzyszenia i realizacji jego
                 celów
@@ -340,7 +343,7 @@ class Status extends Component {
               <li>przestrzegania statutu i uchwał władz Stowarzyszenia</li>
               <li>regularnego opłacania SKŁADEK</li>
             </ol>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§16</strong>
             </p>
             <p>
@@ -348,11 +351,11 @@ class Status extends Component {
               czynnego prawa wyborczego, mogą jednak brać udział z głosem
               doradczym w statutowych władzach Stowarzyszenia.
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§17</strong>
             </p>
             <p>Członkowie honorowi są zwalniani ze składek członkowskich.</p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§18</strong>
             </p>
             <p>1. Utrata członkowstwa następuje na skutek:</p>
@@ -377,7 +380,7 @@ class Status extends Component {
               podjęta zwykłą większością głosów w obecności co najmniej połowy
               członków
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§19</strong>
             </p>
             <p>
@@ -386,23 +389,23 @@ class Status extends Component {
               Członków. Uchwała Walnego Zgromadzenia Członków jest ostateczna.
             </p>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>ROZDZIAł IV</strong>
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>Władze Stowarzyszenia</strong>
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§20</strong>
             </p>
             <p>Władzami stowarzyszenia są:</p>
-            <ol style={{ listStyleType: "lower-alpha" }}>
+            <ol style={{ listStyleType: 'lower-alpha' }}>
               <li>Walne Zgromadzenie Członków</li>
               <li>Zarząd</li>
               <li>Komisja Rewizyjna</li>
             </ol>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§21</strong>
             </p>
             <p>
@@ -412,7 +415,7 @@ class Status extends Component {
               mówią inaczej.
             </p>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§22</strong>
             </p>
             <p>
@@ -421,14 +424,14 @@ class Status extends Component {
               większością głosów przy obecności co najmniej połowy uprawnionych
               do głosowania.
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§23</strong>
             </p>
             <p>
               Członkowie Zarządu i Komisji Rewizyjnej nie otrzymują
               wynagrodzenia za swoją pracę we władzach stowarzyszenia.
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§24</strong>
             </p>
             <p>
@@ -444,7 +447,7 @@ class Status extends Component {
               2. Walne zgromadzenie Członków może być zwyczajne i nadzwyczajne.
             </p>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§25</strong>
             </p>
             <ol>
@@ -465,7 +468,7 @@ class Status extends Component {
               </li>
             </ol>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§26</strong>
             </p>
             <ol>
@@ -491,7 +494,7 @@ class Status extends Component {
               </li>
             </ol>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§27</strong>
             </p>
 
@@ -517,7 +520,7 @@ class Status extends Component {
               </li>
             </ol>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§28</strong>
             </p>
             <p>
@@ -560,7 +563,7 @@ class Status extends Component {
               <li>Rozpatrzenie sprawozdań Zarządu z wykonywania budżetu.</li>
             </ol>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§29</strong>
             </p>
             <p>
@@ -568,8 +571,8 @@ class Status extends Component {
               stowarzyszenia zgodnie z uchwałami Walnego Zgromadzenia Członków,
               reprezentuje Stowarzyszenie na zewnątrz.
             </p>
-            <p></p>
-            <p style={{ textAlign: "center" }}>
+            <p />
+            <p style={{ textAlign: 'center' }}>
               <strong>§30</strong>
             </p>
 
@@ -577,7 +580,7 @@ class Status extends Component {
               Zarząd składa się z Prezesa, dwóch Wiceprezesów, Skarbnika,
               Sekretarza i dwóch członków.
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§31</strong>
             </p>
             <ol>
@@ -597,7 +600,7 @@ class Status extends Component {
               </li>
             </ol>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§32</strong>
             </p>
             <p>
@@ -606,7 +609,7 @@ class Status extends Component {
               przez Zarząd.
             </p>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§33</strong>
             </p>
 
@@ -631,7 +634,7 @@ class Status extends Component {
               <li>Wykonywanie uchwały budżetowej</li>
             </ol>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§34</strong>
             </p>
             <p>
@@ -639,14 +642,14 @@ class Status extends Component {
               działalnością Stowarzyszenia. Kontroluje jego działalność nie
               rzadziej niż raz w roku.
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§35</strong>
             </p>
             <p>
               Komisja Rewizyjna składa się z trzech członków: przewodniczącego,
               zastępcy i sekretarza.
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§36</strong>
             </p>
             <ol>
@@ -667,7 +670,7 @@ class Status extends Component {
               </li>
             </ol>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§37</strong>
             </p>
 
@@ -692,7 +695,7 @@ class Status extends Component {
               </li>
             </ol>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§38</strong>
             </p>
 
@@ -704,19 +707,19 @@ class Status extends Component {
               jednego członka organu.
             </p>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>Rozdział V</strong>
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>Majątek i Fundusze</strong>
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§39</strong>
             </p>
             <p>
               <u>Majątek stowarzyszenia powstaje;</u>
             </p>
-            <ol style={{ listStyleType: "lower-alpha" }}>
+            <ol style={{ listStyleType: 'lower-alpha' }}>
               <li>ze składek członkowskich</li>
               <li>darowizn, spadków, zapisów,</li>
               <li>dochodów z własnej działalności statutowej,</li>
@@ -736,7 +739,7 @@ class Status extends Component {
               <li>innych dotacji,</li>
             </ol>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§40</strong>
             </p>
 
@@ -747,14 +750,14 @@ class Status extends Component {
               zezwolenia.
             </p>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§41</strong>
             </p>
             <p>
               Wszelkie środki pieniężne, mogą być przechowywane wyłącznie na
               koncie bankowym Stowarzyszenia.
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§42</strong>
             </p>
             <p>
@@ -762,14 +765,14 @@ class Status extends Component {
               realizacji celów statutowych CIL "PRZESTRZEŃ " i nie może być
               dzielony pomiędzy członków w przypadku likwidacji stowarzyszenia.
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§43</strong>
             </p>
             <p>
               Stowarzyszenie prowadzi gospodarkę finansową zgodnie z
               obowiązującymi przepisami.
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§44</strong>
             </p>
             <p>
@@ -777,7 +780,7 @@ class Status extends Component {
               Stowarzyszenia podejmuje Zarząd, w ramach przyjętego budżetu.
             </p>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§45</strong>
             </p>
             <p>
@@ -785,13 +788,13 @@ class Status extends Component {
               Zarządu, w tym Prezes lub Wiceprezes. Dotyczy to również
               zaciągania zobowiązań majątkowych.
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>ROZDZIAŁ VI</strong>
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>Postanowienie końcowe</strong>
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§46</strong>
             </p>
             <p>
@@ -805,23 +808,23 @@ class Status extends Component {
               Zgromadzenie Członków okreCla sposób jego likwidacji oraz
               przeznaczenie majątku Stowarzyszenia.
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§47</strong>
             </p>
             <p>
               W sprawach nie uregulowanych w niniejszym statucie zastosowanie
               mają przepis Prawa o stowarzyszeniach.
             </p>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: 'center' }}>
               <strong>§48</strong>
             </p>
             <p>
               Postanowienia niniejszego statutu wchodzą w życie z dniem
               uchwalenia.
             </p>
-            <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                <p class="large text-muted" style={{ color: "#4f4f4f" }}>
+            <div className="row">
+              <div className="col-lg-8 col-lg-offset-2 text-center">
+                <p className="large text-muted" style={{ color: '#4f4f4f' }}>
                   Statut przyjęto w dniu 22 grudnia 2010 r.
                 </p>
               </div>
@@ -830,7 +833,7 @@ class Status extends Component {
           <Footer />
         </div>
         <ScrollUpButton />
-      </Fragment>
+      </>
     );
   }
 }

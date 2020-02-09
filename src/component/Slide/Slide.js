@@ -1,21 +1,21 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
 
-import LogoCil from "../../assets/Images/header-bg.jpg";
+import LogoCil from '../../assets/Images/header-bg.jpg';
 
 const Slide = () => (
   <Fragment>
     <div
       id="carouselExampleSlidesOnly"
-      class="carousel slide"
+      className="carousel slide"
       data-ride="carousel"
-      role="row"      
+      role="row"
     >
-      <div class="carousel-inner">
-        <div class="carousel-item active" role="columnheader">
-          <img src={LogoCil} class="d-block w-100" alt="Logo Stowarzyszenia" role="presentation" title="Logo Stowarzyszenia CIL"/>
+      <div className="carousel-inner">
+        <div className="carousel-item active" role="columnheader">
+          <img src={LogoCil} className="d-block w-100" alt="Logo Stowarzyszenia" role="presentation" title="Logo Stowarzyszenia CIL" />
         </div>
       </div>
-    </div>   
+    </div>
   </Fragment>
 );
 

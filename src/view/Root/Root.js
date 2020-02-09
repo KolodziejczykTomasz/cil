@@ -1,27 +1,27 @@
-import React, { Component, Fragment } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.css";
-import Home from "../Home/Home";
-import Asos from "../Asos/Asos";
-import Call from "../Call/Call";
-import Cookies from "../Cookies/Cookies";
-import Statut from "../Statut/Statut";
-import About from "../About/About";
-import News from "../News/News";
-import Kontakt from "../Contact/Contact";
-import AppContext from "../../context";
+import React, { Component, Fragment } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.css';
+import Home from '../Home/Home';
+import Asos from '../Asos/Asos';
+import Call from '../Call/Call';
+import Cookies from '../Cookies/Cookies';
+import Statut from '../Statut/Statut';
+import About from '../About/About';
+import News from '../News/News';
+import Kontakt from '../Contact/Contact';
+import AppContext from '../../context';
 
 
 class Root extends Component {
   state = {
     fontSize: 12,
     backgroundColor: false,
-    color: "black"
+    color: 'black',
   };
 
   hendleClickSmallFont = () => {
     this.setState({
-      fontSize: this.state.fontSize + 1
+      fontSize: this.state.fontSize + 1,
     });
   };
 
@@ -29,7 +29,7 @@ class Root extends Component {
     // const { fontSize, backgroundColor, color } = this.state;
     const contextElements = { ...this.state };
     return (
-      <Fragment>       
+      <Fragment>
         <BrowserRouter>
           <AppContext.Provider value={contextElements}>
             <Switch>

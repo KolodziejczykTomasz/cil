@@ -1,60 +1,61 @@
-import React, { Fragment, Component } from "react";
+import React, { Fragment, Component } from 'react';
 
-import "bootstrap/dist/css/bootstrap.css";
-import Footer from "../../component/Footer/Footer";
-import NavBar from "../../component/NavBar/NavBar";
-import ScrollUpButton from "react-scroll-up-button";
+import 'bootstrap/dist/css/bootstrap.css';
+import ScrollUpButton from 'react-scroll-up-button';
+import Footer from '../../component/Footer/Footer';
+import NavBar from '../../component/NavBar/NavBar';
 
 class About extends Component {
   state = {
     button: false,
-    fontSizeChange: 14
+    fontSizeChange: 14,
   };
 
   handleResetFontSize = () => {
     this.setState({
-      fontSizeChange: 14
+      fontSizeChange: 14,
     });
   };
 
 
   handleClick = () => {
     this.setState({
-      button: !this.state.button
+      button: !this.state.button,
     });
   };
 
   handleGrowFontSize = () => {
     const number = 1;
     this.setState({
-      fontSizeChange: this.state.fontSizeChange + number
+      fontSizeChange: this.state.fontSizeChange + number,
     });
   };
 
   handleShrinkFontSize = () => {
     const number = 1;
     this.setState({
-      fontSizeChange: this.state.fontSizeChange - number
+      fontSizeChange: this.state.fontSizeChange - number,
     });
   };
+
   render() {
     const { fontSizeChange } = this.state;
     return (
       <Fragment>
-        <div className={this.state.button ? "buttonTrue" : "buttonFalse"}>
-          <NavBar clickColorFn={this.handleClick} growFontFn={this.handleGrowFontSize} shrinkFontFn={this.handleShrinkFontSize} resetFontFn={this.handleResetFontSize}/>
-          <div class="container" style={{ marginTop: 100, fontSize: fontSizeChange  }}>
-            <div class="row">
-              <div class="col-lg-12 text-center">
-                <h1 class="section-heading">O nas</h1>
+        <div className={this.state.button ? 'buttonTrue' : 'buttonFalse'}>
+          <NavBar clickColorFn={this.handleClick} growFontFn={this.handleGrowFontSize} shrinkFontFn={this.handleShrinkFontSize} resetFontFn={this.handleResetFontSize} />
+          <div className="container" style={{ marginTop: 100, fontSize: fontSizeChange }}>
+            <div className="row">
+              <div className="col-lg-12 text-center">
+                <h1 className="section-heading">O nas</h1>
                 <hr />
               </div>
             </div>
             <h2> Władze stowarzyszenia: </h2>
             <table
               role="table"
-              class="table table-bordered"
-              style={{ width: 700, margin: "50 auto 10 auto" }}
+              className="table table-bordered"
+              style={{ width: 700, margin: '50 auto 10 auto' }}
             >
               <thead>
                 <tr>

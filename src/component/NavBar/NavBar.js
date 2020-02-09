@@ -1,16 +1,17 @@
-import React, { Fragment } from "react";
-import { Navbar, Nav } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import React, { Fragment } from 'react';
+import { Navbar, Nav } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
-import { FaSearch } from "react-icons/fa";
-import { FaSearchMinus } from "react-icons/fa";
-import { FaSearchPlus } from "react-icons/fa";
-import { FaAdjust } from "react-icons/fa";
-import { FaAccessibleIcon } from "react-icons/fa";
+import {
+  FaSearch, FaSearchMinus, FaSearchPlus, FaAdjust, FaAccessibleIcon,
+} from 'react-icons/fa';
 
-import "bootstrap/dist/css/bootstrap.min.css";
 
-const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+const NavBar = ({
+  clickColorFn, growFontFn, shrinkFontFn, resetFontFn,
+}) => (
   <Fragment>
     <Navbar
       bg="light"
@@ -20,7 +21,7 @@ const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
       aria-label="Menu nawigacja"
     >
       <Navbar.Brand>
-        <span style={{ color: "#366EB4", fontWeight: 600 }}>
+        <span style={{ color: '#366EB4', fontWeight: 600 }}>
           cilprzestrzen.eu
         </span>
       </Navbar.Brand>
@@ -28,15 +29,15 @@ const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
       <Navbar.Collapse id="basic-navbar-nav" role="group">
         <Nav
           className="mr-auto justify-content-center"
-          style={{ width: "75vw" }}
+          style={{ width: '75vw' }}
         >
           <NavLink to="/" aria-current="page">
             <button
               aria-label="Home"
               role="menuitem"
               type="button"
-              class="btn btn-outline-success"
-              style={{ width: 130, marginRight: 10, color: "black" }}
+              className="btn btn-outline-success"
+              style={{ width: 130, marginRight: 10, color: 'black' }}
             >
               Home
             </button>
@@ -46,8 +47,8 @@ const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
               aria-label="Aktualności"
               role="menuitem"
               type="button"
-              class="btn btn-outline-warning"
-              style={{ width: 130, marginRight: 10, color: "black" }}
+              className="btn btn-outline-warning"
+              style={{ width: 130, marginRight: 10, color: 'black' }}
             >
               Aktualności
             </button>
@@ -57,8 +58,8 @@ const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
               aria-label="O nas"
               role="menuitem"
               type="button"
-              class="btn btn-outline-primary"
-              style={{ width: 130, marginRight: 10, color: "black" }}
+              className="btn btn-outline-primary"
+              style={{ width: 130, marginRight: 10, color: 'black' }}
             >
               O nas
             </button>
@@ -68,8 +69,8 @@ const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
               aria-label="Statut"
               role="menuitem"
               type="button"
-              class="btn btn-outline-success"
-              style={{ width: 130, marginRight: 10, color: "black" }}
+              className="btn btn-outline-success"
+              style={{ width: 130, marginRight: 10, color: 'black' }}
             >
               Statut
             </button>
@@ -79,8 +80,8 @@ const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
               aria-label="Kontakt"
               role="menuitem"
               type="button"
-              class="btn btn-outline-warning"
-              style={{ width: 130, color: "black" }}
+              className="btn btn-outline-warning"
+              style={{ width: 130, color: 'black' }}
             >
               Kontakt
             </button>
