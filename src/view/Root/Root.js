@@ -9,6 +9,9 @@ import Statut from '../Statut/Statut';
 import About from '../About/About';
 import News from '../News/News';
 import Kontakt from '../Contact/Contact';
+import Kurs from '../Projekty/Kurs/Kurs';
+import Rodzina from '../Projekty/Rodzina/Rodzina'
+import ChooseProject from '../Projekty/ChooseProject';
 import AppContext from '../../context';
 
 
@@ -41,6 +44,10 @@ class Root extends Component {
               <Route path="/news" component={News} />
               <Route path="/cookies" component={Cookies} />
               <Route path="/contact" component={Kontakt} />
+              <Route path="/kurs" component={Kurs} />
+              <Route path="/rodzina" component={Rodzina} />
+              <Route path="/projekty" component={ChooseProject} />
+
             </Switch>
           </AppContext.Provider>
         </BrowserRouter>

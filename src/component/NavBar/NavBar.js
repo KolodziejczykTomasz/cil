@@ -64,6 +64,17 @@ const NavBar = ({
               O nas
             </button>
           </NavLink>
+          <NavLink to="/projekty">
+            <button
+              aria-label="Projekty"
+              role="menuitem"
+              type="button"
+              className="btn btn-outline-primary"
+              style={{ width: 130, marginRight: 10, color: 'black' }}
+            >
+              Projekty
+            </button>
+          </NavLink>
           <NavLink to="/statut">
             <button
               aria-label="Statut"

@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.img_rodzina {
+  display: block;
+  box-shadow: 5px 5px 5px 3px rgba(83, 83, 83, 0.63);
+  width: 40vw;
+  margin: 50px auto;
+  
+  
+}
+
+.description {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.wrapper {
+  display: block;
+  width: 80vw;
+  margin: 0 auto; 
+}
