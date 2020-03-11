@@ -62,6 +62,48 @@ const Project = () => (
           </div>
         </div>
       </div>
+      <div className="row justify-content-around" role="row">
+        <div className="col-lg-4 col-sm-12">
+          <div className="timeline-image">
+            <img
+              className="img-circle img-responsive img-centered img_portfolio"
+              src={Logo}
+              alt="Logo projektu"
+              role="presentation"
+            />
+          </div>
+          <div className="timeline-panel">
+            <div className="timeline-heading" role="columnheader">
+              <h3 className="subheading">SILNE I AKTYWNE RODZINY</h3>
+            </div>
+            <Link to="/silneaktywne">
+              <p className="text-muted" style={{ color: '#595959' }}>
+                Opis
+              </p>
+            </Link>
+          </div>
+        </div>
+        <div className="col-lg-4 col-sm-12">
+          <div className="timeline-image">
+            <img
+              className="img-circle img-responsive img-centered img_portfolio"
+              src={Logo}
+              alt="Logo projektu"
+              role="presentation"
+            />
+          </div>
+          <div className="timeline-panel">
+            <div className="timeline-heading" role="columnheader">
+              <h3 className="subheading">RODZINA-NASZ DOM</h3>
+            </div>
+            <Link to="/naszdom">
+              <p className="text-muted" style={{ color: '#595959' }}>
+                Opis
+              </p>
+            </Link>
+          </div>
+        </div>
+      </div>
       <hr />
     </div>
   </Fragment>

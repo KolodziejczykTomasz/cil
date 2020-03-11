@@ -10,10 +10,12 @@ import About from '../About/About';
 import News from '../News/News';
 import Kontakt from '../Contact/Contact';
 import Kurs from '../Projekty/Kurs/Kurs';
-import Rodzina from '../Projekty/Rodzina/Rodzina'
+import NaszDom from '../Projekty/NaszDom/NaszDom';
+import Rodzina from '../Projekty/Rodzina/Rodzina';
 import ChooseProject from '../Projekty/ChooseProject';
-import AppContext from '../../context';
+import SilneAktywne from '../Projekty/SilneAktywne/SilneAktywne';
 
+import AppContext from '../../context';
 
 class Root extends Component {
   state = {
@@ -44,10 +46,11 @@ class Root extends Component {
               <Route path="/news" component={News} />
               <Route path="/cookies" component={Cookies} />
               <Route path="/contact" component={Kontakt} />
+              <Route path="/projekty" component={ChooseProject} />
               <Route path="/kurs" component={Kurs} />
               <Route path="/rodzina" component={Rodzina} />
-              <Route path="/projekty" component={ChooseProject} />
-
+              <Route path="/naszdom" component={NaszDom} />
+              <Route path="/silneaktywne" component={SilneAktywne} />
             </Switch>
           </AppContext.Provider>
         </BrowserRouter>
