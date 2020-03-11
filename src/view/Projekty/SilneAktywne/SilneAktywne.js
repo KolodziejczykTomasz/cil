@@ -11,10 +11,13 @@ import Załącznik4 from '../../../assets/Dok/projekty/SilneAktywne/zal4.doc';
 import Załącznik5 from '../../../assets/Dok/projekty/SilneAktywne/zal5.doc';
 import Załącznik6 from '../../../assets/Dok/projekty/SilneAktywne/zal6.docx';
 
+import { FaPrint } from 'react-icons/fa';
+import ReactToPrint from 'react-to-print';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import './SilneAktywne.css';
 
-class SilneAktywne extends Component {
+class ComponentToPrintSilneAktywne extends Component {
   state = {
     button: false,
     fontSizeChange: 14,
@@ -57,7 +60,7 @@ class SilneAktywne extends Component {
             shrinkFontFn={this.handleShrinkFontSize}
             resetFontFn={this.handleResetFontSize}
           />
-          <div className="container" style={{ marginTop: 100, fontSize: fontSizeChange }}>
+          <div className="container" style={{ marginTop: 20, fontSize: fontSizeChange }}>
             <div className="row" role="row">
               <div className="col-lg-12 text-center" role="columnheader">
                 <h1 className="section-heading">SILNE I AKTYWNE RODZINY</h1>
@@ -69,7 +72,7 @@ class SilneAktywne extends Component {
                 className="img-responsive img_kurs"
                 src={Logo}
                 alt="Plakat projektu kurs na rodzinę"
-                title="Plakat projektu kurs na rodzinę"
+                title="Plakat projektu silne i aktywne rodziny"
               />
               <p className="description">
                 <strong>„SILNE I AKTYWNE RODZINY”</strong>
@@ -149,4 +152,28 @@ class SilneAktywne extends Component {
   }
 }
 
+class SilneAktywne extends Component {
+  render() {
+    return (
+      <p className="print">
+        <ReactToPrint
+          trigger={() => (
+            <button
+              aria-label="Print"
+              role="menuitem"
+              type="button"
+              title="Drukuj"
+              className="btn btn-link"
+            >
+              <FaPrint />
+            </button>
+          )}
+          content={() => this.componentRef}
+        />
+        <ComponentToPrintSilneAktywne ref={el => (this.componentRef = el)} />
+      </p>
+    );
+  }
+}
 export default SilneAktywne;
+

@@ -3,6 +3,7 @@ import ScrollUpButton from 'react-scroll-up-button';
 import Logo from '../../../assets/Dok/projekty/NaszDom/plakat.jpg';
 import Footer from '../../../component/Footer/Footer';
 import NavBar from '../../../component/NavBar/NavBar';
+import ReactToPrint from 'react-to-print';
 import Regulamin from '../../../assets/Dok/projekty/NaszDom/regulamin.doc';
 import Załącznik1 from '../../../assets/Dok/projekty/NaszDom/zal1.docx';
 import Załącznik2 from '../../../assets/Dok/projekty/NaszDom/zal2.doc';
@@ -11,10 +12,12 @@ import Załącznik4 from '../../../assets/Dok/projekty/NaszDom/zal4.doc';
 import Załącznik5 from '../../../assets/Dok/projekty/NaszDom/zal5.doc';
 import Załącznik6 from '../../../assets/Dok/projekty/NaszDom/zal6.docx';
 
+import { FaPrint } from 'react-icons/fa';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import './NaszDom.css';
 
-class NaszDom extends Component {
+class ComponentToPrint extends Component {
   state = {
     button: false,
     fontSizeChange: 14,
@@ -57,7 +60,7 @@ class NaszDom extends Component {
             shrinkFontFn={this.handleShrinkFontSize}
             resetFontFn={this.handleResetFontSize}
           />
-          <div className="container" style={{ marginTop: 100, fontSize: fontSizeChange }}>
+          <div className="container" style={{ marginTop: 20, fontSize: fontSizeChange }}>
             <div className="row" role="row">
               <div className="col-lg-12 text-center" role="columnheader">
                 <h1 className="section-heading">RODZINA-NASZ DOM</h1>
@@ -69,7 +72,7 @@ class NaszDom extends Component {
                 className="img-responsive img_kurs"
                 src={Logo}
                 alt="Plakat projektu kurs na rodzinę"
-                title="Plakat projektu kurs na rodzinę"
+                title="Plakat projektu rodzina-nasz dom"
               />
               <p className="description">
                 <strong>„RODZINA-NASZ DOM”</strong>
@@ -151,4 +154,21 @@ class NaszDom extends Component {
   }
 }
 
+class NaszDom extends Component {
+  render() {
+    return (
+      <p className="print">
+        <ReactToPrint
+          trigger={() => (
+            <button aria-label="Print" role="menuitem" type="button" title="Drukuj" className="btn btn-link">
+              <FaPrint /> 
+            </button>
+          )}
+          content={() => this.componentRef}
+        />
+        <ComponentToPrint ref={el => (this.componentRef = el)} />
+      </p>
+    );
+  }
+}
 export default NaszDom;

@@ -12,10 +12,13 @@ import Załącznik5 from '../../../assets/Dok/projekty/Kurs/Zał-5-Oświadczenie
 import Załącznik6 from '../../../assets/Dok/projekty/Kurs/zal-6-weryfikacja-spełnienia-kryterium.docx';
 import Załącznik7 from '../../../assets/Dok/projekty/Kurs/Zał-7 Kwestionariusz rodziny objetej wsparciem.docx';
 
+import { FaPrint } from 'react-icons/fa';
+import ReactToPrint from 'react-to-print';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import './Kurs.css';
 
-class Kurs extends Component {
+class ComponentToPrintKurs extends Component {
   state = {
     button: false,
     fontSizeChange: 14,
@@ -58,7 +61,7 @@ class Kurs extends Component {
             shrinkFontFn={this.handleShrinkFontSize}
             resetFontFn={this.handleResetFontSize}
           />
-          <div className="container" style={{ marginTop: 100, fontSize: fontSizeChange }}>
+          <div className="container" style={{ marginTop: 20, fontSize: fontSizeChange }}>
             <div className="row" role="row">
               <div className="col-lg-12 text-center" role="columnheader">
                 <h1 className="section-heading">KURS NA RODZINĘ W GMINIE KIWITY</h1>
@@ -72,24 +75,49 @@ class Kurs extends Component {
                 alt="Plakat projektu kurs na rodzinę"
                 title="Plakat projektu kurs na rodzinę"
               />
-              <p className="description"><strong>„KURS NA RODZINĘ W GMINIE KIWITY”</strong></p>
-              <p className="description"><strong>Nr wniosku: RPWM.11.02.03-28-0040/19</strong></p>
-              <p className="description"><strong>
-                Celem projektu jest zwiększenie dostępu do usług społecznych ukierunkowanych na
-                podniesienie aktywności społecznej i integracja ze środowiskiem lokalnym 45 (35 K i
-                10 M) mieszkańców gminy Kiwity, zagrożonych ryzykiem ubóstwa i /lub wykluczeniem
-                społecznym poprzez objęcie ich kompleksowym wsparciem w okresie II 2020 – IV 2021.</strong>
+              <p className="description">
+                <strong>„KURS NA RODZINĘ W GMINIE KIWITY”</strong>
               </p>
-              <p className="description">W okresie od 01 lutego 2020 r. do 30 kwietnia 2021 r. uczestnicy projektu będą mogli skorzystać z poradnictwa specjalistycznego  (psycholog, praca socjalna), konsultanta rodzinny, warsztatów poprawiających funkcjonowanie rodziny (warsztaty właściwych relacji rodzinnych, warsztaty wychowania dziecka w rodzinie wielodzietnej, warsztaty umiejętności wychowawczych), organizacji czasu wolnego (praca animatorów, warsztaty animacyjne), organizacji inicjatyw środowiskowych.</p>
-              <p className="description">Grupą docelowa projektu będzie 11 rodzin/45 osób (35K i 10M) z terenu gminy Kiwity, zagrożonych ryzykiem ubóstwa i/lub wykluczenia społecznego: osób korzystających ze świadczeń pomocy społecznej lub kwalifikujących się do objęcia wsparciem pomocy społecznej, tj. spełniających co najmniej jedną z przesłanek wykluczenia społecznego.</p>
-              <p className="description">Rekrutacja potrwa do 29 lutego 2020 r. w siedzicie Centrum Inicjatyw Lokalnych „Przestrzeń”.  Zasady rekrutacji określa regulamin rekrutacji dostępny w siedzibie CIL „Przestrzeń” oraz na stronie internetowej www.cilprzestrzen.eu.</p>
-              <p className="description">Osoby zainteresowane do udziału w projekcie mogą złożyć dokumenty rekrutacyjne osobiście lub za pośrednictwem innych osób w siedzibie CIL „Przestrzeń”.</p>
-              
-             
+              <p className="description">
+                <strong>Nr wniosku: RPWM.11.02.03-28-0040/19</strong>
+              </p>
+              <p className="description">
+                <strong>
+                  Celem projektu jest zwiększenie dostępu do usług społecznych ukierunkowanych na
+                  podniesienie aktywności społecznej i integracja ze środowiskiem lokalnym 45 (35 K
+                  i 10 M) mieszkańców gminy Kiwity, zagrożonych ryzykiem ubóstwa i /lub wykluczeniem
+                  społecznym poprzez objęcie ich kompleksowym wsparciem w okresie II 2020 – IV 2021.
+                </strong>
+              </p>
+              <p className="description">
+                W okresie od 01 lutego 2020 r. do 30 kwietnia 2021 r. uczestnicy projektu będą mogli
+                skorzystać z poradnictwa specjalistycznego (psycholog, praca socjalna), konsultanta
+                rodzinny, warsztatów poprawiających funkcjonowanie rodziny (warsztaty właściwych
+                relacji rodzinnych, warsztaty wychowania dziecka w rodzinie wielodzietnej, warsztaty
+                umiejętności wychowawczych), organizacji czasu wolnego (praca animatorów, warsztaty
+                animacyjne), organizacji inicjatyw środowiskowych.
+              </p>
+              <p className="description">
+                Grupą docelowa projektu będzie 11 rodzin/45 osób (35K i 10M) z terenu gminy Kiwity,
+                zagrożonych ryzykiem ubóstwa i/lub wykluczenia społecznego: osób korzystających ze
+                świadczeń pomocy społecznej lub kwalifikujących się do objęcia wsparciem pomocy
+                społecznej, tj. spełniających co najmniej jedną z przesłanek wykluczenia
+                społecznego.
+              </p>
+              <p className="description">
+                Rekrutacja potrwa do 29 lutego 2020 r. w siedzicie Centrum Inicjatyw Lokalnych
+                „Przestrzeń”. Zasady rekrutacji określa regulamin rekrutacji dostępny w siedzibie
+                CIL „Przestrzeń” oraz na stronie internetowej www.cilprzestrzen.eu.
+              </p>
+              <p className="description">
+                Osoby zainteresowane do udziału w projekcie mogą złożyć dokumenty rekrutacyjne
+                osobiście lub za pośrednictwem innych osób w siedzibie CIL „Przestrzeń”.
+              </p>
 
-              <p className="description"><strong>Pobierz pliki:</strong>
-              
-                <ul style={{ marginLeft: 30}}>
+              <p className="description">
+                <strong>Pobierz pliki:</strong>
+
+                <ul style={{ marginLeft: 30 }}>
                   <li>
                     <a href={Regulamin}>Regulamin rekrutacji</a>
                   </li>
@@ -126,4 +154,27 @@ class Kurs extends Component {
   }
 }
 
+class Kurs extends Component {
+  render() {
+    return (
+      <p className="print">
+        <ReactToPrint
+          trigger={() => (
+            <button
+              aria-label="Print"
+              role="menuitem"
+              type="button"
+              title="Drukuj"
+              className="btn btn-link"
+            >
+              <FaPrint />
+            </button>
+          )}
+          content={() => this.componentRef}
+        />
+        <ComponentToPrintKurs ref={el => (this.componentRef = el)} />
+      </p>
+    );
+  }
+}
 export default Kurs;
