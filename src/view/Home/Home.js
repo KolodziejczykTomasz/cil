@@ -17,7 +17,7 @@ class Home extends Component {
 
   handleResetFontSize = () => {
     this.setState({
-      fontSizeChange: 14,
+      fontSizeChange: 14,  
     });
   };
 

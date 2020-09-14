@@ -1,129 +1,134 @@
 import React, { Fragment } from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import { Navbar } from 'react-bootstrap';
+import { FaSearch, FaSearchMinus, FaSearchPlus, FaAdjust } from 'react-icons/fa';
+import './NavBar.css';
 
-import {
-  FaSearch, FaSearchMinus, FaSearchPlus, FaAdjust, FaAccessibleIcon,
-} from 'react-icons/fa';
-
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-const NavBar = ({
-  clickColorFn, growFontFn, shrinkFontFn, resetFontFn,
-}) => (
+const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
   <Fragment>
-    <Navbar
-      bg="light"
-      expand="lg"
-      fixed="top"
-      role="menu"
-      aria-label="Menu nawigacja"
-    >
-      <Navbar.Brand>
-        <span style={{ color: '#366EB4', fontWeight: 600 }}>
-          cilprzestrzen.eu
-        </span>
-      </Navbar.Brand>
-      <Navbar.Toggle />
-      <Navbar.Collapse id="basic-navbar-nav" role="group">
-        <Nav
-          className="mr-auto justify-content-center"
-          style={{ width: '75vw' }}
+    <div aria-label="Menu accesible" id="accesibleWrapper">
+      <FaSearch
+        id="accesibleIcon"
+        aria-label="Przywrócenie początkowej wielkości czcionki na stronie po kliknięciu"
+        onClick={resetFontFn}
+      />
+      <FaSearchMinus
+        id="accesibleIcon"
+        aria-label="Zmniejszenie czcionki na stronie po kliknięciu"
+        onClick={shrinkFontFn}
+      />
+      <FaSearchPlus
+        id="accesibleIcon"
+        aria-label="Powiększenie czcionki na stronie po kliknięciu"
+        onClick={growFontFn}
+      />
+      <FaAdjust
+        id="accesibleIcon"
+        aria-label="Zmiana kontrastu strony po kliknięciu"
+        onClick={clickColorFn}
+      />
+    </div>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+      <div class="navbar-toggler-right">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <NavLink to="/" aria-current="page">
-            <button
-              aria-label="Home"
-              role="menuitem"
-              type="button"
-              className="btn btn-outline-success"
-              style={{ width: 130, marginRight: 10, color: 'black' }}
-            >
-              Home
-            </button>
-          </NavLink>
-          <NavLink to="/news">
-            <button
-              aria-label="Aktualności"
-              role="menuitem"
-              type="button"
-              className="btn btn-outline-warning"
-              style={{ width: 130, marginRight: 10, color: 'black' }}
-            >
-              Aktualności
-            </button>
-          </NavLink>
-          <NavLink to="/about">
-            <button
-              aria-label="O nas"
-              role="menuitem"
-              type="button"
-              className="btn btn-outline-primary"
-              style={{ width: 130, marginRight: 10, color: 'black' }}
-            >
-              O nas
-            </button>
-          </NavLink>
-          <NavLink to="/projekty">
-            <button
-              aria-label="Projekty"
-              role="menuitem"
-              type="button"
-              className="btn btn-outline-primary"
-              style={{ width: 130, marginRight: 10, color: 'black' }}
-            >
-              Projekty
-            </button>
-          </NavLink>
-          <NavLink to="/statut">
-            <button
-              aria-label="Statut"
-              role="menuitem"
-              type="button"
-              className="btn btn-outline-success"
-              style={{ width: 130, marginRight: 10, color: 'black' }}
-            >
-              Statut
-            </button>
-          </NavLink>
-          <NavLink to="/contact">
-            <button
-              aria-label="Kontakt"
-              role="menuitem"
-              type="button"
-              className="btn btn-outline-warning"
-              style={{ width: 130, color: 'black' }}
-            >
-              Kontakt
-            </button>
-          </NavLink>
-        </Nav>
-      </Navbar.Collapse>
-      <div aria-label="Menu accesible">
-        <FaAccessibleIcon
-          aria-label="Zmiana wielkości czcionki oraz kontrastu strony"
-          style={{ marginRight: 15 }}
-        />
-        <FaSearch
-          aria-label="Przywrócenie początkowej wielkości czcionki na stronie po kliknięciu"
-          style={{ marginRight: 15 }}
-          onClick={resetFontFn}
-        />
-        <FaSearchMinus
-          aria-label="Zmniejszenie czcionki na stronie po kliknięciu"
-          onClick={shrinkFontFn}
-        />
-        <FaSearchPlus
-          aria-label="Powiększenie czcionki na stronie po kliknięciu"
-          style={{ marginLeft: 15, marginRight: 15 }}
-          onClick={growFontFn}
-        />
-        <FaAdjust
-          aria-label="Zmiana kontrastu strony po kliknięciu"
-          onClick={clickColorFn}
-        />
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
-    </Navbar>
+      <Navbar.Brand>
+        <span style={{ color: '#366EB4', fontWeight: 600, marginLeft: '10px' }}>cilprzestrzen.eu</span>
+      </Navbar.Brand>
+      <nav class="collapse navbar-collapse flex-column " id="navbar">
+        <ul class="navbar-nav  w-100 justify-content-center px-3">
+          <li class="nav-item active">
+            <NavLink to="/" aria-current="page">
+              <button
+                aria-label="Home"
+                role="menuitem"
+                type="button"
+                className="btn btn-outline-success"
+                style={{ marginRight: 10, color: 'black' }}
+              >
+                Home
+              </button>
+            </NavLink>
+          </li>
+          <li class="nav-item dropdown">
+            <NavLink to="/news">
+              <button
+                aria-label="Aktualności"
+                role="menuitem"
+                type="button"
+                className="btn btn-outline-warning"
+                style={{ marginRight: 10, color: 'black' }}
+              >
+                Aktualności
+              </button>
+            </NavLink>
+          </li>
+          <li class="nav-item dropdown">
+            <NavLink to="/about">
+              <button
+                aria-label="O nas"
+                role="menuitem"
+                type="button"
+                className="btn btn-outline-primary"
+                style={{ marginRight: 10, color: 'black' }}
+              >
+                O nas
+              </button>
+            </NavLink>
+          </li>
+          <li class="nav-item dropdown">
+            <NavLink to="/projekty">
+              <button
+                aria-label="Projekty"
+                role="menuitem"
+                type="button"
+                className="btn btn-outline-primary"
+                style={{ marginRight: 10, color: 'black' }}
+              >
+                Projekty
+              </button>
+            </NavLink>
+          </li>
+          <li class="nav-item dropdown">
+            <NavLink to="/statut">
+              <button
+                aria-label="Statut"
+                role="menuitem"
+                type="button"
+                className="btn btn-outline-success"
+                style={{ marginRight: 10, color: 'black' }}
+              >
+                Statut
+              </button>
+            </NavLink>
+          </li>
+          <li class="nav-item dropdown">
+            <NavLink to="/contact">
+              <button
+                aria-label="Kontakt"
+                role="menuitem"
+                type="button"
+                className="btn btn-outline-warning"
+                style={{ color: 'black' }}
+              >
+                Kontakt
+              </button>
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </nav>
   </Fragment>
 );
 
