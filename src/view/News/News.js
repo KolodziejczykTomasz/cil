@@ -1,11 +1,11 @@
 import React, { Fragment, Component } from 'react';
-
 import ScrollUpButton from 'react-scroll-up-button';
 import LogoHeaderPost from '../../assets/Images/logo.jpg';
 import Footer from '../../component/Footer/Footer';
 import NavBar from '../../component/NavBar/NavBar';
 
 import 'bootstrap/dist/css/bootstrap.css';
+
 
 class News extends Component {
   state = {
@@ -64,10 +64,10 @@ class News extends Component {
               </div>
             </div>
 
-            <div className={this.state.button ? 'buttonTrue card' : 'buttonFalse card'}>
+            <div id='photo' className={this.state.button ? 'buttonTrue card' : 'buttonFalse card'}>
               <h2 className="card-title text-center">Domowe leki z polnej apteki</h2>
               <img
-                className="img-responsive img-centered"
+                className="img-responsive img-centered "id='photo'
                 style={{ marginTop: 50 }}
                 src={LogoHeaderPost}
                 alt="Domowe leki z polnej apteki"
@@ -118,10 +118,10 @@ class News extends Component {
               </div>
             </div>
             <hr />
-            <div className={this.state.button ? 'buttonTrue card' : 'buttonFalse card'}>
+            <div id='photo'className={this.state.button ? 'buttonTrue card' : 'buttonFalse card'}>
               <h2 className="card-title text-center">Animacje szansą lokalnego rozwoju</h2>
               <img
-                className="img-responsive img-centered"
+                className="img-responsive img-centered "
                 style={{ marginTop: 50 }}
                 src={LogoHeaderPost}
                 alt="Animacje szansą lokalnego rozwoju"
@@ -172,7 +172,7 @@ class News extends Component {
               </div>
             </div>
             <hr />
-            <div className={this.state.button ? 'buttonTrue card' : 'buttonFalse card'}>
+            <div id='photo' className={this.state.button ? 'buttonTrue card' : 'buttonFalse card'}>
               <h2 className="card-title text-center">
                 Innowacje społeczne wzmacniające kapitał społeczny wsi tematycznej Blanki
               </h2>

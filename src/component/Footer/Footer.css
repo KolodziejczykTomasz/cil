@@ -3,3 +3,11 @@
   margin-top: 50px;
   padding-bottom: 10px;
 }
+
+
+@media (max-width: 767px) {
+ .row_footer_item {
+    text-align: center;
+    margin-top: 10px;
+  }
+}

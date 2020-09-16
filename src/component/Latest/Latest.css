@@ -6,3 +6,10 @@ margin: 40px auto 0 auto;
     width: 80%;
     box-shadow: 15px 15px 15px rgba(83, 83, 83, 0.63);
 }
+
+@media (max-width: 767px) {
+ .img_Latest {
+    width: 70%;
+    margin-bottom: 40px;
+  }
+}

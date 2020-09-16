@@ -6,13 +6,21 @@ import Portfolio from '../../component/Portfolio/Portfolio';
 import NavBar from '../../component/NavBar/NavBar';
 import Latest from '../../component/Latest/Latest';
 import Logotyp from '../../component/Logotyp/Logotyp';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './Home.css';
+
 
 class Home extends Component {
   state = {
     button: false,
     fontSizeChange: 14,
+  };
+
+  componentDidMount(){
+    AOS.init({
+      duration: 1000
+    })
   };
 
   handleResetFontSize = () => {
@@ -43,6 +51,8 @@ class Home extends Component {
 
   render() {
     const { fontSizeChange } = this.state;
+   
+
     return (
       <Fragment>
         <div
@@ -56,10 +66,14 @@ class Home extends Component {
             resetFontFn={this.handleResetFontSize}
           />
           <Slide />
-          <Latest clickColorFn={this.handleClick} />
-          <Portfolio clickColorFn={this.handleClick} />
-          <Logotyp clickColorFn={this.handleClick} />
-          <Footer clickColorFn={this.handleClick} />
+          <div data-aos="fade-up"><Latest clickColorFn={this.handleClick} /></div>
+          <div data-aos="fade-up"><Portfolio clickColorFn={this.handleClick} /></div>
+          <div data-aos="fade-up"><Logotyp clickColorFn={this.handleClick} /></div>
+          <div data-aos="fade-up"><Footer clickColorFn={this.handleClick} /></div>
+          
+          
+          
+          
           <ScrollUpButton />
         </div>
       </Fragment>
