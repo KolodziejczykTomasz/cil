@@ -1,5 +1,6 @@
-.wrapper {
-  width: 100vw;
+#wrapperHome {
+  width: 97%; 
+  margin: 0 auto;
 }
 
 .buttonTrue {
@@ -8,4 +9,10 @@
 
 .buttonFalse {
   background-color: white;
+}
+
+
+#cookieSpan {
+  width: 100%;
+  padding: 0 20px;
 }

@@ -9,10 +9,10 @@ import './Project.css';
 const Project = () => (
   <Fragment>
     <div
-      style={{ textAlign: 'center' }}
+      style={{ textAlign: 'center', width: '100%'}}
       className="container container_portfolio"
       role="row"
-      aria-label="Portfolio"
+      aria-label="Portfolio"      
     >
       <div className="row" role="row">
         <div className="col-lg-12 text-center" role="columnheader">

@@ -9,7 +9,7 @@ import './Latest.css';
 
 const Latest = () => (
   <Fragment>
-    <div className="container container_Latest" role="row" aria-label="Ostatnie projekty">
+    <div className="container container_Latest" aria-label="Ostatnie projekty" style={{width: '100%'}}>
       <div className="row" role="row">
         <div className="col-lg-12 text-center" role="columnheader">
           <h1 className="section-heading">Zapraszamy do udziału</h1>

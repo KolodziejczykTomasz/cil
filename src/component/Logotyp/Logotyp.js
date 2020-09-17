@@ -10,7 +10,7 @@ import './Logotyp.css';
 
 const Logotyp = () => (
   <Fragment>
-    <div className="container container_logotyp" role="row" aria-label="Logotypy">
+    <div className="container container_logotyp" role="row" aria-label="Logotypy" style={{width: '100%'}}>
       <div className="row" role="row">
         <div className="col-md-3 col-sm-6" role="columnheader">
           <img

@@ -9,7 +9,7 @@ import './Portfolio.css';
 const Portfolio = () => (
   <Fragment>
     <div
-      style={{ textAlign: 'center' }}
+      style={{ textAlign: 'center', width: '100%' }}
       className="container container_portfolio"
       role="row"
       aria-label="Portfolio"

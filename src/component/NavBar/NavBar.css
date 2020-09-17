@@ -1,5 +1,6 @@
 #accesibleWrapper {
   text-align: right;
+  width: 100%;
 }
 
 #accesibleIcon {
@@ -8,8 +9,10 @@
 }
 
 .navbar {
-  padding: 0rem;
+  padding: 1rem 0rem;
   margin-bottom: 2rem;
+  width: 100%;
+  background-color:white;  
 }
 
 .dropdown .dropdown-menu {
