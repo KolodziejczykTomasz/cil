@@ -5,6 +5,7 @@ import Home from '../Home/Home';
 import Asos from '../Asos/Asos';
 import Call from '../Call/Call';
 import Cookies from '../Cookies/Cookies';
+import Wcag from '../Wcag/Wcag';
 import Statut from '../Statut/Statut';
 import About from '../About/About';
 import News from '../News/News';
@@ -45,6 +46,7 @@ class Root extends Component {
               <Route path="/about" component={About} />
               <Route path="/news" component={News} />
               <Route path="/cookies" component={Cookies} />
+              <Route path="/wcag" component={Wcag} />
               <Route path="/contact" component={Kontakt} />
               <Route path="/projekty" component={ChooseProject} />
               <Route path="/kurs" component={Kurs} />

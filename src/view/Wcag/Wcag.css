@@ -1,0 +1,19 @@
+.wcagHeader{
+    display: block;
+    margin: 50px 0 30px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.wcagDescritpion {
+    display: block;
+}
+
+.wcagh2{
+    display: block;
+    margin: 50px 0 30px 0;
+}
+
+.wcagList {
+    margin-left: 20px;
+}

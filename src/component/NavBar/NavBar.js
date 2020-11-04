@@ -7,26 +7,38 @@ import './NavBar.css';
 const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
   <Fragment>
     <div aria-label="Menu accesible" id="accesibleWrapper">
-      <FaSearch
-        id="accesibleIcon"
-        aria-label="Przywrócenie początkowej wielkości czcionki na stronie po kliknięciu"
-        onClick={resetFontFn}
-      />
-      <FaSearchMinus
-        id="accesibleIcon"
-        aria-label="Zmniejszenie czcionki na stronie po kliknięciu"
-        onClick={shrinkFontFn}
-      />
-      <FaSearchPlus
-        id="accesibleIcon"
-        aria-label="Powiększenie czcionki na stronie po kliknięciu"
-        onClick={growFontFn}
-      />
-      <FaAdjust
-        id="accesibleIcon"
-        aria-label="Zmiana kontrastu strony po kliknięciu"
-        onClick={clickColorFn}
-      />
+      <button type="submit" id="accessibleIconButton">
+        <FaSearch
+          id="accesibleIcon"
+          aria-label="Przywrócenie początkowej wielkości czcionki na stronie po kliknięciu"
+          onClick={resetFontFn}
+          aria-hidden="true"
+        />
+      </button>
+      <button type="submit" id="accessibleIconButton">
+        <FaSearchMinus
+          id="accesibleIcon"
+          aria-label="Zmniejszenie czcionki na stronie po kliknięciu"
+          onClick={shrinkFontFn}
+          aria-hidden="true"
+        />
+      </button>
+      <button type="submit" id="accessibleIconButton">
+        <FaSearchPlus
+          id="accesibleIcon"
+          aria-label="Powiększenie czcionki na stronie po kliknięciu"
+          onClick={growFontFn}
+          aria-hidden="true"
+        />
+      </button>
+      <button type="submit" id="accessibleIconButton">
+        <FaAdjust
+          id="accesibleIcon"
+          aria-label="Zmiana kontrastu strony po kliknięciu"
+          onClick={clickColorFn}
+          aria-hidden="true"
+        />
+      </button>
     </div>
 
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
@@ -44,7 +56,9 @@ const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
         </button>
       </div>
       <Navbar.Brand>
-        <span style={{ color: '#366EB4', fontWeight: 600, marginLeft: '10px' }}>cilprzestrzen.eu</span>
+        <span style={{ color: '#366EB4', fontWeight: 600, marginLeft: '10px' }}>
+          cilprzestrzen.eu
+        </span>
       </Navbar.Brand>
       <nav class="collapse navbar-collapse flex-column " id="navbar">
         <ul class="navbar-nav  w-100 justify-content-center px-3">

@@ -12,7 +12,7 @@
   padding: 1rem 0rem;
   margin-bottom: 2rem;
   width: 100%;
-  background-color:white;  
+  background-color: white;
 }
 
 .dropdown .dropdown-menu {
@@ -29,4 +29,28 @@
 
 .btn {
   width: 106px;
+}
+
+#accessibleIconButton {
+  margin-right: 5px;
+  background-color: #f8f9fa;
+  border: 2px solid transparent;
+}
+#accessibleIconButton:hover {
+  color: #1680bc;
+}
+
+#accessibleIconButton:focus,
+#accessibleIconButton:active {
+  outline: none !important;
+  border-color: red;  
+  border-style: dotted;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;  
+  border-color: red;  
+  border-style: dotted;
+  border-width: 2px;
 }
