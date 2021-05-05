@@ -15,6 +15,7 @@ import NaszDom from '../Projekty/NaszDom/NaszDom';
 import Rodzina from '../Projekty/Rodzina/Rodzina';
 import ChooseProject from '../Projekty/ChooseProject';
 import SilneAktywne from '../Projekty/SilneAktywne/SilneAktywne';
+import Partners from '../partners/partners';
 
 import AppContext from '../../context';
 
@@ -53,6 +54,7 @@ class Root extends Component {
               <Route path="/rodzina" component={Rodzina} />
               <Route path="/naszdom" component={NaszDom} />
               <Route path="/silneaktywne" component={SilneAktywne} />
+              <Route path="/partners" component={Partners} />
             </Switch>
           </AppContext.Provider>
         </BrowserRouter>

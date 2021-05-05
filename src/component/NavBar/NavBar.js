@@ -128,6 +128,19 @@ const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
             </NavLink>
           </li>
           <li class="nav-item dropdown">
+            <NavLink to="/partners">
+              <button
+                aria-label="Partnerzy"
+                role="menuitem"
+                type="button"
+                className="btn btn-outline-success"
+                style={{ marginRight: 10, color: 'black' }}
+              >
+                Partnerzy
+              </button>
+            </NavLink>
+          </li>
+          <li class="nav-item dropdown">
             <NavLink to="/contact">
               <button
                 aria-label="Kontakt"
