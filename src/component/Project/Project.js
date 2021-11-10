@@ -9,10 +9,10 @@ import './Project.css';
 const Project = () => (
   <Fragment>
     <div
-      style={{ textAlign: 'center', width: '100%'}}
+      style={{ textAlign: 'center', width: '100%' }}
       className="container container_portfolio"
       role="row"
-      aria-label="Portfolio"      
+      aria-label="Portfolio"
     >
       <div className="row" role="row">
         <div className="col-lg-12 text-center" role="columnheader">
@@ -97,6 +97,26 @@ const Project = () => (
               <h3 className="subheading">RODZINA-NASZ DOM</h3>
             </div>
             <Link to="/naszdom">
+              <p className="text-muted" style={{ color: '#595959' }}>
+                Opis
+              </p>
+            </Link>
+          </div>
+        </div>
+        <div className="col-lg-4 col-sm-12">
+          <div className="timeline-image">
+            <img
+              className="img-circle img-responsive img-centered img_portfolio"
+              src={Logo}
+              alt="Logo projektu"
+              role="presentation"
+            />
+          </div>
+          <div className="timeline-panel">
+            <div className="timeline-heading" role="columnheader">
+              <h3 className="subheading">Projekt „Stoczek -nasza mała ojczyzna”</h3>
+            </div>
+            <Link to="/stoczek">
               <p className="text-muted" style={{ color: '#595959' }}>
                 Opis
               </p>
