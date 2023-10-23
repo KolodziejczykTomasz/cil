@@ -17,3 +17,12 @@
     margin-top: 10px;
   }
 }
+
+a {
+  color: #000
+}
+
+
+a:hover {
+  color: #000
+}

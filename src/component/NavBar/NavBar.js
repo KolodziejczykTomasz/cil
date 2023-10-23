@@ -41,7 +41,7 @@ const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
       </button>
     </div>
 
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-md sticky-top">
       <div class="navbar-toggler-right">
         <button
           class="navbar-toggler"

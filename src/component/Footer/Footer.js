@@ -18,10 +18,10 @@ const Footer = () => (
         </Link>
       </div>
       <div className="col-md-auto row_footer_item" role="columnheader">
-        <span className="copyright">Copyright &copy; Website 2020</span>
+        <span className="copyright">&copy; cilprzestrzen</span>
       </div>
       <div className="col col-lg-3 row_footer_item" role="columnheader">
-        Created by NETTOM
+        Created by <a href="https://nettom24.com/" target='_blank'>NETTOM24</a>  
       </div>
     </div>
   </div>

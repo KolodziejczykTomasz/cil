@@ -12,7 +12,7 @@
   padding: 1rem 0rem;
   margin-bottom: 2rem;
   width: 100%;
-  background-color: white;
+  background-color: #fff;
 }
 
 .dropdown .dropdown-menu {
@@ -33,7 +33,7 @@
 
 #accessibleIconButton {
   margin-right: 5px;
-  background-color: #f8f9fa;
+  background-color: transparent;
   border: 2px solid transparent;
 }
 #accessibleIconButton:hover {
