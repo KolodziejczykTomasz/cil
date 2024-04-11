@@ -10,14 +10,14 @@ import './Latest.css';
 const Latest = () => (
   <Fragment>
     <div className="container container_Latest" aria-label="Ostatnie projekty" style={{width: '100%'}}>
-      <div className="row" role="row">
-        <div className="col-lg-12 text-center" role="columnheader">
+      <div className="row">
+        <div className="col-lg-12 text-center">
           <h1 className="section-heading">Zapraszamy do udziału</h1>
           <hr />
         </div>
       </div>
     </div>
-    <div className="row" role="columnheader">
+    <div className="row" >
       <div className="col-md-4 col-sm-12">
         <img
           src={Festiwal}

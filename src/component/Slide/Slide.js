@@ -8,12 +8,15 @@ const Slide = () => (
       id="carouselExampleSlidesOnly"
       className="carousel slide"
       data-ride="carousel"
-      role="row"
       style={{width: '100%'}}
     >
       <div className="carousel-inner" >
-        <div className="carousel-item active" role="columnheader">
-          <img src={LogoCil} className="d-block w-100" alt="Logo Stowarzyszenia" role="presentation" title="Logo Stowarzyszenia CIL" />
+        <div className="carousel-item active" >
+          <img src={LogoCil}
+               className="d-block w-100"
+               alt="Logo Stowarzyszenia"
+               title="Logo Stowarzyszenia"
+          />
         </div>
       </div>
     </div>

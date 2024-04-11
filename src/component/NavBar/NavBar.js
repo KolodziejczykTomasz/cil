@@ -7,66 +7,66 @@ import './NavBar.css';
 const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
   <Fragment>
     <div aria-label="Menu accesible" id="accesibleWrapper">
-      <button type="submit" id="accessibleIconButton">
+      <button type="submit" id="accessibleIconButtonSearch" className="accessibleIconButton" role="img" title="Przycisk początkowej wielkości czcionki na stronie po kliknięciu" aria-label="Przywrócenie początkowej wielkości czcionki na stronie po kliknięciu">
         <FaSearch
-          id="accesibleIcon"
-          aria-label="Przywrócenie początkowej wielkości czcionki na stronie po kliknięciu"
+          id="accesibleIconSearch"
+          className="accesibleIcon"
           onClick={resetFontFn}
-          aria-hidden="true"
         />
       </button>
-      <button type="submit" id="accessibleIconButton">
+      <button type="submit" id="accessibleIconButtonSearchMinus" className="accessibleIconButton" aria-label="Zmniejszenie czcionki na stronie po kliknięciu"
+              title="Przycisk zmniejszający czcionki na stronie po kliknięciu" role="img">
         <FaSearchMinus
-          id="accesibleIcon"
-          aria-label="Zmniejszenie czcionki na stronie po kliknięciu"
+          id="accesibleIconSearchMinus"
+          className="accesibleIcon"
+
           onClick={shrinkFontFn}
-          aria-hidden="true"
         />
       </button>
-      <button type="submit" id="accessibleIconButton">
+      <button type="submit" id="accessibleIconButtonSubmit" className="accessibleIconButton" aria-label="Powiększenie czcionki na stronie po kliknięciu"
+              title="Przycisk powiększający czcionki na stronie po kliknięciu" role="img">
         <FaSearchPlus
           id="accesibleIcon"
-          aria-label="Powiększenie czcionki na stronie po kliknięciu"
+          className="accesibleIconPlus"
           onClick={growFontFn}
-          aria-hidden="true"
         />
       </button>
-      <button type="submit" id="accessibleIconButton">
+      <button type="submit" id="accessibleIconButtonContrast" className="accessibleIconButton"aria-label="Zmiana kontrastu strony po kliknięciu"
+              title="Przycisk zmieniający kontrast na stronie" role="img">
         <FaAdjust
-          id="accesibleIcon"
-          aria-label="Zmiana kontrastu strony po kliknięciu"
+          id="accesibleIconContrast"
+          className="accesibleIcon"
           onClick={clickColorFn}
-          aria-hidden="true"
         />
       </button>
     </div>
 
-    <nav class="navbar navbar-expand-md sticky-top">
-      <div class="navbar-toggler-right">
+    <nav className="navbar navbar-expand-md sticky-top">
+      <div className="navbar-toggler-right">
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbar"
-          aria-controls="navbarTogglerDemo02"
+          aria-controls="navbar"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          title="Przycisk włączjący menu mobile"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
       </div>
       <Navbar.Brand>
-        <span style={{ color: '#366EB4', fontWeight: 600, marginLeft: '10px' }}>
+        <span style={{ color: '#091d31', fontWeight: 600, marginLeft: '10px' }}>
           cilprzestrzen.eu
         </span>
       </Navbar.Brand>
-      <nav class="collapse navbar-collapse flex-column " id="navbar">
-        <ul class="navbar-nav  w-100 justify-content-center px-3">
-          <li class="nav-item active">
-            <NavLink to="/" aria-current="page">
+      <nav className="collapse navbar-collapse flex-column " id="navbar">
+        <ul className="navbar-nav  w-100 justify-content-center px-3" >
+          <li className="nav-item active">
+            <NavLink to="/">
               <button
                 aria-label="Home"
-                role="menuitem"
                 type="button"
                 className="btn btn-outline-success"
                 style={{ marginRight: 10, color: 'black' }}
@@ -75,11 +75,10 @@ const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
               </button>
             </NavLink>
           </li>
-          <li class="nav-item dropdown">
+          <li className="nav-item dropdown">
             <NavLink to="/news">
               <button
                 aria-label="Aktualności"
-                role="menuitem"
                 type="button"
                 className="btn btn-outline-warning"
                 style={{ marginRight: 10, color: 'black' }}
@@ -88,11 +87,10 @@ const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
               </button>
             </NavLink>
           </li>
-          <li class="nav-item dropdown">
+          <li className="nav-item dropdown">
             <NavLink to="/about">
               <button
                 aria-label="O nas"
-                role="menuitem"
                 type="button"
                 className="btn btn-outline-primary"
                 style={{ marginRight: 10, color: 'black' }}
@@ -101,11 +99,10 @@ const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
               </button>
             </NavLink>
           </li>
-          <li class="nav-item dropdown">
+          <li className="nav-item dropdown">
             <NavLink to="/projekty">
               <button
                 aria-label="Projekty"
-                role="menuitem"
                 type="button"
                 className="btn btn-outline-primary"
                 style={{ marginRight: 10, color: 'black' }}
@@ -114,11 +111,10 @@ const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
               </button>
             </NavLink>
           </li>
-          <li class="nav-item dropdown">
+          <li className="nav-item dropdown">
             <NavLink to="/statut">
               <button
                 aria-label="Statut"
-                role="menuitem"
                 type="button"
                 className="btn btn-outline-success"
                 style={{ marginRight: 10, color: 'black' }}
@@ -127,11 +123,10 @@ const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
               </button>
             </NavLink>
           </li>
-          <li class="nav-item dropdown">
+          <li className="nav-item dropdown">
             <NavLink to="/partners">
               <button
                 aria-label="Partnerzy"
-                role="menuitem"
                 type="button"
                 className="btn btn-outline-success"
                 style={{ marginRight: 10, color: 'black' }}
@@ -140,11 +135,10 @@ const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => (
               </button>
             </NavLink>
           </li>
-          <li class="nav-item dropdown">
+          <li className="nav-item dropdown">
             <NavLink to="/contact">
               <button
                 aria-label="Kontakt"
-                role="menuitem"
                 type="button"
                 className="btn btn-outline-warning"
                 style={{ color: 'black' }}

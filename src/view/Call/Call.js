@@ -48,17 +48,16 @@ class Call extends Component {
           <NavBar clickColorFn={this.handleClick} growFontFn={this.handleGrowFontSize} shrinkFontFn={this.handleShrinkFontSize} resetFontFn={this.handleResetFontSize} />
           <div className="container" style={{ marginTop: 100, fontSize: fontSizeChange }}>
             <div className="row" role="row">
-              <div className="col-lg-12 text-center" role="columnheader">
+              <div className="col-lg-12 text-center" >
                 <h1 className="section-heading">CALL II</h1>
                 <hr />
               </div>
             </div>
-            <div className="row text-left" role="row">
+            <div className="row text-left">
               <img
                 className="img-responsive img_call"
                 src={callii}
                 alt="call ii"
-                title="Logotypy"
               />
               <p className="description">
                 <b>CENTRUM INICJATYW LOKALNYCH „PRZESTRZEŃ”</b>                

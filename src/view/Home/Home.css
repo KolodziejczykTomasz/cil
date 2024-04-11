@@ -16,3 +16,7 @@
   width: 100%;
   padding: 0 20px;
 }
+
+.ScrollUpButton__Toggled {
+  background-color: rgba(50, 50, 50, 0.7) !important;
+}

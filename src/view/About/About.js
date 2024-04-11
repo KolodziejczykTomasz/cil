@@ -37,7 +37,6 @@ class About extends Component {
       fontSizeChange: this.state.fontSizeChange - number,
     });
   };
-
   render() {
     const { fontSizeChange } = this.state;
     return (

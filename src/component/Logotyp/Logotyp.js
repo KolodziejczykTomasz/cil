@@ -10,42 +10,38 @@ import './Logotyp.css';
 
 const Logotyp = () => (
   <Fragment>
-    <div className="container container_logotyp" role="row" aria-label="Logotypy" style={{width: '100%'}}>
-      <div className="row" role="row">
-        <div className="col-md-3 col-sm-6" role="columnheader">
+    <div className="container container_logotyp" style={{width: '100%'}}>
+      <div className="row">
+        <div className="col-md-3 col-sm-6">
           <img
             src={LogoCal}
-            title="Centrum Aktywności Lokalnej"
             className="img-responsive img-centered img_Logotyp"
             alt="Logo Centrum Aktywności Lokalnej"
-            role="presentation"
+            title="Logo Centrum Aktywności Lokalnej"
           />
         </div>
         <div className="col-md-3 col-sm-6">
           <img
             src={LogoFio}
-            title="Fundusz Inicjatyw Obywatelskich"
             className="img-responsive img-centered img_Logotyp"
             alt="Logo Funduszu Inicjatyw Obywatelskich"
-            role="presentation"
+            title="Logo Funduszu Inicjatyw Obywatelskich"
           />
         </div>
         <div className="col-md-3 col-sm-6">
           <img
             src={LogoKapital}
-            title="Kapital Ludzki"
             className="img-responsive img-centered img_Logotyp"
             alt="Logo kapital Ludzki"
-            role="presentation"
+            title="Logo kapital Ludzki"
           />
         </div>
         <div className="col-md-3 col-sm-6">
           <img
             src={LogoUe}
-            title="Unia europejska"
             className="img-responsive img-centered img_Logotyp"
             alt="Logo unii europejskiej"
-            role="presentation"
+            title="Logo unii europejskiej"
           />
         </div>
       </div>

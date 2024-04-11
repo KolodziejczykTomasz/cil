@@ -57,8 +57,8 @@ class News extends Component {
             resetFontFn={this.handleResetFontSize}
           />
           <div className="container" style={{ marginTop: 100, fontSize: fontSizeChange }}>
-            <div className="row" role="row">
-              <div className="col-lg-12 text-center" role="columnheader">
+            <div className="row" >
+              <div className="col-lg-12 text-center" >
                 <h1 className="section-heading">Aktualności</h1>
                 <hr />
               </div>
@@ -67,10 +67,11 @@ class News extends Component {
             <div id='photo' className={this.state.button ? 'buttonTrue card' : 'buttonFalse card'}>
               <h2 className="card-title text-center">Domowe leki z polnej apteki</h2>
               <img
-                className="img-responsive img-centered "id='photo'
+                className="img-responsive img-centered" id='photo'
                 style={{ marginTop: 50 }}
                 src={LogoHeaderPost}
                 alt="Domowe leki z polnej apteki"
+                title="Domowe leki z polnej apteki"
               />
               <div className="card-body">
                 <p className="card-text">
@@ -125,6 +126,7 @@ class News extends Component {
                 style={{ marginTop: 50 }}
                 src={LogoHeaderPost}
                 alt="Animacje szansą lokalnego rozwoju"
+                title="Animacje szansą lokalnego rozwoju"
               />
               <div className="card-body">
                 <p className="card-text">
@@ -185,6 +187,7 @@ class News extends Component {
                 style={{ marginTop: 50 }}
                 src={LogoHeaderPost}
                 alt="Innowacje społeczne"
+                title="Innowacje społeczne"
               />
               <div className="card-body">
                 <p className="card-text">
@@ -210,7 +213,6 @@ class News extends Component {
                   aniołków ze sklejki.
                 </p>
                 <p className="card-text">
-                  {' '}
                   Dzięki prowadzonym warsztatom pamiątkarskim wykonane zostaną pamiątki regionalne
                   oparte o zasoby naturalne i nawiązujące do zielarskiej wsi tematycznej Blanki w
                   formie m. in. magnesów, zakładek do książek, aniołków, breloczków, witraży na

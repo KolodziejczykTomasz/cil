@@ -3,13 +3,13 @@
   width: 100%;
 }
 
-#accesibleIcon {
+#accesibleIcon, .accesibleIcon {
   margin: 8px 5px 8px 5px !important;
   font-size: 15px !important;
 }
 
 .navbar {
-  padding: 1rem 0rem;
+  padding: 1rem 0;
   margin-bottom: 2rem;
   width: 100%;
   background-color: #fff;
@@ -29,19 +29,20 @@
 
 .btn {
   width: 106px;
+  border-width: 2px;
 }
 
-#accessibleIconButton {
+.accessibleIconButton {
   margin-right: 5px;
   background-color: transparent;
   border: 2px solid transparent;
 }
-#accessibleIconButton:hover {
+.accessibleIconButton:hover {
   color: #1680bc;
 }
 
-#accessibleIconButton:focus,
-#accessibleIconButton:active {
+.accessibleIconButton:focus,
+.accessibleIconButton:active {
   outline: none !important;
   border-color: red;  
   border-style: dotted;

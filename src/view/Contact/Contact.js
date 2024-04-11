@@ -81,13 +81,13 @@ class Contact extends Component {
         <div className={this.state.button ? 'buttonTrue' : 'buttonFalse'}>
           <NavBar clickColorFn={this.handleClick} growFontFn={this.handleGrowFontSize} shrinkFontFn={this.handleShrinkFontSize} resetFontFn={this.handleResetFontSize} />
           <div className="container container_form" style={{ marginTop: 100, fontSize: fontSizeChange }}>
-            <div className="row" role="row">
-              <div className="col-lg-12 text-center" role="columnheader">
+            <div className="row">
+              <div className="col-lg-12 text-center">
                 <h1 className="section-heading">Napisz do nas</h1>
                 <hr />
               </div>
             </div>
-            <div className="row" role="row">
+            <div className="row">
               <div className="col-lg-12" style={{ marginTop: 30 }}>
                 <FormGroup controlId="formBasicName">
                   <label htmlFor="name">Imię - wymagane</label>

@@ -54,8 +54,8 @@ class ComponentToPrintPartners extends Component {
             resetFontFn={this.handleResetFontSize}
           />
           <div className="container" style={{ marginTop: 20, fontSize: fontSizeChange }}>
-            <div className="row" role="row">
-              <div className="col-lg-12 text-center" role="columnheader">
+            <div className="row">
+              <div className="col-lg-12 text-center">
                 <h1 className="section-heading">Partnerzy</h1>
                 <hr />
               </div>
@@ -64,7 +64,7 @@ class ComponentToPrintPartners extends Component {
               <span style={{ color: 'orange' }}>Kompleksowe zarządzanie nieruchomościami</span> w
               sektorze prywatnym i komercyjnym
             </h2>
-            <div className="row text-left wrapper" role="row">
+            <div className="row text-left wrapper">
               <img
                 className="img-responsive img_kurs"
                 src={Logo}

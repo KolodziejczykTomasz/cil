@@ -54,8 +54,8 @@ class Asos extends Component {
             }
             style={{ marginTop: 100, fontSize: fontSizeChange }}
           >
-            <div className="row" role="row">
-              <div className="col-lg-12 text-center" role="columnheader">
+            <div className="row" >
+              <div className="col-lg-12 text-center">
                 <h1 className="section-heading">ASOS2014</h1>
                 <hr />
               </div>
