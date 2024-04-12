@@ -2,7 +2,6 @@ import React, { Fragment, Component } from 'react';
 import { FaPrint } from 'react-icons/fa';
 import Gallery from "./Gallery"
 
-import ScrollUpButton from 'react-scroll-up-button';
 import Footer from '../../../component/Footer/Footer';
 import NavBar from '../../../component/NavBar/NavBar';
 
@@ -62,18 +61,17 @@ class ComponentToPrintStoczek extends Component {
             resetFontFn={this.handleResetFontSize}
           />
           <div className="container" style={{ marginTop: 20, fontSize: fontSizeChange }}>
-            <div className="row" role="row">
-              <div className="col-lg-12 text-center" role="columnheader">
+            <div className="row" >
+              <div className="col-lg-12 text-center">
                 <h1 className="section-heading">Projekt „Stoczek -nasza mała ojczyzna”</h1>
                 <hr />
               </div>
             </div>
-            <div className="row text-left wrapper" role="row">
+            <div className="row text-left wrapper">
               <img
                 className="img-responsive img_kurs"
                 src={stoczek1}
                 alt="Plakat projektu Stoczek -nasza mała ojczyzna"
-                title="Plakat projektu Stoczek -nasza mała ojczyzna"
               />
               <p className="description">
                 W ramach tegorocznej edycji konkursu grantowego „Działaj Lokalnie 2021” Polsko –
@@ -122,7 +120,6 @@ class ComponentToPrintStoczek extends Component {
           </div>
           <Footer />
         </div>
-        <ScrollUpButton />
       </Fragment>
     );
   }

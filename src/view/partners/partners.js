@@ -1,24 +1,19 @@
 import React, { Fragment, Component } from 'react';
-import ScrollUpButton from 'react-scroll-up-button';
 import Logo from '../../assets/Images/manez_logo.jpg';
 import Footer from '../../component/Footer/Footer';
 import NavBar from '../../component/NavBar/NavBar';
-
-import { FaPrint } from 'react-icons/fa';
-import ReactToPrint from 'react-to-print';
-
 import 'bootstrap/dist/css/bootstrap.css';
 import './partners.css';
 
-class ComponentToPrintPartners extends Component {
+class Partners extends Component {
   state = {
     button: false,
-    fontSizeChange: 14,
+    fontSizeChange: 16,
   };
 
   handleResetFontSize = () => {
     this.setState({
-      fontSizeChange: 14,
+      fontSizeChange: 16,
     });
   };
 
@@ -56,12 +51,12 @@ class ComponentToPrintPartners extends Component {
           <div className="container" style={{ marginTop: 20, fontSize: fontSizeChange }}>
             <div className="row">
               <div className="col-lg-12 text-center">
-                <h1 className="section-heading">Partnerzy</h1>
+                <h1 className="section-heading" >Partnerzy</h1>
                 <hr />
               </div>
             </div>
             <h2>
-              <span style={{ color: 'orange' }}>Kompleksowe zarządzanie nieruchomościami</span> w
+              <span style={{ color: 'orange', fontSize: fontSizeChange }}>Kompleksowe zarządzanie nieruchomościami</span> w
               sektorze prywatnym i komercyjnym
             </h2>
             <div className="row text-left wrapper">
@@ -69,18 +64,17 @@ class ComponentToPrintPartners extends Component {
                 className="img-responsive img_kurs"
                 src={Logo}
                 alt="Logo firmy MANEZ"
-                title="Logo firmy MANEZ"
               />
-              <p className="description">
+              <p className="description" style={{fontSize: fontSizeChange }}>
                 Nawiązaliśmy współpracę z firmą MANEZ Zarządzanie Nieruchomościami, która wdraża na
                 naszym terenie innowacyjny system do zarządzania nieruchomościami.{' '}
               </p>
-              <p className="description">
+              <p className="description" style={{fontSize: fontSizeChange }}>
                 Jeśli wynajmujesz nieruchomość bądź nią zarządzasz to jest to rozwiązanie dla
                 Ciebie.
               </p>
 
-              <p className="description">
+              <p className="description" style={{fontSize: fontSizeChange }}>
                 Aplikacja mobilna udostępniana przez firmę MANEZ jest narzędziem automatyzującym
                 proces zarządzania nieruchomościami. Obsługa nieruchomości, czy zdalny kontakt z
                 najemcą będzie szybki, sprawny i bezproblemowy. Naliczanie opłat, wystawianie FV,
@@ -88,43 +82,19 @@ class ComponentToPrintPartners extends Component {
                 automatycznie oszczędzając Twój czas.
               </p>
 
-              <p className="description">
+              <p className="description" style={{fontSize: fontSizeChange }}>
                 Dzięki aplikacji mobilnej każdy najemca czy użytkownik nieruchomości będzie płacił
                 za faktyczne zużycie mediów i śmieci.{' '}
               </p>
 
-              <p className="description">Zobacz jak to działa: https://www.manez.pl</p>
+              <p className="description" style={{fontSize: fontSizeChange }}>Zobacz jak to działa: https://www.manez.pl</p>
             </div>
           </div>
           <Footer />
         </div>
-        <ScrollUpButton />
       </Fragment>
     );
   }
 }
 
-class Partners extends Component {
-  render() {
-    return (
-      <p className="print">
-        <ReactToPrint
-          trigger={() => (
-            <button
-              aria-label="Print"
-              role="menuitem"
-              type="button"
-              title="Drukuj"
-              className="btn btn-link"
-            >
-              <FaPrint />
-            </button>
-          )}
-          content={() => this.componentRef}
-        />
-        <ComponentToPrintPartners ref={el => (this.componentRef = el)} />
-      </p>
-    );
-  }
-}
 export default Partners;

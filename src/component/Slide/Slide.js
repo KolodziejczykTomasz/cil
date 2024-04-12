@@ -12,11 +12,7 @@ const Slide = () => (
     >
       <div className="carousel-inner" >
         <div className="carousel-item active" >
-          <img src={LogoCil}
-               className="d-block w-100"
-               alt="Logo Stowarzyszenia"
-               title="Logo Stowarzyszenia"
-          />
+          <img src={LogoCil} className="d-block w-100" alt="Logo Stowarzyszenia" />
         </div>
       </div>
     </div>

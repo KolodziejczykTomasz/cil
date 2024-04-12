@@ -1,37 +1,40 @@
 #accesibleWrapper {
   text-align: right;
-  width: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 4;
+  right: 50px;
+  top: 10px;
 }
-
 #accesibleIcon, .accesibleIcon {
   margin: 8px 5px 8px 5px !important;
-  font-size: 15px !important;
+  font-size: 2.4rem !important;
 }
-
 .navbar {
   padding: 1rem 0;
   margin-bottom: 2rem;
   width: 100%;
-  background-color: #fff;
+  max-width: 1440px;
+  z-index: 3;
+  background-color: white;
 }
-
-.dropdown .dropdown-menu {
-  border-radius: 0;
-}
-
-@media (min-width: 768px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
-    border-radius: 0;
-  }
-}
-
-.btn {
-  width: 106px;
+.nav-item {
   border-width: 2px;
 }
-
+.nav-item {
+  color: black;
+}
+.nav-item a:hover {
+  width: 150px;
+  height: 80px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  z-index: 2;
+  text-decoration: none;
+}
+.nav-item a:hover {
+  text-decoration: none !important;
+}
 .accessibleIconButton {
   margin-right: 5px;
   background-color: transparent;
@@ -40,18 +43,19 @@
 .accessibleIconButton:hover {
   color: #1680bc;
 }
-
 .accessibleIconButton:focus,
 .accessibleIconButton:active {
   outline: none !important;
   border-color: red;  
   border-style: dotted;
 }
-
-.btn:focus,
-.btn:active {
-  outline: none !important;  
+.nav-item a:focus,
+.nav-item a:active {
   border-color: red;  
   border-style: dotted;
   border-width: 2px;
+  text-decoration: none;
+}
+.brand {
+  font-size: 2.4rem;
 }

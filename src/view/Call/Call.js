@@ -1,5 +1,4 @@
 import React, { Fragment, Component } from 'react';
-import ScrollUpButton from 'react-scroll-up-button';
 import callii from '../../assets/Images/callii.png';
 import Footer from '../../component/Footer/Footer';
 import NavBar from '../../component/NavBar/NavBar';
@@ -47,7 +46,7 @@ class Call extends Component {
         <div className={this.state.button ? 'buttonTrue' : 'buttonFalse'}>
           <NavBar clickColorFn={this.handleClick} growFontFn={this.handleGrowFontSize} shrinkFontFn={this.handleShrinkFontSize} resetFontFn={this.handleResetFontSize} />
           <div className="container" style={{ marginTop: 100, fontSize: fontSizeChange }}>
-            <div className="row" role="row">
+            <div className="row" >
               <div className="col-lg-12 text-center" >
                 <h1 className="section-heading">CALL II</h1>
                 <hr />
@@ -57,7 +56,7 @@ class Call extends Component {
               <img
                 className="img-responsive img_call"
                 src={callii}
-                alt="call ii"
+                alt="Logotyp call 2"
               />
               <p className="description">
                 <b>CENTRUM INICJATYW LOKALNYCH „PRZESTRZEŃ”</b>                
@@ -91,7 +90,6 @@ class Call extends Component {
           </div>
           <Footer />
         </div>
-        <ScrollUpButton />
       </Fragment>
     );
   }

@@ -1,6 +1,5 @@
 import React, { Fragment, Component } from 'react';
 import { Link } from 'react-router-dom';
-import ScrollUpButton from 'react-scroll-up-button';
 import Footer from '../../component/Footer/Footer';
 import Slide from '../../component/Slide/Slide';
 import Portfolio from '../../component/Portfolio/Portfolio';
@@ -15,7 +14,7 @@ import './Home.css';
 class Home extends Component {
   state = {
     button: false,
-    fontSizeChange: 14,
+    fontSizeChange: 16,
   };
 
   componentDidMount() {
@@ -26,7 +25,7 @@ class Home extends Component {
 
   handleResetFontSize = () => {
     this.setState({
-      fontSizeChange: 14,
+      fontSizeChange: 16,
     });
   };
 
@@ -79,23 +78,21 @@ class Home extends Component {
             <div>
               <Footer clickColorFn={this.handleClick} />
             </div>
-
-            <ScrollUpButton />
           </div>
           <CookieConsent
             location="bottom"
-            buttonText="Wyrażam zgodę"
+            buttonText="Wyrażam zgodę"
             cookieName="myAwesomeCookieName2"
-            style={{ background: '#2B373B', width: '100%' }}
-            buttonStyle={{ color: '#4e503b', fontSize: '13px' }}
+            style={{ background: '#000', width: '100%' }}
+            buttonStyle={{ color: '#fff', fontSize: fontSizeChange }}
             expires={150}
           >
                  
-            <span id="cookieSpan">
-               Nasz serwis, jak większość serwisów internetowych, wykorzystuje tzw. pliki cookies.
+            <span id="cookieSpan" style={{ fontSize: fontSizeChange }}>
+              Nasz serwis, jak większość serwisów internetowych, wykorzystuje tzw. pliki cookies.
               Korzystanie z serwisu oznacza zgodę na ich zapis lub wykorzystanie. Więcej informacji
-              można znaleźć w „Polityce prywatności”. Akceptuję{' '}
-              <Link to="/cookies">"Politykę prywatności"</Link> i wykorzystania plików cookies w
+              można znaleźć w „Polityce prywatności”. Akceptuję
+              <Link to="/cookies" className="linkToCookies" title="Link przenoszący na stronę polityki prywatności">"Politykę prywatności"</Link> i wykorzystania plików cookies w
               serwisie.
             </span>
                 

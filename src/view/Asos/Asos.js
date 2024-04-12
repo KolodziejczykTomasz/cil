@@ -1,5 +1,4 @@
 import React, { Fragment, Component } from 'react';
-import ScrollUpButton from 'react-scroll-up-button';
 import logoasos from '../../assets/Images/callii.png';
 import Footer from '../../component/Footer/Footer';
 import NavBar from '../../component/NavBar/NavBar';
@@ -64,14 +63,12 @@ class Asos extends Component {
               <img
                 className="img-responsive img-centered img_asos"
                 src={logoasos}
-                alt="asos"
-                title="Logotypy"
+                alt="Logotyp asos"
               />
               <p>
                 <b>CENTRUM INICJATYW LOKALNYCH „PRZESTRZEŃ”</b>
-                {' '}
-                z radością
-                informuje, iż rozpoczęło realizację projektu pn. „Bądź aktywny w
+
+                z radością informuje, iż rozpoczęło realizację projektu pn. „Bądź aktywny w
                 każdym wieku” dofinansowanego ze środków Ministerstwa Pracy i
                 Polityki Społecznej w ramach Rządowego Programu Na Rzecz
                 Aktywności Społecznej Osób Starszych na lata 2014-2020. Celem
@@ -132,7 +129,6 @@ class Asos extends Component {
           </div>
           <Footer clickColorFn={this.handleClick} />
         </div>
-        <ScrollUpButton />
       </Fragment>
     );
   }

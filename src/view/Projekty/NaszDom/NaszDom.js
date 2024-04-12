@@ -1,5 +1,4 @@
 import React, { Fragment, Component } from 'react';
-import ScrollUpButton from 'react-scroll-up-button';
 import Logo from '../../../assets/Dok/projekty/NaszDom/plakat.jpg';
 import Footer from '../../../component/Footer/Footer';
 import NavBar from '../../../component/NavBar/NavBar';
@@ -61,18 +60,17 @@ class ComponentToPrint extends Component {
             resetFontFn={this.handleResetFontSize}
           />
           <div className="container" style={{ marginTop: 20, fontSize: fontSizeChange }}>
-            <div className="row" role="row">
-              <div className="col-lg-12 text-center" role="columnheader">
+            <div className="row">
+              <div className="col-lg-12 text-center" >
                 <h1 className="section-heading">RODZINA-NASZ DOM</h1>
                 <hr />
               </div>
             </div>
-            <div className="row text-left wrapper" role="row">
+            <div className="row text-left wrapper">
               <img
                 className="img-responsive img_kurs"
                 src={Logo}
                 alt="Plakat projektu kurs na rodzinę"
-                title="Plakat projektu rodzina-nasz dom"
               />
               <p className="description">
                 <strong>„RODZINA-NASZ DOM”</strong>
@@ -148,7 +146,6 @@ class ComponentToPrint extends Component {
           </div>
           <Footer />
         </div>
-        <ScrollUpButton />
       </Fragment>
     );
   }

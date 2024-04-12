@@ -1,5 +1,4 @@
 import React, { Fragment, Component } from 'react';
-import ScrollUpButton from 'react-scroll-up-button';
 import Logo from '../../../assets/Images/projekty/Kurs/kursPlakat.jpg';
 import Footer from '../../../component/Footer/Footer';
 import NavBar from '../../../component/NavBar/NavBar';
@@ -62,18 +61,17 @@ class ComponentToPrintKurs extends Component {
             resetFontFn={this.handleResetFontSize}
           />
           <div className="container" style={{ marginTop: 20, fontSize: fontSizeChange }}>
-            <div className="row" role="row">
-              <div className="col-lg-12 text-center" role="columnheader">
+            <div className="row">
+              <div className="col-lg-12 text-center">
                 <h1 className="section-heading">KURS NA RODZINĘ W GMINIE KIWITY</h1>
                 <hr />
               </div>
             </div>
-            <div className="row text-left wrapper" role="row">
+            <div className="row text-left wrapper">
               <img
                 className="img-responsive img_kurs"
                 src={Logo}
                 alt="Plakat projektu kurs na rodzinę"
-                title="Plakat projektu kurs na rodzinę"
               />
               <p className="description">
                 <strong>„KURS NA RODZINĘ W GMINIE KIWITY”</strong>
@@ -148,7 +146,6 @@ class ComponentToPrintKurs extends Component {
           </div>
           <Footer />
         </div>
-        <ScrollUpButton />
       </Fragment>
     );
   }
@@ -161,9 +158,7 @@ class Kurs extends Component {
         <ReactToPrint
           trigger={() => (
             <button
-              aria-label="Print"
-              role="menuitem"
-              type="button"
+              aria-label="Drukuj"
               title="Drukuj"
               className="btn btn-link"
             >

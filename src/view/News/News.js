@@ -71,7 +71,6 @@ class News extends Component {
                 style={{ marginTop: 50 }}
                 src={LogoHeaderPost}
                 alt="Domowe leki z polnej apteki"
-                title="Domowe leki z polnej apteki"
               />
               <div className="card-body">
                 <p className="card-text">
@@ -126,7 +125,6 @@ class News extends Component {
                 style={{ marginTop: 50 }}
                 src={LogoHeaderPost}
                 alt="Animacje szansą lokalnego rozwoju"
-                title="Animacje szansą lokalnego rozwoju"
               />
               <div className="card-body">
                 <p className="card-text">
@@ -187,7 +185,6 @@ class News extends Component {
                 style={{ marginTop: 50 }}
                 src={LogoHeaderPost}
                 alt="Innowacje społeczne"
-                title="Innowacje społeczne"
               />
               <div className="card-body">
                 <p className="card-text">

@@ -77,7 +77,7 @@ class Contact extends Component {
   render() {
     const { fontSizeChange } = this.state;
     return (
-      <Fragment>
+      <Fragment style={{fontSize: fontSizeChange }}>
         <div className={this.state.button ? 'buttonTrue' : 'buttonFalse'}>
           <NavBar clickColorFn={this.handleClick} growFontFn={this.handleGrowFontSize} shrinkFontFn={this.handleShrinkFontSize} resetFontFn={this.handleResetFontSize} />
           <div className="container container_form" style={{ marginTop: 100, fontSize: fontSizeChange }}>

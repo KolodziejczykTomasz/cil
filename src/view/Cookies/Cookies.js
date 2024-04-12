@@ -1,9 +1,8 @@
 import React, { Fragment, Component } from 'react';
-
 import Footer from '../../component/Footer/Footer';
 import 'bootstrap/dist/css/bootstrap.css';
 import NavBar from '../../component/NavBar/NavBar';
-import ScrollUpButton from 'react-scroll-up-button';
+
 
 
 class Cookies extends Component {
@@ -47,8 +46,8 @@ class Cookies extends Component {
           <NavBar clickColorFn={this.handleClick} growFontFn={this.handleGrowFontSize} shrinkFontFn={this.handleShrinkFontSize} resetFontFn={this.handleResetFontSize} />
 
           <div className="container" style={{ marginTop: 100, fontSize: fontSizeChange }}>
-            <div className="row" role="row">
-              <div className="col-lg-12 text-center" role="columnheader">
+            <div className="row" >
+              <div className="col-lg-12 text-center">
                 <h1 className="section-heading">Polityka prywatności</h1>
                 <hr />
               </div>
@@ -169,8 +168,7 @@ class Cookies extends Component {
                   </p>
                 </li>
                 <li>
-                  Operator Serwisu informuje, że zmiany ustawień w przeglądarce
-                  internetowej użytkownika mogą uniemożliwić poprawne działanie Stron
+                  Operator Serwisu informuje, że zmiany ustawień w przeglądarce internetowej użytkownika mogą uniemożliwić poprawne działanie Stron
                   Internetowych.
                 </li>
               </ul>
@@ -178,7 +176,6 @@ class Cookies extends Component {
           </div>
           <Footer />
         </div>
-        <ScrollUpButton />
       </Fragment>
     );
   }

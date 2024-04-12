@@ -1,9 +1,8 @@
 import React, { Fragment, Component } from 'react';
-
 import Footer from '../../component/Footer/Footer';
 import 'bootstrap/dist/css/bootstrap.css';
 import NavBar from '../../component/NavBar/NavBar';
-import ScrollUpButton from 'react-scroll-up-button';
+
 
 import './Wcag.css'
 
@@ -52,8 +51,8 @@ class Wcag extends Component {
           />
 
           <div className="container" style={{ marginTop: 100, fontSize: fontSizeChange }}>
-            <div className="row" role="row">
-              <div className="col-lg-12 text-center" role="columnheader">
+            <div className="row">
+              <div className="col-lg-12 text-center">
                 <h1 className="section-heading">Oświadczenie o dostępności</h1>
                 <hr />
               </div>
@@ -111,7 +110,6 @@ class Wcag extends Component {
           </div>
           <Footer />
         </div>
-        <ScrollUpButton />
       </Fragment>
     );
   }

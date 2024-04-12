@@ -22,14 +22,14 @@ import AppContext from '../../context';
 
 class Root extends Component {
   state = {
-    fontSize: 12,
+    fontSize: 14,
     backgroundColor: false,
     color: 'black',
   };
 
   hendleClickSmallFont = () => {
     this.setState({
-      fontSize: this.state.fontSize + 1,
+      fontSize: this.state.fontSize + 2,
     });
   };
 

@@ -17,20 +17,17 @@
 }
 .wrapper {
   display: block;
-
   width: 80vw;
-  margin: 0 auto;
-  margin-top: 70px;
+  margin: 70px auto 0 auto;
 }
 
 .print {
   display: flex;
   justify-content: center;
-
-  background-color: none;
-height: 20px;
-margin-top: 70px;
-margin-bottom: 0;
+  background: none;
+  height: 20px;
+  margin-top: 70px;
+  margin-bottom: 0;
 }
 
 

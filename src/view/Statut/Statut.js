@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import ScrollUpButton from 'react-scroll-up-button';
 import NavBar from '../../component/NavBar/NavBar';
 import Footer from '../../component/Footer/Footer';
 
@@ -47,8 +46,8 @@ class Status extends Component {
             resetFontFn={this.handleResetFontSize}
           />
           <div className="container" style={{ marginTop: 100, fontSize: fontSizeChange }}>
-            <div className="row" role="row">
-              <div className="col-lg-12 text-center" role="columnheader">
+            <div className="row">
+              <div className="col-lg-12 text-center" >
                 <h1 className="section-heading">Statut</h1>
                 <h2
                   className="section-subheading text-muted"
@@ -568,7 +567,6 @@ class Status extends Component {
               </div>
               <Footer />
             </div>
-            <ScrollUpButton />
           </div>
         </div>
       </Fragment>
