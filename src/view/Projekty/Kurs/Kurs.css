@@ -20,14 +20,3 @@
   width: 80vw;
   margin: 70px auto 0 auto;
 }
-
-.print {
-  display: flex;
-  justify-content: center;
-  background: none;
-  height: 20px;
-  margin-top: 70px;
-  margin-bottom: 0;
-}
-
-

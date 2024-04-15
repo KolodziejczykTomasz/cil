@@ -13,12 +13,14 @@ class Contact extends Component {
     phone: '',
     message: '',
     button: false,
-    fontSizeChange: 14,
+    fontSizeChange: 16,
+    fontSizeHeader: 36
   };
 
   handleResetFontSize = () => {
     this.setState({
-      fontSizeChange: 14,
+      fontSizeChange: 16,
+      fontSizeHeader: 36
     });
   };
 
@@ -33,6 +35,7 @@ class Contact extends Component {
     const number = 1;
     this.setState({
       fontSizeChange: this.state.fontSizeChange + number,
+      fontSizeHeader: this.state.fontSizeHeader + number,
     });
   };
 
@@ -40,6 +43,7 @@ class Contact extends Component {
     const number = 1;
     this.setState({
       fontSizeChange: this.state.fontSizeChange - number,
+      fontSizeHeader: this.state.fontSizeHeader - number,
     });
   };
 
@@ -75,22 +79,22 @@ class Contact extends Component {
   };
 
   render() {
-    const { fontSizeChange } = this.state;
+    const { fontSizeChange, fontSizeHeader } = this.state;
     return (
-      <Fragment style={{fontSize: fontSizeChange }}>
-        <div className={this.state.button ? 'buttonTrue' : 'buttonFalse'}>
+      <Fragment>
+        <div className={this.state.button ? 'buttonTrue' : 'buttonFalse'} style={{fontSize: fontSizeChange }}>
           <NavBar clickColorFn={this.handleClick} growFontFn={this.handleGrowFontSize} shrinkFontFn={this.handleShrinkFontSize} resetFontFn={this.handleResetFontSize} />
           <div className="container container_form" style={{ marginTop: 100, fontSize: fontSizeChange }}>
             <div className="row">
               <div className="col-lg-12 text-center">
-                <h1 className="section-heading">Napisz do nas</h1>
+                <h1 className="section-heading" style={{fontSize: fontSizeHeader}}>Napisz do nas</h1>
                 <hr />
               </div>
             </div>
             <div className="row">
-              <div className="col-lg-12" style={{ marginTop: 30 }}>
+              <form className="col-lg-12" style={{ marginTop: 30 }} autoComplete="on">
                 <FormGroup controlId="formBasicName">
-                  <label htmlFor="name">Imię - wymagane</label>
+                  <label htmlFor="name"></label>
                   <Input
                     type="text"
                     name="name"
@@ -98,12 +102,14 @@ class Contact extends Component {
                     value={this.state.name}
                     className="text-primary"
                     required
+                    placeholder='Imię'
                     data-validation-required-message="Podaj imię."
                     onChange={this.handleChange.bind(this, 'name')}
+                    style={{ fontSize: fontSizeChange }}
                   />
                 </FormGroup>
                 <FormGroup controlId="formBasicSubject">
-                  <label htmlFor="phone">Numer telefonu - wymagane</label>
+                  <label htmlFor="phone"></label>
                   <Input
                     type="text"
                     name="phone"
@@ -112,12 +118,14 @@ class Contact extends Component {
                     value={this.state.phone}
                     onChange={this.handleChange.bind(this, 'phone')}
                     required
-                    data-validation-required-message="Podaj numer telefonu."
+                    placeholder='Numer telefonu'
+                    data-validation-required-message="Podaj numer telefonu." 
+                    style={{ fontSize: fontSizeChange }}
                   />
                 </FormGroup>
                 <Form onSubmit={this.handleSubmit.bind(this)}>
                   <FormGroup controlId="formBasicEmail">
-                    <label htmlFor="email">Email - wymagane</label>
+                    <label htmlFor="email"></label>
                     <Input
                       type="email"
                       name="email"
@@ -126,12 +134,14 @@ class Contact extends Component {
                       className="text-primary"
                       onChange={this.handleChange.bind(this, 'email')}
                       required
-                      data-validation-required-message="Podaj adres e-mail"
+                      placeholder='Email'
+                      data-validation-required-message="Podaj adres e-mail" 
+                      style={{ fontSize: fontSizeChange }}
                     />
                   </FormGroup>
 
                   <FormGroup controlId="formBasicMessage">
-                    <label htmlFor="message">Treść wiadomości - wymagane</label>
+                    <label htmlFor="message"></label>
                     <Input
                       type="textarea"
                       name="message"
@@ -139,24 +149,19 @@ class Contact extends Component {
                       className="text-primary"
                       value={this.state.message}
                       required
+                      placeholder='Treść wiadomości'
                       data-validation-required-message="Treść wiadomości."
                       onChange={this.handleChange.bind(this, 'message')}
+                      style={{ fontSize: fontSizeChange }}
                     />
                   </FormGroup>
                   <div className="clearfix" />
                   <div className="col-lg-12 text-center">
-                    <div id="success" />
-                    <button
-                      aria-label="Wyślij"
-                      type="submit"
-                      className="btn btn-lg btn-outline-primary"
-                      style={{ marginTop: 20, color: 'black' }}
-                    >
-                      Wyślij
-                    </button>
+                    <div id="success"/>
+                    <input aria-label="Wyślij" type="submit" className="btn btn-outline-success"  style={{ fontSize: fontSizeChange }}/>                
                   </div>
                 </Form>
-              </div>
+              </form>
             </div>
           </div>
           <Footer />

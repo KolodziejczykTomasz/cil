@@ -1,5 +1,4 @@
 import React, { Fragment, Component } from 'react';
-import ScrollUpButton from 'react-scroll-up-button';
 import LogoHeaderPost from '../../assets/Images/logo.jpg';
 import Footer from '../../component/Footer/Footer';
 import NavBar from '../../component/NavBar/NavBar';
@@ -10,12 +9,18 @@ import 'bootstrap/dist/css/bootstrap.css';
 class News extends Component {
   state = {
     button: false,
-    fontSizeChange: 14
+    fontSizeChange: 14,
+    fontSizeSubtitle: 16,
+    fontSizeTitle: 24,
+    fontSizeHeader: 36
   };
 
   handleResetFontSize = () => {
     this.setState({
       fontSizeChange: 14,
+      fontSizeSubtitle: 16,
+      fontSizeTitle: 24,
+      fontSizeHeader: 36
     });
   };
 
@@ -29,6 +34,9 @@ class News extends Component {
     const number = 1;
     this.setState({
       fontSizeChange: this.state.fontSizeChange + number,
+      fontSizeSubtitle: this.state.fontSizeSubtitle + number,
+      fontSizeHeader: this.state.fontSizeHeader + number,
+      fontSizeTitle: this.state.fontSizeTitle + number
     });
   };
 
@@ -36,17 +44,15 @@ class News extends Component {
     const number = 1;
     this.setState({
       fontSizeChange: this.state.fontSizeChange - number,
+      fontSizeSubtitle: this.state.fontSizeSubtitle - number,
+      fontSizeHeader: this.state.fontSizeHeader - number,
+      fontSizeTitle: this.state.fontSizeTitle - number
     });
   };
 
-  handleClick = () => {
-    this.setState({
-      button: !this.state.button,
-    });
-  };
 
   render() {
-    const { fontSizeChange } = this.state;
+    const { fontSizeChange, fontSizeHeader, fontSizeTitle } = this.state;
     return (
       <Fragment>
         <div className={this.state.button ? 'buttonTrue' : 'buttonFalse'}>
@@ -59,15 +65,15 @@ class News extends Component {
           <div className="container" style={{ marginTop: 100, fontSize: fontSizeChange }}>
             <div className="row" >
               <div className="col-lg-12 text-center" >
-                <h1 className="section-heading">Aktualności</h1>
+                <h1 className="section-heading" style={{fontSize: fontSizeHeader}}>Aktualności</h1>
                 <hr />
               </div>
             </div>
 
-            <div id='photo' className={this.state.button ? 'buttonTrue card' : 'buttonFalse card'}>
-              <h2 className="card-title text-center">Domowe leki z polnej apteki</h2>
+            <div className={this.state.button ? 'buttonTrue card' : 'buttonFalse card'} style={{marginTop: '100px', marginBottom: '100px'}}>
+              <h2 className="card-title text-center" style={{fontSize: fontSizeTitle}}>Domowe leki z polnej apteki</h2>
               <img
-                className="img-responsive img-centered" id='photo'
+                className="img-responsive img-centered photo" 
                 style={{ marginTop: 50 }}
                 src={LogoHeaderPost}
                 alt="Domowe leki z polnej apteki"
@@ -95,7 +101,7 @@ class News extends Component {
                   zakresu:
                 </p>
                 <p className="card-text">Planowane do osiągnięcia efekty realizacji projektu:</p>
-                <ul>
+                <ul style={{marginLeft: "30px"}}>
                   <li>liczba osób przeszkolonych – 10 </li>
                   <li>
                     liczba zrealizowanych projektów z zakresu ochrony środowiska i zmian
@@ -111,17 +117,17 @@ class News extends Component {
                   telefonu: 606-946-018
                 </p>
                 <p className="card-text">
-                  <small className="text-muted" style={{ color: '#595959' }}>
-                    Data publikacji: 28 czerwiec 2019r. | Autor: Admin
+                  <small className="text-muted-custom" style={{ marginTop: 50 }}>
+                    Data publikacji: 28 czerwiec 2019r. Autor: Admin
                   </small>
                 </p>
               </div>
             </div>
             <hr />
-            <div id='photo'className={this.state.button ? 'buttonTrue card' : 'buttonFalse card'}>
+            <div className={this.state.button ? 'buttonTrue card' : 'buttonFalse card'} style={{marginTop: '100px', marginBottom: '100px'}}>
               <h2 className="card-title text-center">Animacje szansą lokalnego rozwoju</h2>
               <img
-                className="img-responsive img-centered "
+                className="img-responsive img-centered photo"
                 style={{ marginTop: 50 }}
                 src={LogoHeaderPost}
                 alt="Animacje szansą lokalnego rozwoju"
@@ -165,23 +171,19 @@ class News extends Component {
                   telefonu: 606-946-018
                 </p>
                 <p className="card-text">
-                  <small className="text-muted" style={{ color: '#595959' }}>
-                    Data publikacji: - | Autor: Admin
+                  <small className="text-muted-custom" style={{ marginTop: 50 }}>
+                    Data publikacji: -, Autor: Admin
                   </small>
                 </p>
               </div>
             </div>
             <hr />
-            <div id='photo' className={this.state.button ? 'buttonTrue card' : 'buttonFalse card'}>
+            <div className={this.state.button ? 'buttonTrue card' : 'buttonFalse card'} style={{marginTop: '100px', marginBottom: '100px'}}>
               <h2 className="card-title text-center">
                 Innowacje społeczne wzmacniające kapitał społeczny wsi tematycznej Blanki
               </h2>
               <img
-                className={
-                  this.state.button
-                    ? 'buttonTrue card img-responsive img-centered'
-                    : 'buttonFalse card img-responsive img-centered'
-                }
+                className={"img-responsive img-centered photo"}
                 style={{ marginTop: 50 }}
                 src={LogoHeaderPost}
                 alt="Innowacje społeczne"
@@ -216,7 +218,7 @@ class News extends Component {
                   szkle.
                 </p>
                 <p className="card-text">Planowane do osiągnięcia efekty realizacji projektu:</p>
-                <ul>
+                <ul style={{marginLeft: "30px"}}>
                   <li>liczba spotkań, działań integracyjnych – 30 </li>
                   <li>
                     liczba osób, których kompetencje społeczne i udział w życiu lokalnym wzrósł
@@ -229,15 +231,14 @@ class News extends Component {
                   telefonu: 606-946-018
                 </p>
                 <p className="card-text">
-                  <small className="text-muted" style={{ marginTop: 50 }}>
-                    Data publikacji: - | Autor: Admin
+                  <small className="text-muted-custom" style={{ marginTop: 50 }}>
+                    Data publikacji: -, Autor: Admin
                   </small>
                 </p>
               </div>
             </div>
           </div>
           <Footer />
-          <ScrollUpButton />
         </div>
       </Fragment>
     );

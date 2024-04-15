@@ -5,46 +5,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './Project.css';
 
 
-class Project extends Component {
-  state = {
-    button: false,
-    fontSizeChange: 18,
-  };
+const Project = ({fontSizeHeader, fontSizeSubtitle, fontSizeTitle}) => {
 
-  handleResetFontSize = () => {
-    this.setState({
-      fontSizeChange: 18,
-    });
-  };
-
-  handleClick = () => {
-    this.setState({
-      button: !this.state.button,
-    });
-  };
-
-  handleGrowFontSize = () => {
-    const number = 1;
-    this.setState({
-      fontSizeChange: this.state.fontSizeChange + number,
-    });
-  };
-
-  handleShrinkFontSize = () => {
-    const number = 1;
-    this.setState({
-      fontSizeChange: this.state.fontSizeChange - number,
-    });
-  };
-
-  render() {
-    const { fontSizeChange } = this.state;
     return (
         <Fragment>
-          <div style={{textAlign: 'center', width: '100%', fontSize: fontSizeChange}} className="container container_portfolio" >
+          <div style={{textAlign: 'center', width: '100%'}} className="container container_portfolio" >
             <div className="row">
               <div className="col-lg-12 text-center">
-                <h1 className="section-heading" >Realizowane projekty</h1>
+                <h1 className="section-heading" style={{fontSize: `${fontSizeHeader}rem`}}>Realizowane projekty</h1>
                 <hr/>
               </div>
             </div>
@@ -59,10 +27,10 @@ class Project extends Component {
                 </div>
                 <div className="timeline-panel">
                   <div className="timeline-heading">
-                    <h3 className="subheading" style={{fontSize: fontSizeChange }}>RODZINA FUNDAMENTEM ŻYCIA</h3>
+                    <h2 className="subheading" style={{fontSize: `${fontSizeTitle}rem`}} >RODZINA FUNDAMENTEM ŻYCIA</h2>
                   </div>
-                  <Link to="/rodzina">
-                    <p className="text-muted" style={{color: '#000',fontSize: fontSizeChange }}>
+                  <Link to="/rodzina" target="_self" title="Link przenoszący na stronę projektu (zawartość otwiera się w tym samyn oknie)">
+                    <p className="text-muted-custom" style={{color: '#000', fontSize: `${fontSizeSubtitle}rem`}}>
                       Opis
                     </p>
                   </Link>
@@ -78,10 +46,10 @@ class Project extends Component {
                 </div>
                 <div className="timeline-panel">
                   <div className="timeline-heading">
-                    <h3 className="subheading" style={{fontSize: fontSizeChange }}>KURS NA RODZINĘ W GMINIE KIWITY</h3>
+                    <h2 className="subheading" style={{fontSize: `${fontSizeTitle}rem`}} >KURS NA RODZINĘ W GMINIE KIWITY</h2>
                   </div>
-                  <Link to="/kurs">
-                    <p className="text-muted" style={{color: '#000',fontSize: fontSizeChange }}>
+                  <Link to="/kurs" target="_self" title="Link przenoszący na stronę projektu (zawartość otwiera się w tym samyn oknie)">
+                    <p className="text-muted-custom" style={{color: '#000', fontSize: `${fontSizeSubtitle}rem` }}>
                       Opis
                     </p>
                   </Link>
@@ -99,10 +67,10 @@ class Project extends Component {
                 </div>
                 <div className="timeline-panel">
                   <div className="timeline-heading">
-                    <h3 className="subheading" style={{fontSize: fontSizeChange }}>SILNE I AKTYWNE RODZINY</h3>
+                    <h2 className="subheading" style={{fontSize: `${fontSizeTitle}rem`}}>SILNE I AKTYWNE RODZINY</h2>
                   </div>
-                  <Link to="/silneaktywne">
-                    <p className="text-muted" style={{color: '#000',fontSize: fontSizeChange }}>
+                  <Link to="/silneaktywne"  target="_self" title="Link przenoszący na stronę projektu (zawartość otwiera się w tym samyn oknie)">
+                    <p className="text-muted-custom" style={{color: '#000', fontSize: `${fontSizeSubtitle}rem` }}>
                       Opis
                     </p>
                   </Link>
@@ -118,10 +86,10 @@ class Project extends Component {
                 </div>
                 <div className="timeline-panel">
                   <div className="timeline-heading">
-                    <h3 className="subheading">RODZINA-NASZ DOM</h3>
+                    <h2 className="subheading" style={{fontSize: `${fontSizeTitle}rem`}}>RODZINA-NASZ DOM</h2>
                   </div>
-                  <Link to="/naszdom">
-                    <p className="text-muted" style={{color: '#000'}}>
+                  <Link to="/naszdom" target="_self" title="Link przenoszący na stronę projektu (zawartość otwiera się w tym samyn oknie)">
+                    <p className="text-muted-custom" style={{color: '#000', fontSize: `${fontSizeSubtitle}rem`}}>
                       Opis
                     </p>
                   </Link>
@@ -137,10 +105,10 @@ class Project extends Component {
                 </div>
                 <div className="timeline-panel">
                   <div className="timeline-heading">
-                    <h3 className="subheading">Projekt „Stoczek -nasza mała ojczyzna”</h3>
+                    <h2 className="subheading" style={{fontSize: `${fontSizeTitle}rem`}}>Projekt „Stoczek -nasza mała ojczyzna”</h2>
                   </div>
-                  <Link to="/stoczek">
-                    <p className="text-muted" style={{color: '#000'}}>
+                  <Link to="/stoczek" target="_self" title="Link przenoszący na stronę projektu (zawartość otwiera się w tym samyn oknie)">
+                    <p className="text-muted-custom" style={{color: '#000', fontSize: `${fontSizeSubtitle}rem`}}>
                       Opis
                     </p>
                   </Link>
@@ -151,8 +119,8 @@ class Project extends Component {
           </div>
         </Fragment>
     );
-  }
-}
+  };
+
 
 export default Project;
 

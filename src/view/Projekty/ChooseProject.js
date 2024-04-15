@@ -2,18 +2,30 @@ import React, { Fragment, Component } from 'react';
 import Footer from '../../component/Footer/Footer';
 import Project from '../../component/Project/Project';
 import NavBar from '../../component/NavBar/NavBar';
+import AOS from 'aos';
 
 
 
-class Home extends Component {
+class ChooseProject extends Component {
   state = {
     button: false,
-    fontSizeChange: 14,
+    fontSizeSubtitle: 1.6,
+    fontSizeTitle: 2.4,
+    fontSizeHeader: 3.6
   };
+
+  componentDidMount() {
+    AOS.init({
+      duration: 1000,
+    });
+  }
 
   handleResetFontSize = () => {
     this.setState({
-      fontSizeChange: 14,
+      fontSizeSubtitle: 1.6,
+      fontSizeChange: 1.8,
+      fontSizeTitle: 2.4,
+      fontSizeHeader: 3.6
     });
   };
 
@@ -24,40 +36,44 @@ class Home extends Component {
   };
 
   handleGrowFontSize = () => {
-    const number = 1;
+    const number = .1;
     this.setState({
-      fontSizeChange: this.state.fontSizeChange + number,
+      fontSizeSubtitle: this.state.fontSizeSubtitle + number,
+      fontSizeHeader: this.state.fontSizeHeader + number,
+      fontSizeTitle: this.state.fontSizeTitle + number
     });
   };
 
   handleShrinkFontSize = () => {
-    const number = 1;
+    const number = .1;
     this.setState({
-      fontSizeChange: this.state.fontSizeChange - number,
+      fontSizeSubtitle: this.state.fontSizeSubtitle - number,
+      fontSizeHeader: this.state.fontSizeHeader - number,
+      fontSizeTitle: this.state.fontSizeTitle - number
     });
   };
 
   render() {
-    const { fontSizeChange } = this.state;
+
+
     return (
       <Fragment>
-        <div
-          className={this.state.button ? 'buttonTrue' : 'buttonFalse'}
-          style={{ fontSize: fontSizeChange }}
-        >
+        <div className={this.state.button ? 'buttonTrue' : 'buttonFalse'}>
           <NavBar
             clickColorFn={this.handleClick}
             growFontFn={this.handleGrowFontSize}
             shrinkFontFn={this.handleShrinkFontSize}
             resetFontFn={this.handleResetFontSize}
           />
-        
-          <Project clickColorFn={this.handleClick} />
+          <Project
+              fontSizeHeader={this.state.fontSizeHeader}
+              fontSizeTitle={this.state.fontSizeTitle}
+              fontSizeSubtitle={this.state.fontSizeSubtitle}
+          />
         <Footer/>
-     
         </div>
       </Fragment>
     );
   }
 }
-export default Home;
+export default ChooseProject;

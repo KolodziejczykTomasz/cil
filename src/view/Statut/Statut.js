@@ -5,12 +5,18 @@ import Footer from '../../component/Footer/Footer';
 class Status extends Component {
   state = {
     button: false,
-    fontSizeChange: 14,
+    fontSizeChange: 16,
+    fontSizeSubtitle: 16,
+    fontSizeTitle: 24,
+    fontSizeHeader: 36
   };
 
   handleResetFontSize = () => {
     this.setState({
-      fontSizeChange: 14,
+      fontSizeChange: 16,
+      fontSizeSubtitle: 16,
+      fontSizeTitle: 24,
+      fontSizeHeader: 36
     });
   };
 
@@ -24,6 +30,9 @@ class Status extends Component {
     const number = 1;
     this.setState({
       fontSizeChange: this.state.fontSizeChange + number,
+      fontSizeSubtitle: this.state.fontSizeSubtitle + number,
+      fontSizeHeader: this.state.fontSizeHeader + number,
+      fontSizeTitle: this.state.fontSizeTitle + number
     });
   };
 
@@ -31,11 +40,15 @@ class Status extends Component {
     const number = 1;
     this.setState({
       fontSizeChange: this.state.fontSizeChange - number,
+      fontSizeSubtitle: this.state.fontSizeSubtitle - number,
+      fontSizeHeader: this.state.fontSizeHeader - number,
+      fontSizeTitle: this.state.fontSizeTitle - number
     });
   };
 
+
   render() {
-    const { fontSizeChange } = this.state;
+    const { fontSizeChange, fontSizeSubtitle, fontSizeHeader, fontSizeTitle } = this.state;
     return (
       <Fragment>
         <div className={this.state.button ? 'buttonTrue' : 'buttonFalse'}>
@@ -48,11 +61,8 @@ class Status extends Component {
           <div className="container" style={{ marginTop: 100, fontSize: fontSizeChange }}>
             <div className="row">
               <div className="col-lg-12 text-center" >
-                <h1 className="section-heading">Statut</h1>
-                <h2
-                  className="section-subheading text-muted"
-                  style={{ color: '#4f4f4f', fontSize: fontSizeChange }}
-                >
+                <h1 className="section-heading" style={{fontSize: fontSizeHeader}}>Statut</h1>
+                <h2 className="section-subheading" style={{ fontSize: fontSizeSubtitle }}>
                   STOWARZYSZENIE CENTRUM INICJATYW LOKALNYCH "PRZESTRZEŃ"
                 </h2>
               </div>
@@ -73,7 +83,7 @@ class Status extends Component {
 
             <p style={{ textAlign: 'center' }}><strong>§ 2</strong></p>
 
-            <ol>
+            <ol style={{marginLeft: "30px"}}>
               <li>CIL ”PRZESTRZEŃ” posiada osobowość prawną. </li>
               <li>
                 Terenem działania CIL ”PRZESTRZEŃ” jest obszar Rzeczpospolitej Polskiej, a siedzibą
@@ -114,7 +124,7 @@ class Status extends Component {
             <p style={{ textAlign: 'center' }}><strong>§ 8</strong></p>
 
             Stowarzyszenie CIL „PRSZESTRZEŃ” będzie dążyło do realizacji swojego celu poprzez:
-            <ol>
+            <ol style={{marginLeft: "30px"}}>
               <li>
                 Rozwijanie i propagowanie wszelkich form samoorganizacji społecznej na terenie gminy
                 Lidzbark Warmiński;
@@ -198,7 +208,7 @@ class Status extends Component {
             <p style={{ textAlign: 'center' }}><strong>§ 10</strong></p>
 
             Stowarzyszenie CIL ”PRZESTRZEŃ” posiada członków:
-            <ol type="a">
+            <ol type="a" style={{marginLeft: "30px"}}>
               <li>Zwyczajnych</li>
               <li>Wspierających</li>
               <li>Honorowych </li>
@@ -206,21 +216,22 @@ class Status extends Component {
 
             <p style={{ textAlign: 'center' }}><strong>§ 11</strong></p>
 
-            <ol>
-              <li>Członkiem zwyczajnym stowarzyszenia może być:</li>
-              <ol type="a">
+            <ol style={{marginLeft: "30px"}}>
+              <li>Członkiem zwyczajnym stowarzyszenia może być:
+              <ol type="a" style={{marginLeft: "30px"}}>
                 <li>
                   osoba fizyczna będąca obywatelem polskim, posiadająca pełną zdolność do czynności
                   prawnych, mająca miejsce zamieszkania na terytorium Polski,
                 </li>
                 <li>cudzoziemiec mający stały pobyt w Polsce.</li>
-              </ol>
-              <li>Warunkiem uzyskania członkowstwa przez osobę o której mowa w pkt.1. jest:</li>
-              <ul>
+              </ol></li>
+              <li>Warunkiem uzyskania członkowstwa przez osobę o której mowa w pkt.1. jest:
+              <ul style={{marginLeft: "30px"}}>
                 <li>złożenie deklaracji członkowskiej</li>
                 <li>uzyskanie pozytywnej opinii Zarządu</li>
                 <li>opłacenie składki członkowskiej </li>
               </ul>
+              </li>
             </ol>
 
             <p style={{ textAlign: 'center' }}><strong>§ 12</strong></p>
@@ -231,13 +242,12 @@ class Status extends Component {
 
             <p style={{ textAlign: 'center' }}><strong>§ 13</strong></p>
 
-            <ol>
+            <ol style={{marginLeft: "30px"}}>
               <li>
                 Członkiem honorowym CIL „PRZESTRZEŃ” może być osoba fizyczna, która wniosła wybitny
                 wkład w działalność i rozwój stowarzyszenia.
               </li>
-              <li>
-                {' '}
+              <li>                
                 Członkowie honorowi są ustanawiani przez Zarząd na wniosek trzech członków
                 Stowarzyszenia.
               </li>
@@ -246,7 +256,7 @@ class Status extends Component {
 
             <p style={{ textAlign: 'center' }}><strong>§ 14</strong></p>
             Członkowie zwyczajni mają prawo:
-            <ol type="a">
+            <ol type="a" style={{marginLeft: "30px"}}>
               <li>biernego i czynnego uczestnictwa w wyborach do władzy CIL „PRZESTRZEŃ”</li>
               <li>
                 udziału w zebraniach, wykładach oraz imprezach organizowanych przez CIL
@@ -257,7 +267,7 @@ class Status extends Component {
             
             <p style={{ textAlign: 'center' }}><strong>§ 15</strong></p>
             Członkowie zwyczajni mają obowiązek:
-            <ol type="a">
+            <ol type="a" style={{marginLeft: "30px"}}>
               <li>brania udziału w działalności Stowarzyszenia i realizacji jego celów</li>
               <li>przestrzegania statutu i uchwał władz Stowarzyszenia</li>
               <li>regularnego opłacania SKŁADEK</li>
@@ -268,24 +278,24 @@ class Status extends Component {
             <p style={{ textAlign: 'center' }}><strong>§ 17</strong></p>
             Członkowie honorowi są zwalniani ze składek członkowskich.
             <p style={{ textAlign: 'center' }}><strong>§ 18</strong></p>
-            <ol>
-              <li>Utrata członkowstwa następuje na skutek:</li>
-              <ol type="a">
+            <ol style={{marginLeft: "30px"}}>
+              <li>Utrata członkowstwa następuje na skutek:
+              <ol type="a" style={{marginLeft: "30px"}}>
                 <li>Pisemnej rezygnacji złożonej na ręce Zarządu,</li>
-                <li>Wykluczenia przez Zarząd;</li>
-                <ul>
+                <li>Wykluczenia przez Zarząd;
+                <ul style={{marginLeft: "30px"}}>
                   <li>z powodu łamania statutu i nieprzestrzegania uchwał władz Stowarzyszenia,</li>
                   <li>z powodu notorycznego nie brania udziału w pracach Stowarzyszenia,</li>
                   <li>z powodu niepłacenia składek za okres co najmniej pól roku,</li>
                   <li>na pisemny wniosek co najmniej trzech członków Stowarzyszenia,</li>
-                </ul>
+                </ul></li>
                 <li>
                   śmierci członkowstwa w stowarzyszeniu przez członka Zarządu lub Komisji Rewizyjnej
                   z powodów innych niż określonych w ust.1 pkt. a) i c) jest możliwa tylko decyzją
                   Walnego Zgromadzenia Członków podjęta zwykłą większością głosów w obecności co
                   najmniej połowy członków.
                 </li>
-              </ol>
+              </ol></li>
             </ol>
 
             <p style={{ textAlign: 'center' }}><strong>§ 19</strong></p>
@@ -300,7 +310,7 @@ class Status extends Component {
 
             <p style={{ textAlign: 'center' }}><strong>§ 20</strong></p>
             Władzami stowarzyszenia są:
-            <ol type="a">
+            <ol type="a" style={{marginLeft: "30px"}}>
               <li>Walne Zgromadzenie Członków</li>
               <li>Zarząd</li>
               <li>Komisja Rewizyjna</li>
@@ -324,22 +334,22 @@ class Status extends Component {
             władzach stowarzyszenia.
 
             <p style={{ textAlign: 'center' }}><strong>§ 24</strong></p>
-            <ol>
+            <ol style={{marginLeft: "30px"}}>
               <li>
                 Walne Zgromadzenie Członków jest najwyższa władzą Stowarzyszenia. W Walnym
                 Zgromadzeniu Członków biorą udział :
-              </li>
-              <ul>
+             
+              <ul style={{marginLeft: "30px"}}>
                 <li>z głosem stanowiącym- członkowie zwyczajni</li>
                 <li>
                   z głosem doradczym – członkowie wspierający, honorowi oraz zaproszeni goście.
                 </li>
-              </ul>
+              </ul> </li>
               <li>Walne zgromadzenie Członków może być zwyczajne i nadzwyczajne.</li>
             </ol>
 
             <p style={{ textAlign: 'center' }}><strong>§ 25</strong></p>
-            <ol>
+            <ol style={{marginLeft: "30px"}}>
               <li>
                 Walne zgromadzenie Członków zwyczajne jest przez Zarząd Stowarzyszenia. Termin i
                 miejsce obrad Zarządu podaje do wiadomości wszystkich członków co najmniej na 14 dni
@@ -355,7 +365,7 @@ class Status extends Component {
             </ol>
 
             <p style={{ textAlign: 'center' }}><strong>§ 26</strong></p>
-            <ol>
+            <ol style={{marginLeft: "30px"}}>
               <li>
                 Walne zgromadzenie Członków nadzwyczajne może się odbywać w każdym czasie. Jest
                 zwołane przez Zarząd z jego inicjatywy, na wniosek Komisji Rewizyjnej lub pisemny
@@ -375,7 +385,7 @@ class Status extends Component {
             </ol>
             
             <p style={{ textAlign: 'center' }}><strong>§ 27</strong></p>
-            <ol>
+            <ol style={{marginLeft: "30px"}}>
               <li>
                 Uchwały Walnego Zgromadzenia Członków zapadają zwykłą większością głosów przy
                 obecności co najmniej połowy członków uprawnionych do głosowania. Głosowanie jest
@@ -398,7 +408,7 @@ class Status extends Component {
             <p style={{ textAlign: 'center' }}><strong>§ 28</strong></p>
 
             Do kompetencji Walnego Zgromadzenia należy:
-            <ol type="a">
+            <ol type="a" style={{marginLeft: "30px"}}>
               <li>Określenie głównych kierunków działania i rozwoju Stowarzyszenia</li>
               <li>Uchwalenie zmian statutu,</li>
               <li>Wybór Prezesa Stowarzyszenia,</li>
@@ -432,7 +442,7 @@ class Status extends Component {
             Zarząd składa się z Prezesa, dwóch Wiceprezesów, Skarbnika, Sekretarza i dwóch członków.
 
             <p style={{ textAlign: 'center' }}><strong>§ 31</strong></p>
-            <ol>
+            <ol style={{marginLeft: "30px"}}>
               <li>W skład Zarządu mogą wchodzić jedynie członkowie zwyczajni stowarzyszenia.</li>
               <li>Osoby wchodzące w skład komisji rewizyjnej nie mogą być członkami Zarządu.</li>
               <li>
@@ -448,7 +458,7 @@ class Status extends Component {
 
             <p style={{ textAlign: 'center' }}><strong>§ 33</strong></p>
             Do kompetencji Zarządu należy:
-            <ol type="a">
+            <ol type="a" style={{marginLeft: "30px"}}>
               <li>Realizacja celów Stowarzyszenia,</li>
               <li>Wykonywanie uchwał Walnego Zgromadzenia Członków, </li>
               <li>Sporządzanie planów pracy,</li>
@@ -472,7 +482,7 @@ class Status extends Component {
 
             Komisja Rewizyjna składa się z trzech członków: przewodniczącego, zastępcy i sekretarza.
             <p style={{ textAlign: 'center' }}><strong>§ 36</strong></p>
-            <ol>
+            <ol style={{marginLeft: "30px"}}>
               <li>
                 W skład Komisji Rewizyjnej mogą wchodzić jedynie członkowie zwyczajni
                 stowarzyszenia.
@@ -488,7 +498,7 @@ class Status extends Component {
             </ol>
             <p style={{ textAlign: 'center' }}><strong>§ 37</strong></p>
             Do kompetencji Komisji Rewizyjnej należy:
-            <ol type="a">
+            <ol type="a" style={{marginLeft: "30px"}}>
               <li>kontrolowanie działań stowarzyszenia</li>
               <li>składanie wniosków z kontroli na Walnym Zgromadzeniu Członków,</li>
               <li>prawo żądania zwołania Walnego Zgromadzenia Członków oraz zebrania Zarządu,</li>
@@ -505,7 +515,7 @@ class Status extends Component {
 
             <p style={{ textAlign: 'center' }}><strong>§ 39</strong></p>
             Majątek stowarzyszenia powstaje;
-            <ol type="a">
+            <ol type="a" style={{marginLeft: "30px"}}>
               <li>ze składek członkowskich</li>
               <li>darowizn, spadków, zapisów,</li>
               <li>dochodów z własnej działalności statutowej,</li>
@@ -561,9 +571,7 @@ class Status extends Component {
             Postanowienia niniejszego statutu wchodzą w życie z dniem uchwalenia.
             <div className="row">
               <div className="col-lg-8 col-lg-offset-2 text-center">
-                <p className="large text-muted" style={{ color: '#4f4f4f' }}>
-                  Statut przyjęto w dniu 6 marca 2019 r.
-                </p>
+                <p className="large" style={{margin: '50px 0'}}>Statut przyjęto w dniu 6 marca 2019 r.</p>
               </div>
               <Footer />
             </div>

@@ -14,7 +14,9 @@ import './Home.css';
 class Home extends Component {
   state = {
     button: false,
-    fontSizeChange: 16,
+    fontSizeSubtitle: 16,
+    fontSizeTitle: 24,
+    fontSizeHeader: 36
   };
 
   componentDidMount() {
@@ -25,7 +27,10 @@ class Home extends Component {
 
   handleResetFontSize = () => {
     this.setState({
-      fontSizeChange: 16,
+      fontSizeSubtitle: 16,
+      fontSizeChange: 18,
+      fontSizeTitle: 24,
+      fontSizeHeader: 36
     });
   };
 
@@ -38,26 +43,31 @@ class Home extends Component {
   handleGrowFontSize = () => {
     const number = 1;
     this.setState({
-      fontSizeChange: this.state.fontSizeChange + number,
+      fontSizeSubtitle: this.state.fontSizeSubtitle + number,
+      fontSizeHeader: this.state.fontSizeHeader + number,
+      fontSizeTitle: this.state.fontSizeTitle + number
     });
   };
 
   handleShrinkFontSize = () => {
     const number = 1;
     this.setState({
-      fontSizeChange: this.state.fontSizeChange - number,
+      fontSizeSubtitle: this.state.fontSizeSubtitle - number,
+      fontSizeHeader: this.state.fontSizeHeader - number,
+      fontSizeTitle: this.state.fontSizeTitle - number
     });
   };
 
   render() {
-    const { fontSizeChange } = this.state;
+    const { fontSizeSubtitle } = this.state;
+    const { fontSizeHeader} = this.state;
 
     return (
       <Fragment>
         <div id="wrapperHome">
           <div
             className={this.state.button ? 'buttonTrue' : 'buttonFalse'}
-            style={{ fontSize: fontSizeChange }}
+            style={{ fontSize: fontSizeSubtitle }}
           >
             <NavBar
               clickColorFn={this.handleClick}
@@ -67,16 +77,25 @@ class Home extends Component {
             />
             <Slide />
             <div data-aos="fade-up">
-              <Latest clickColorFn={this.handleClick} />
+              <Latest fontSizeHeader={this.state.fontSizeHeader} />
             </div>
             <div data-aos="fade-up">
-              <Portfolio clickColorFn={this.handleClick} />
+              <Portfolio
+                  fontSizeHeader={this.state.fontSizeHeader}
+                  fontSizeTitle={this.state.fontSizeTitle}
+                  fontSizeSubtitle={this.state.fontSizeSubtitle} />
             </div>
             <div data-aos="fade-up">
-              <Logotyp clickColorFn={this.handleClick} />
+              <Logotyp  clickColorFn={this.handleClick}
+                        growFontFn={this.handleGrowFontSize}
+                        shrinkFontFn={this.handleShrinkFontSize}
+                        resetFontFn={this.handleResetFontSize} />
             </div>
             <div>
-              <Footer clickColorFn={this.handleClick} />
+              <Footer  clickColorFn={this.handleClick}
+                       growFontFn={this.handleGrowFontSize}
+                       shrinkFontFn={this.handleShrinkFontSize}
+                       resetFontFn={this.handleResetFontSize} />
             </div>
           </div>
           <CookieConsent
@@ -84,11 +103,11 @@ class Home extends Component {
             buttonText="Wyrażam zgodę"
             cookieName="myAwesomeCookieName2"
             style={{ background: '#000', width: '100%' }}
-            buttonStyle={{ color: '#fff', fontSize: fontSizeChange }}
+            buttonStyle={{ color: '#fff', fontSize: fontSizeHeader }}
             expires={150}
           >
                  
-            <span id="cookieSpan" style={{ fontSize: fontSizeChange }}>
+            <span id="cookieSpan" style={{ fontSize: fontSizeHeader }}>
               Nasz serwis, jak większość serwisów internetowych, wykorzystuje tzw. pliki cookies.
               Korzystanie z serwisu oznacza zgodę na ich zapis lub wykorzystanie. Więcej informacji
               można znaleźć w „Polityce prywatności”. Akceptuję

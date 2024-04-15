@@ -1,7 +1,5 @@
 import React, { Fragment, Component } from 'react';
-
 import 'bootstrap/dist/css/bootstrap.css';
-import ScrollUpButton from 'react-scroll-up-button';
 import Footer from '../../component/Footer/Footer';
 import NavBar from '../../component/NavBar/NavBar';
 
@@ -9,11 +7,15 @@ class About extends Component {
   state = {
     button: false,
     fontSizeChange: 14,
+    fontSizeHeader: 36,
+    fontSizeTitle: 24
   };
 
   handleResetFontSize = () => {
     this.setState({
       fontSizeChange: 14,
+      fontSizeHeader: 36,
+      fontSizeTitle: 24
     });
   };
 
@@ -28,6 +30,8 @@ class About extends Component {
     const number = 1;
     this.setState({
       fontSizeChange: this.state.fontSizeChange + number,
+      fontSizeHeader: this.state.fontSizeHeader + number,
+      fontSizeTitle: this.state.fontSizeTitle + number
     });
   };
 
@@ -35,10 +39,12 @@ class About extends Component {
     const number = 1;
     this.setState({
       fontSizeChange: this.state.fontSizeChange - number,
+      fontSizeHeader: this.state.fontSizeHeader - number,
+      fontSizeTitle: this.state.fontSizeTitle - number
     });
   };
   render() {
-    const { fontSizeChange } = this.state;
+    const { fontSizeChange, fontSizeHeader, fontSizeTitle } = this.state;
     return (
       <Fragment>
         <div className={this.state.button ? 'buttonTrue' : 'buttonFalse'}>
@@ -46,11 +52,11 @@ class About extends Component {
           <div className="container" style={{ marginTop: 100, fontSize: fontSizeChange }}>
             <div className="row">
               <div className="col-lg-12 text-center">
-                <h1 className="section-heading">O nas</h1>
+                <h1 className="section-heading" style={{ fontSize: fontSizeHeader }}>O nas</h1>
                 <hr />
               </div>
             </div>
-            <h2> Władze stowarzyszenia: </h2>
+            <h2 style={{fontSize: fontSizeTitle, margin: '50px 0'}}> Władze stowarzyszenia: </h2>
             <table
               role="table"
               className="table table-bordered"
@@ -89,8 +95,8 @@ class About extends Component {
             <br />
             <br />
 
-            <h3>Główne działania statutowe:</h3>
-            <ul>
+            <h3 style={{fontSize: fontSizeTitle, marginBottom: "50px"}}>Główne działania statutowe:</h3>
+            <ul style={{marginLeft: "30px"}}>
               <li>
                 rozwijanie i propagowanie wszelkich form samoorganizacji
                 społecznej na terenie gminy Lidzbark Warmiński,
@@ -176,7 +182,6 @@ class About extends Component {
             </ul>
           </div>
           <Footer />
-          <ScrollUpButton />
         </div>
       </Fragment>
     );

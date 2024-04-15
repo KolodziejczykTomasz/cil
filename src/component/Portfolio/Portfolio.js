@@ -6,12 +6,12 @@ import Logo from '../../assets/Images/about/1.jpg';
 import 'bootstrap/dist/css/bootstrap.css';
 import './Portfolio.css';
 
-const Portfolio = () => (
+const Portfolio = ({fontSizeHeader, fontSizeSubtitle, fontSizeTitle}) => (
   <Fragment>
     <div style={{ textAlign: 'center', width: '100%' }} className="container container_portfolio" >
       <div className="row">
         <div className="col-lg-12 text-center">
-          <h2 className="section-heading">Zrealizowane projekty</h2>
+          <h1 className="section-heading" style={{fontSize: `${fontSizeHeader}px`}}>Zrealizowane projekty</h1>
           <hr />
         </div>
       </div>
@@ -22,10 +22,10 @@ const Portfolio = () => (
           </div>
           <div className="timeline-panel">
             <div className="timeline-heading">
-              <h3 className="subheading">ASOS 2014</h3>
+              <h2 className="subheading" style={{fontSize: `${fontSizeTitle}px`}}>ASOS 2014</h2>
             </div>
-            <Link to="/asos">
-              <p className="text-muted-custom">Opis</p>
+            <Link to="/asos" title="Link do projektu ASOS (otwiera w tym samym oknie)">
+              <p className="text-muted-custom" style={{fontSize: `${fontSizeSubtitle}px`}}>Opis</p>
             </Link>
           </div>
         </div>
@@ -35,10 +35,10 @@ const Portfolio = () => (
           </div>
           <div className="timeline-panel">
             <div className="timeline-heading">
-              <h3 className="subheading">CALL II </h3>
+              <h2 className="subheading" style={{fontSize: `${fontSizeTitle}px`}}>CALL II </h2>
             </div>
-            <Link to="/call">
-              <p className="text-muted-custom">Opis</p>
+            <Link to="/call" title="Link do projektu CALL (otwiera w tym samym oknie)">
+              <p className="text-muted-custom" style={{fontSize: `${fontSizeSubtitle}px`}}>Opis</p>
             </Link>
           </div>
         </div>

@@ -8,12 +8,16 @@ import NavBar from '../../component/NavBar/NavBar';
 class Cookies extends Component {
   state = {
     button: false,
-    fontSizeChange: 14,
+    fontSizeChange: 1.6,
+    fontSizeHeader: 3.6,
+    fontSizeTitle: 1.8
   };
 
   handleResetFontSize = () => {
     this.setState({
-      fontSizeChange: 14,
+      fontSizeChange: 1.6,
+      fontSizeHeader: 3.6,
+      fontSizeTitle: 1.8
     });
   };
 
@@ -25,51 +29,50 @@ class Cookies extends Component {
   };
 
   handleGrowFontSize = () => {
-    const number = 1;
+    const number = .1;
     this.setState({
       fontSizeChange: this.state.fontSizeChange + number,
+      fontSizeHeader: this.state.fontSizeHeader + number,
+      fontSizeTitle: this.state.fontSizeTitle + number
     });
   };
 
   handleShrinkFontSize = () => {
-    const number = 1;
+    const number = .1;
     this.setState({
       fontSizeChange: this.state.fontSizeChange - number,
+      fontSizeHeader: this.state.fontSizeHeader - number,
+      fontSizeTitle: this.state.fontSizeTitle - number
     });
   };
-
   render() {
-    const { fontSizeChange } = this.state;
+    const { fontSizeChange, fontSizeHeader, fontSizeTitle } = this.state;
     return (
       <Fragment>
         <div className={this.state.button ? 'buttonTrue' : 'buttonFalse'}>
           <NavBar clickColorFn={this.handleClick} growFontFn={this.handleGrowFontSize} shrinkFontFn={this.handleShrinkFontSize} resetFontFn={this.handleResetFontSize} />
 
-          <div className="container" style={{ marginTop: 100, fontSize: fontSizeChange }}>
+          <div className="container" style={{ marginTop: 100, fontSize: `${fontSizeChange}rem`}}>
             <div className="row" >
               <div className="col-lg-12 text-center">
-                <h1 className="section-heading">Polityka prywatności</h1>
+                <h1 className="section-heading" style={{ fontSize: `${fontSizeHeader}rem`}}>Polityka prywatności</h1>
                 <hr />
               </div>
             </div>
             <div className="row text-left">
-              <ul>
+              <ul style={{marginLeft: "30px", marginTop: 100}}>
                 <li>
-                  Poprzez piki “cookies” należy rozumieć dane informatyczne
-                  przechowywane w urządzeniach końcowych użytkowników, przeznaczone do
-                  korzystania ze stron internetowych. W szczególności są to pliki
-                  tekstowe, zawierające nazwę strony internetowej, z której pochodzą,
+                  Poprzez piki “cookies” należy rozumieć dane informatyczne przechowywane w urządzeniach końcowych użytkowników, przeznaczone do
+                  korzystania ze stron internetowych. W szczególności są to pliki tekstowe, zawierające nazwę strony internetowej, z której pochodzą,
                   czas przechowywania ich na urządzeniu końcowym oraz unikalny numer.
                 </li>
 
                 <li>
-                  Serwis nie zbiera w sposób automatyczny żadnych informacji, z
-                  wyjątkiem informacji zawartych w plikach cookies.
+                  Serwis nie zbiera w sposób automatyczny żadnych informacji, z wyjątkiem informacji zawartych w plikach cookies.
                 </li>
 
                 <li>
-                  Pliki cookies przeznaczone są do korzystania ze stron serwisu.
-                  Operator wykorzystuje te pliki do:
+                  Pliki cookies przeznaczone są do korzystania ze stron serwisu. Operator wykorzystuje te pliki do:
                 </li>
 
                 <li>
@@ -82,8 +85,7 @@ class Cookies extends Component {
                   urządzenie, aby zgodnie z jego preferencjami wyświetlić stronę
                 </li>
                 <li>
-                  do tworzenia anonimowych statystyk z wyłączeniem możliwości
-                  identyfikacji użytkownika.
+                  do tworzenia anonimowych statystyk z wyłączeniem możliwości identyfikacji użytkownika.
                 </li>
 
                 <li>
@@ -119,9 +121,9 @@ class Cookies extends Component {
                   <p>
                     <a
                       target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: '#6e5500' }}
+                      rel="noopener noreferrer"                     
                       href="http://windows.microsoft.com/pl-PL/windows7/How-to-manage-cookies-in-Internet-Explorer-9"
+                      title="Link przenoszący na stronę ustawień danej przeglądarki (zawartość otwiera się w nowym oknie)"
                     >
                       - w przeglądarce Internet Explorer
                     </a>
@@ -129,9 +131,9 @@ class Cookies extends Component {
                   <p>
                     <a
                       target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: '#6e5500' }}
+                      rel="noopener noreferrer"                     
                       href="https://support.microsoft.com/pl-pl/help/17442/windows-internet-explorer-delete-manage-cookies"
+                      title="Link przenoszący na stronę ustawień danej przeglądarki (zawartość otwiera się w nowym oknie)"
                     >
                       - w przeglądarce Edge
                     </a>
@@ -139,9 +141,9 @@ class Cookies extends Component {
                   <p>
                     <a
                       target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: '#6e5500' }}
+                      rel="noopener noreferrer"                     
                       href="http://support.mozilla.org/pl/kb/ciasteczka"
+                      title="Link przenoszący na stronę ustawień danej przeglądarki (zawartość otwiera się w nowym oknie)"
                     >
                       - w przeglądarce Mozilla Firefox
                     </a>
@@ -149,9 +151,9 @@ class Cookies extends Component {
                   <p>
                     <a
                       target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: '#6e5500' }}
+                      rel="noopener noreferrer"                     
                       href="http://support.google.com/chrome/bin/answer.py?hl=pl&answer=95647"
+                      title="Link przenoszący na stronę ustawień danej przeglądarki (zawartość otwiera się w nowym oknie)"
                     >
                       - w przeglądarce Chrome
                     </a>
@@ -159,9 +161,9 @@ class Cookies extends Component {
                   <p>
                     <a
                       target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: '#6e5500' }}
+                      rel="noopener noreferrer"                   
                       href="http://support.apple.com/kb/HT1677?viewlocale=pl_PL&locale=pl_PL"
+                      title="Link przenoszący na stronę ustawień danej przeglądarki (zawartość otwiera się w nowym oknie)"
                     >
                       - w przeglądarce Safari
                     </a>

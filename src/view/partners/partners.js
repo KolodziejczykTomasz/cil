@@ -8,12 +8,18 @@ import './partners.css';
 class Partners extends Component {
   state = {
     button: false,
-    fontSizeChange: 16,
+    fontSizeChange: 14,
+    fontSizeSubtitle: 16,
+    fontSizeTitle: 24,
+    fontSizeHeader: 36
   };
 
   handleResetFontSize = () => {
     this.setState({
-      fontSizeChange: 16,
+      fontSizeChange: 14,
+      fontSizeSubtitle: 16,
+      fontSizeTitle: 24,
+      fontSizeHeader: 36
     });
   };
 
@@ -27,6 +33,9 @@ class Partners extends Component {
     const number = 1;
     this.setState({
       fontSizeChange: this.state.fontSizeChange + number,
+      fontSizeSubtitle: this.state.fontSizeSubtitle + number,
+      fontSizeHeader: this.state.fontSizeHeader + number,
+      fontSizeTitle: this.state.fontSizeTitle + number
     });
   };
 
@@ -34,11 +43,15 @@ class Partners extends Component {
     const number = 1;
     this.setState({
       fontSizeChange: this.state.fontSizeChange - number,
+      fontSizeSubtitle: this.state.fontSizeSubtitle - number,
+      fontSizeHeader: this.state.fontSizeHeader - number,
+      fontSizeTitle: this.state.fontSizeTitle - number
     });
   };
 
+
   render() {
-    const { fontSizeChange } = this.state;
+    const { fontSizeChange, fontSizeSubtitle, fontSizeHeader, fontSizeTitle } = this.state;
     return (
       <Fragment>
         <div className={this.state.button ? 'buttonTrue' : 'buttonFalse'}>
@@ -51,13 +64,12 @@ class Partners extends Component {
           <div className="container" style={{ marginTop: 20, fontSize: fontSizeChange }}>
             <div className="row">
               <div className="col-lg-12 text-center">
-                <h1 className="section-heading" >Partnerzy</h1>
+                <h1 className="section-heading" style={{fontSize: fontSizeHeader}}>Partnerzy</h1>
                 <hr />
               </div>
             </div>
-            <h2>
-              <span style={{ color: 'orange', fontSize: fontSizeChange }}>Kompleksowe zarządzanie nieruchomościami</span> w
-              sektorze prywatnym i komercyjnym
+            <h2 style={{ color: '#853605', fontSize: fontSizeTitle, width: '100%', textAlign: 'center', marginTop: "50px"  }}>
+             Kompleksowe zarządzanie nieruchomościami w sektorze prywatnym i komercyjnym
             </h2>
             <div className="row text-left wrapper">
               <img
@@ -65,16 +77,16 @@ class Partners extends Component {
                 src={Logo}
                 alt="Logo firmy MANEZ"
               />
-              <p className="description" style={{fontSize: fontSizeChange }}>
+              <p className="description" style={{fontSize: fontSizeSubtitle }}>
                 Nawiązaliśmy współpracę z firmą MANEZ Zarządzanie Nieruchomościami, która wdraża na
                 naszym terenie innowacyjny system do zarządzania nieruchomościami.{' '}
               </p>
-              <p className="description" style={{fontSize: fontSizeChange }}>
+              <p className="description" style={{fontSize: fontSizeSubtitle }}>
                 Jeśli wynajmujesz nieruchomość bądź nią zarządzasz to jest to rozwiązanie dla
                 Ciebie.
               </p>
 
-              <p className="description" style={{fontSize: fontSizeChange }}>
+              <p className="description" style={{fontSize: fontSizeSubtitle }}>
                 Aplikacja mobilna udostępniana przez firmę MANEZ jest narzędziem automatyzującym
                 proces zarządzania nieruchomościami. Obsługa nieruchomości, czy zdalny kontakt z
                 najemcą będzie szybki, sprawny i bezproblemowy. Naliczanie opłat, wystawianie FV,
@@ -82,12 +94,12 @@ class Partners extends Component {
                 automatycznie oszczędzając Twój czas.
               </p>
 
-              <p className="description" style={{fontSize: fontSizeChange }}>
+              <p className="description" style={{fontSize: fontSizeSubtitle }}>
                 Dzięki aplikacji mobilnej każdy najemca czy użytkownik nieruchomości będzie płacił
                 za faktyczne zużycie mediów i śmieci.{' '}
               </p>
 
-              <p className="description" style={{fontSize: fontSizeChange }}>Zobacz jak to działa: https://www.manez.pl</p>
+              <p className="description" style={{fontSize: fontSizeSubtitle }}>Zobacz jak to działa: https://www.manez.pl</p>
             </div>
           </div>
           <Footer />

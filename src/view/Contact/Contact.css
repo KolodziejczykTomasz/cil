@@ -5,27 +5,45 @@
     max-width: 420px;                     
     margin: 0 auto;                     
 }
-Input[type=text],Input[type=email], Input[type=textarea] {
-   width: 100%;                     
+input[type=text], input[type=email], input[type=textarea] {
+   width: 100%;   
+   height: 40px;                  
    padding: 12px;                     
-   border: 1px solid #ccc;                     
+   border: 1px solid #091d31;                     
    border-radius: 4px;
    margin-top: 6px;                     
-   resize: vertical;                     
-}                     
-input[type=submit] {              
-background-color: #4CAF50;              
-color: white;              
-padding: 12px 20px;              
-border: none;              
-border-radius: 4px;              
-cursor: pointer;              
+   resize: vertical;  
+   margin-bottom: 20px;  
+   color: black !important;
+   font-size: 16px;   
+   background: none;              
+} 
+.form-control {
+  border: 1px solid #091d31; 
+  font-size: 16px;  
+  height: 60px; 
+  background: none;
+}                    
+input[type=submit] {           
+  color: green;              
+  padding: 12px 20px; 
+  width: 200px;
+  height: 40px;   
+  border-radius: 4px;              
+  cursor: pointer;  
+  font-size: 20px;  
+  font-weight: 600;   
+  line-height: 20px;   
+  margin-top: 30px;  
 }              
-input[type=submit]:hover {              
-background-color: #45a049;              
+  input[type=submit]:hover {              
+  background-color: #45a049;              
 }              
 .container {              
-border-radius: 5px;             
-            
-padding: 20px;              
+  border-radius: 5px;  
+  padding: 20px;              
 } 
+
+::placeholder {
+  color: #000 !important;
+}
