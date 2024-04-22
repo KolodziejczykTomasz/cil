@@ -10,12 +10,14 @@ class Cookies extends Component {
     button: false,
     fontSizeChange: 1.6,
     fontSizeHeader: 3.6,
+    fontSizeSubtitle: 16,
     fontSizeTitle: 1.8
   };
 
   handleResetFontSize = () => {
     this.setState({
       fontSizeChange: 1.6,
+      fontSizeSubtitle: 16,
       fontSizeHeader: 3.6,
       fontSizeTitle: 1.8
     });
@@ -33,7 +35,8 @@ class Cookies extends Component {
     this.setState({
       fontSizeChange: this.state.fontSizeChange + number,
       fontSizeHeader: this.state.fontSizeHeader + number,
-      fontSizeTitle: this.state.fontSizeTitle + number
+      fontSizeTitle: this.state.fontSizeTitle + number,
+      fontSizeSubtitle: this.state.fontSizeSubtitle + number,
     });
   };
 
@@ -42,11 +45,12 @@ class Cookies extends Component {
     this.setState({
       fontSizeChange: this.state.fontSizeChange - number,
       fontSizeHeader: this.state.fontSizeHeader - number,
-      fontSizeTitle: this.state.fontSizeTitle - number
+      fontSizeTitle: this.state.fontSizeTitle - number,
+      fontSizeSubtitle: this.state.fontSizeSubtitle - number,
     });
   };
   render() {
-    const { fontSizeChange, fontSizeHeader, fontSizeTitle } = this.state;
+    const { fontSizeChange, fontSizeHeader, fontSizeSubtitle } = this.state;
     return (
       <Fragment>
         <div className={this.state.button ? 'buttonTrue' : 'buttonFalse'}>
@@ -176,7 +180,7 @@ class Cookies extends Component {
               </ul>
             </div>
           </div>
-          <Footer />
+          <Footer fontSizeSubtitle={fontSizeSubtitle} />
         </div>
       </Fragment>
     );

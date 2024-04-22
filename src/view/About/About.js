@@ -7,6 +7,7 @@ class About extends Component {
   state = {
     button: false,
     fontSizeChange: 14,
+    fontSizeSubtitle: 16,
     fontSizeHeader: 36,
     fontSizeTitle: 24
   };
@@ -14,6 +15,7 @@ class About extends Component {
   handleResetFontSize = () => {
     this.setState({
       fontSizeChange: 14,
+      fontSizeSubtitle: 16,
       fontSizeHeader: 36,
       fontSizeTitle: 24
     });
@@ -29,6 +31,7 @@ class About extends Component {
   handleGrowFontSize = () => {
     const number = 1;
     this.setState({
+      fontSizeSubtitle: this.state.fontSizeSubtitle + number,
       fontSizeChange: this.state.fontSizeChange + number,
       fontSizeHeader: this.state.fontSizeHeader + number,
       fontSizeTitle: this.state.fontSizeTitle + number
@@ -38,6 +41,7 @@ class About extends Component {
   handleShrinkFontSize = () => {
     const number = 1;
     this.setState({
+      fontSizeSubtitle: this.state.fontSizeSubtitle - number,
       fontSizeChange: this.state.fontSizeChange - number,
       fontSizeHeader: this.state.fontSizeHeader - number,
       fontSizeTitle: this.state.fontSizeTitle - number
@@ -145,7 +149,7 @@ class About extends Component {
                 bezrobotnych,
               </li>
               <li>
-                tworzenie szeroko pojętego społeczeństwa obywatelskiego dzięki
+                tworzenie szeroko pojętego społeczeństwa obywatelskiego dzięki 
                 promowaniu postaw prospołecznych,
               </li>
               <li>
@@ -181,7 +185,7 @@ class About extends Component {
               <li>działania na rzecz kultury oświaty i sportu.</li>
             </ul>
           </div>
-          <Footer />
+          <Footer fontSizeSubtitle={this.state.fontSizeSubtitle} />
         </div>
       </Fragment>
     );

@@ -71,6 +71,7 @@ class Stoczek extends Component {
                 className="img-responsive img_kurs"
                 src={stoczek1}
                 alt="Plakat projektu Stoczek -nasza mała ojczyzna"
+                title="Plakat projektu Stoczek -nasza mała ojczyzna"
               />
               <p className="description" style={{ fontSize: `${fontSizeTitle}rem` }}>
                 W ramach tegorocznej edycji konkursu grantowego „Działaj Lokalnie 2021” Polsko –

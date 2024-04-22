@@ -23,6 +23,7 @@ const Project = ({fontSizeHeader, fontSizeSubtitle, fontSizeTitle}) => {
                       className="img-circle img-responsive img-centered img_portfolio"
                       src={Logo}
                       alt="Logo projektu"
+                      title="Logo projektu"
                   />
                 </div>
                 <div className="timeline-panel">
@@ -42,6 +43,7 @@ const Project = ({fontSizeHeader, fontSizeSubtitle, fontSizeTitle}) => {
                       className="img-circle img-responsive img-centered img_portfolio"
                       src={Logo}
                       alt="Logo projektu"
+                      title="Logo projektu"
                   />
                 </div>
                 <div className="timeline-panel">
@@ -63,6 +65,7 @@ const Project = ({fontSizeHeader, fontSizeSubtitle, fontSizeTitle}) => {
                       className="img-circle img-responsive img-centered img_portfolio"
                       src={Logo}
                       alt="Logo projektu"
+                      title="Logo projektu"
                   />
                 </div>
                 <div className="timeline-panel">
@@ -82,6 +85,7 @@ const Project = ({fontSizeHeader, fontSizeSubtitle, fontSizeTitle}) => {
                       className="img-circle img-responsive img-centered img_portfolio"
                       src={Logo}
                       alt="Logo projektu"
+                      title="Logo projektu"
                   />
                 </div>
                 <div className="timeline-panel">
@@ -101,6 +105,7 @@ const Project = ({fontSizeHeader, fontSizeSubtitle, fontSizeTitle}) => {
                       className="img-circle img-responsive img-centered img_portfolio"
                       src={Logo}
                       alt="Logo projektu"
+                      title="Logo projektu"
                   />
                 </div>
                 <div className="timeline-panel">

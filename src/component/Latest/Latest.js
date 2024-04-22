@@ -25,6 +25,7 @@ const Latest = ({fontSizeHeader}) => {
             src={Festiwal}
             className="rounded mx-auto d-block img_Latest"
             alt="Plakat projektu Festiwal Kultury i Tradycji Warmińskiej"
+            title="Plakat projektu Festiwal Kultury i Tradycji Warmińskiej"
         />
       </div>
       <div className="col-md-4 col-sm-12">
@@ -32,6 +33,7 @@ const Latest = ({fontSizeHeader}) => {
             src={Senioriada}
             className="rounded mx-auto d-block img_Latest"
             alt="Plakat projektu Senioriada"
+            title="Plakat projektu Senioriada"
         />
       </div>
       <div className="col-md-4 col-sm-12">
@@ -39,6 +41,7 @@ const Latest = ({fontSizeHeader}) => {
             src={Apteka}
             className="rounded mx-auto d-block img_Latest"
             alt="Plakat projektu Polna apteka"
+            title="Plakat projektu Polna apteka"
         />
       </div>
     </div>

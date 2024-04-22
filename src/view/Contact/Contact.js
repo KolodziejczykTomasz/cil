@@ -92,7 +92,7 @@ class Contact extends Component {
               </div>
             </div>
             <div className="row">
-              <form className="col-lg-12" style={{ marginTop: 30 }} autoComplete="on">
+              <form className="col-lg-12" style={{ marginTop: 30 }} autoComplete="on" role="form">
                 <FormGroup controlId="formBasicName">
                   <label htmlFor="name"></label>
                   <Input

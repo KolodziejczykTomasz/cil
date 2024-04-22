@@ -64,6 +64,7 @@ class Asos extends Component {
                 className="img-responsive img-centered img_asos"
                 src={logoasos}
                 alt="Logotyp asos"
+                title="Logotyp asos"
               />
               <p>
                 <b>CENTRUM INICJATYW LOKALNYCH „PRZESTRZEŃ”</b>

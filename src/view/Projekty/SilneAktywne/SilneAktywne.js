@@ -76,6 +76,7 @@ class SilneAktywne extends Component {
                 className="img-responsive img_kurs"
                 src={Logo}
                 alt="Plakat projektu silne i aktywne rodziny"
+                title="Plakat projektu silne i aktywne rodziny"
               />
               <p className="description" style={{ fontSize: `${fontSizeTitle}rem` }}>
                 <strong>„SILNE I AKTYWNE RODZINY”</strong>

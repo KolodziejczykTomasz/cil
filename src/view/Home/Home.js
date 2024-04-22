@@ -60,7 +60,7 @@ class Home extends Component {
 
   render() {
     const { fontSizeSubtitle } = this.state;
-    const { fontSizeHeader} = this.state;
+
 
     return (
       <Fragment>
@@ -92,10 +92,7 @@ class Home extends Component {
                         resetFontFn={this.handleResetFontSize} />
             </div>
             <div>
-              <Footer  clickColorFn={this.handleClick}
-                       growFontFn={this.handleGrowFontSize}
-                       shrinkFontFn={this.handleShrinkFontSize}
-                       resetFontFn={this.handleResetFontSize} />
+              <Footer fontSizeSubtitle={this.state.fontSizeSubtitle} />
             </div>
           </div>
           <CookieConsent
@@ -103,18 +100,16 @@ class Home extends Component {
             buttonText="Wyrażam zgodę"
             cookieName="myAwesomeCookieName2"
             style={{ background: '#000', width: '100%' }}
-            buttonStyle={{ color: '#fff', fontSize: fontSizeHeader }}
+            buttonStyle={{ color: '#fff', fontSize: fontSizeSubtitle }}
             expires={150}
-          >
-                 
-            <span id="cookieSpan" style={{ fontSize: fontSizeHeader }}>
+          >            
+            <span id="cookieSpan" style={{ fontSize: fontSizeSubtitle }}>
               Nasz serwis, jak większość serwisów internetowych, wykorzystuje tzw. pliki cookies.
               Korzystanie z serwisu oznacza zgodę na ich zapis lub wykorzystanie. Więcej informacji
               można znaleźć w „Polityce prywatności”. Akceptuję
               <Link to="/cookies" className="linkToCookies" title="Link przenoszący na stronę polityki prywatności">"Politykę prywatności"</Link> i wykorzystania plików cookies w
               serwisie.
             </span>
-                
           </CookieConsent>
         </div>
       </Fragment>

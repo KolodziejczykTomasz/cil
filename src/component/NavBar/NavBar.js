@@ -11,12 +11,12 @@ const NavBar = ({ clickColorFn, growFontFn, shrinkFontFn, resetFontFn }) => {
 return (
     <Fragment>
         <div id="skip">
-            <NavLink to="/">Skip Content</NavLink>
+            <NavLink to="/" role="link">Skip Content</NavLink>
         </div>
         <header>
             <div id="accesibleWrapper">
                 <button id="accessibleIconButtonSearch" className="accessibleIconButton" onClick={() => setFontSize(18)}
-                        title="Przycisk początkowej wielkości czcionki na stronie po kliknięciu"
+                        title="Przycisk początkowej wielkości czcionki na stronie po kliknięciu" role="button"
                         aria-label="Przywrócenie początkowej wielkości czcionki na stronie po kliknięciu">
                     <FaSearch
                         id="accesibleIconSearch"
@@ -25,7 +25,7 @@ return (
                     />
                 </button>
                 <button id="accessibleIconButtonSearchMinus" className="accessibleIconButton"
-                        aria-label="Zmniejszenie czcionki na stronie po kliknięciu"
+                        aria-label="Zmniejszenie czcionki na stronie po kliknięciu" role="button"
                         title="Przycisk zmniejszający czcionki na stronie po kliknięciu"
                         onClick={() => setFontSize(fontSize - 1)}>
                     <FaSearchMinus
@@ -35,7 +35,7 @@ return (
                     />
                 </button>
                 <button id="accessibleIconButtonSubmit" className="accessibleIconButton"
-                        aria-label="Powiększenie czcionki na stronie po kliknięciu"
+                        aria-label="Powiększenie czcionki na stronie po kliknięciu" role="button"
                         title="Przycisk powiększający czcionki na stronie po kliknięciu"
                         onClick={() => setFontSize(fontSize + 1)}>
                     <FaSearchPlus
@@ -45,7 +45,7 @@ return (
                     />
                 </button>
                 <button id="accessibleIconButtonContrast" className="accessibleIconButton"
-                        aria-label="Zmiana kontrastu strony po kliknięciu"
+                        aria-label="Zmiana kontrastu strony po kliknięciu" role="button"
                         title="Przycisk zmieniający kontrast na stronie">
                     <FaAdjust
                         id="accesibleIconContrast"
@@ -55,7 +55,7 @@ return (
                 </button>
             </div>
 
-            <nav className="navbar navbar-expand-md sticky-top">
+            <nav className="navbar navbar-expand-md sticky-top" role="navigation" aria-label="Main">
                 <div className="navbar-toggler-right">
                     <button
                         className="navbar-toggler"
@@ -77,30 +77,30 @@ return (
                     <ul className="navbar-nav justify-content-center px-3">
                         <li className="nav-item btn btn-outline-success" aria-label="Home Page"
                             style={{marginRight: 10, color: 'black'}}>
-                            <NavLink to="/" style={{fontSize: `${fontSize}px`}}>Home</NavLink>
+                            <NavLink to="/" style={{fontSize: `${fontSize}px`}} role="link">Home</NavLink>
                         </li>
                         <li className="nav-item btn btn-outline-warning" aria-label="Aktualności"
                             style={{marginRight: 10, color: 'black'}}>
-                            <NavLink to="/news" style={{fontSize: `${fontSize}px`}}>Aktualności</NavLink>
+                            <NavLink to="/news" style={{fontSize: `${fontSize}px`}} role="link">Aktualności</NavLink>
                         </li>
                         <li className="nav-item btn btn-outline-primary" aria-label="O nas"
                             style={{marginRight: 10, color: 'black'}}>
-                            <NavLink to="/about" style={{fontSize: `${fontSize}px`}}>O nas</NavLink>
+                            <NavLink to="/about" style={{fontSize: `${fontSize}px`}} role="link">O nas</NavLink>
                         </li>
                         <li className="nav-item btn btn-outline-primary" aria-label="Projekty"
                             style={{marginRight: 10, color: 'black'}}>
-                            <NavLink to="/projekty" style={{fontSize: `${fontSize}px`}}>Projekty</NavLink>
+                            <NavLink to="/projekty" style={{fontSize: `${fontSize}px`}} role="link">Projekty</NavLink>
                         </li>
                         <li className="nav-item btn btn-outline-success" aria-label="Statut"
                             style={{marginRight: 10, color: 'black'}}>
-                            <NavLink to="/statut" style={{fontSize: `${fontSize}px`}}>Statut</NavLink>
+                            <NavLink to="/statut" style={{fontSize: `${fontSize}px`}} role="link">Statut</NavLink>
                         </li>
                         <li className="nav-item btn btn-outline-success" aria-label="Partnerzy"
                             style={{marginRight: 10, color: 'black'}}>
-                            <NavLink to="/partners" style={{fontSize: `${fontSize}px`}}>Partnerzy</NavLink>
+                            <NavLink to="/partners" style={{fontSize: `${fontSize}px`}} role="link">Partnerzy</NavLink>
                         </li>
                         <li className="nav-item btn btn-outline-warning" aria-label="Kontakt" style={{color: 'black'}}>
-                            <NavLink to="/contact" style={{fontSize: `${fontSize}px`}}>Kontakt</NavLink>
+                            <NavLink to="/contact" style={{fontSize: `${fontSize}px`}} role="link">Kontakt</NavLink>
                         </li>
                     </ul>
                 </nav>

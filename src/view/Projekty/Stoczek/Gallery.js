@@ -31,6 +31,7 @@ const Gallery = () => {
           key={index}
           style={{ margin: '2px' }}
           alt="Galeria projektu"
+          title="Galeria projektu"
         />
       ))}
 
@@ -40,6 +41,8 @@ const Gallery = () => {
           currentIndex={currentImage}
           onClose={closeImageViewer}
           disableScroll={false}
+          alt="Galeria projektu"
+          title="Galeria projektu"
           backgroundStyle={{
             backgroundColor: 'rgba(0,0,0,0.9)',
           }}

@@ -76,6 +76,7 @@ class Partners extends Component {
                 className="img-responsive img_kurs"
                 src={Logo}
                 alt="Logo firmy MANEZ"
+                title="Logo firmy MANEZ"
               />
               <p className="description" style={{fontSize: fontSizeSubtitle }}>
                 Nawiązaliśmy współpracę z firmą MANEZ Zarządzanie Nieruchomościami, która wdraża na

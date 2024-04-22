@@ -78,6 +78,7 @@ class Kurs extends Component {
                 className="img-responsive img_kurs"
                 src={Logo}
                 alt="Plakat projektu kurs na rodzinę"
+               title="Plakat projektu kurs na rodzinę"
               />
               <p className="description" style={{ fontSize: `${fontSizeTitle}rem` }}>
                 <strong>„KURS NA RODZINĘ W GMINIE KIWITY”</strong>

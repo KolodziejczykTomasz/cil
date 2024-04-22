@@ -78,6 +78,7 @@ class Rodzina extends Component {
                 className="img-responsive img_rodzina"
                 src={Logo}
                 alt="Plakat projektu"
+                title="Plakat projektu"
               />
               <p className="description" style={{ fontSize: `${fontSizeTitle}rem` }}>
                 <strong>

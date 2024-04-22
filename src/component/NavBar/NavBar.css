@@ -57,22 +57,26 @@ header {
 .accessibleIconButton:hover {
   color: #fff;
 }
-.accessibleIconButton:focus,
-.accessibleIconButton:active {
-  outline: none !important;
+.accessibleIconButton:focus {
+  outline: dotted red;
   border-color: red;  
   border-style: dotted;
 }
-.nav-item a:focus,
-.nav-item a:active {
-  border-color: red;  
-  border-style: dotted;
-  border-width: 2px;
-  text-decoration: none;
+.accessibleIconButton:active {
+  outline:none;
 }
 .brand {
   font-size: 2.4rem;
 }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(9,29,49, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.nav-item a:focus {
+  border-color: red;  
+  border-style: dotted;
+  border-width: 2px;
+  text-decoration: none;
+}
+.nav-item a:active {
+  outline: none ;
 }

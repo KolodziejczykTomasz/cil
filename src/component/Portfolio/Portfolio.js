@@ -18,7 +18,7 @@ const Portfolio = ({fontSizeHeader, fontSizeSubtitle, fontSizeTitle}) => (
       <div className="row justify-content-around">
         <div className="col-lg-4 col-sm-12">
           <div className="timeline-image">
-            <img className="img-circle img-responsive img-centered img_portfolio" src={Logo} alt="Logo projektu"/>
+            <img className="img-circle img-responsive img-centered img_portfolio" src={Logo} alt="Logo projektu" title="Logo projektu"/>
           </div>
           <div className="timeline-panel">
             <div className="timeline-heading">
@@ -31,7 +31,7 @@ const Portfolio = ({fontSizeHeader, fontSizeSubtitle, fontSizeTitle}) => (
         </div>
         <div className="col-lg-4 col-sm-12">
           <div className="timeline-image">
-            <img className="img-circle img-responsive img-centered img_portfolio" src={Logo} alt="Logo projektu" />
+            <img className="img-circle img-responsive img-centered img_portfolio" src={Logo} alt="Logo projektu" title="Logo projektu"/>
           </div>
           <div className="timeline-panel">
             <div className="timeline-heading">

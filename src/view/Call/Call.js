@@ -57,6 +57,7 @@ class Call extends Component {
                 className="img-responsive img_call"
                 src={callii}
                 alt="Logotyp call 2"
+                title="Logotyp call 2"
               />
               <p className="description">
                 <b>CENTRUM INICJATYW LOKALNYCH „PRZESTRZEŃ”</b>                
